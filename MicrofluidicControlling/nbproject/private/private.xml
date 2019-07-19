@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
+        <file>
+            <url>src/Action.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>113</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/PumpType.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>15</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/liuyang/Desktop/MicrofluidicControlling/src/MainFrame.java</file>
-            <file>file:/Users/liuyang/Desktop/MicrofluidicControlling/src/Action.java</file>
-            <file>file:/Users/liuyang/Desktop/MicrofluidicControlling/src/Configuation.java</file>
-            <file>file:/Users/liuyang/Desktop/MicrofluidicControlling/src/Main.java</file>
-            <file>file:/Users/liuyang/Desktop/MicrofluidicControlling/src/Util.java</file>
-            <file>file:/Users/liuyang/Desktop/MicrofluidicControlling/src/Pump.java</file>
-            <file>file:/Users/liuyang/Desktop/MicrofluidicControlling/src/PumpType.java</file>
+            <file>file:/Users/liuyang/Desktop/MicroControl/MicrofluidicControlling/src/Configuation.java</file>
+            <file>file:/Users/liuyang/Desktop/MicroControl/MicrofluidicControlling/src/Action.java</file>
+            <file>file:/Users/liuyang/Desktop/MicroControl/MicrofluidicControlling/src/MainFrame.java</file>
+            <file>file:/Users/liuyang/Desktop/MicroControl/MicrofluidicControlling/src/Pump.java</file>
+            <file>file:/Users/liuyang/Desktop/MicroControl/MicrofluidicControlling/src/PumpType.java</file>
         </group>
     </open-files>
 </project-private>
