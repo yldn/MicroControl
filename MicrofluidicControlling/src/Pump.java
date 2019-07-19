@@ -25,6 +25,7 @@ public class Pump {
     int pinNumber1;
     int pinNumber2;
     //每个pump上的两个针脚
+    //默认Pin1高电位 Pin2低电位
     private Pin Pin1;
     private Pin Pin2;
     
@@ -128,13 +129,13 @@ public class Pump {
         pwm.setPwm(0);
         console.println("PWM rate is: " + pwm.getPwm());
 
-        stopWithPin();
         
     }
     // stop all GPIO activity/threads by shutting down the GPIO controller
     // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
     //Stop the pump 
-    public void stopWithPin(){
+    public void stopWithPin(Pin pin){
+        
         //TODO 设置所有针脚都为低电位 ------- pwm.setPwm(0);
         
         gpio.shutdown();
