@@ -11,6 +11,10 @@
 public class PumpType {
     private String Name ;
     // 防止短路的最低阈值
+    
+    private int range = 1000;
+    private int clock = 50;
+    
     private int minSpeed = 100;
 
     public PumpType(String Name) {
@@ -24,6 +28,22 @@ public class PumpType {
     public PumpType(String Name, int minSpeed) {
         this.Name = Name;
         this.minSpeed = minSpeed;
+    }
+
+    public int getRange() {
+        return range;
+    }
+
+    public void setRenge(int range) {
+        this.range = range;
+    }
+
+    public int getClock() {
+        return clock;
+    }
+
+    public void setClock(int clock) {
+        this.clock = clock;
     }
     
     

@@ -28,7 +28,7 @@ public class Action implements Runnable {
     //delayTime;
     int delayTime;
     //runtime
-    int runTume;
+    int runTime;
     //cur pump that take action
     Pump p;
     
@@ -41,10 +41,10 @@ public class Action implements Runnable {
     //检查是否在执行
     boolean isActive;
 
-    public Action(int seq, int delayTime, int runTume, Pump p) {
+    public Action(int seq, int delayTime, int runTime, Pump p) {
         this.seq = seq;
         this.delayTime = delayTime;
-        this.runTume = runTume;
+        this.runTime = runTime;
         this.p = p;
     }
     
@@ -54,9 +54,9 @@ public class Action implements Runnable {
             @Override
                 public void run() {
                 try {
-                    p.runWithPin(pin);
+                    p.run();
                     Thread.sleep(runTime);
-                    p.stopWithPin(pin);                
+                    p.stop();
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Action.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -84,11 +84,11 @@ public class Action implements Runnable {
     }
 
     public int getRunTume() {
-        return runTume;
+        return runTime;
     }
 
     public void setRunTume(int runTume) {
-        this.runTume = runTume;
+        this.runTime = runTume;
     }
 
     public Pump getP() {
@@ -112,7 +112,7 @@ public class Action implements Runnable {
     }
 
     public String toString(){
-        return "seq:"+ seq +"/Delay:"+this.delayTime+ "/RunTime:"+this.runTume+"/Pump:"+this.p.getName();
+        return "seq:"+ seq +"/Delay:"+this.delayTime+ "/RunTime:"+this.runTime+"/Pump:"+this.p.getName();
     }
     
     

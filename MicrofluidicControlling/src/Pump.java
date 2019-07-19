@@ -30,7 +30,7 @@ public class Pump {
     private Pin Pin2;
     
     //GPIO控制单元
-//    GpioController gpio = GpioFactory.getInstance();
+    //GpioController gpio = GpioFactory.getInstance();
     GpioController gpio ;
     
     //For Debugging
@@ -45,6 +45,12 @@ public class Pump {
         
         this.Pin1 = allPins[pinNumber1];
         this.Pin2 = allPins[pinNumber2];
+        
+        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
+        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
+        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+        
+        
     }
 ////////////getter /////////////////////
     public String getName() {
@@ -99,49 +105,53 @@ public class Pump {
         this.Pin2 = allPins[pinNumber2];
     }
     
-    
+    GpioPinPwmOutput pwm;
     //run methord
-    public void runWithPin(Pin pin){
-        GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(pin);
+    public void setPinHigh(Pin pin){
+        pwm  = gpio.provisionPwmOutputPin(pin);
+        
+        pwm.setPwm(type.getRange()*(speed /100));
         
         //use Pwm mode
-        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
-        //change the Range to fit the PumpMinSpeed  (This sets the range register in the PWM generator. The default is 1024.)
-        com.pi4j.wiringpi.Gpio.pwmSetRange(1000);
-        //set clock (This sets the divisor for the PWM clock.)
-        com.pi4j.wiringpi.Gpio.pwmSetClock(500);
-        
-        pwm.setPwm(500);
-        console.println("PWM rate is: " + pwm.getPwm());
-
-        console.println("Press ENTER to set the PWM to a rate of 250");
-        System.console().readLine();
-
-        // set the PWM rate to 250
-        pwm.setPwm(250);
-        console.println("PWM rate is: " + pwm.getPwm());
-
-
-        console.println("Press ENTER to set the PWM to a rate to 0 (stop PWM)");
-        System.console().readLine();
-
-        // set the PWM rate to 0
-        pwm.setPwm(0);
-        console.println("PWM rate is: " + pwm.getPwm());
+//        pwm.setPwm(500);
+//        console.println("PWM rate is: " + pwm.getPwm());
+//        console.println("Press ENTER to set the PWM to a rate of 250");
+//        System.console().readLine();
+//        // set the PWM rate to 250
+//        pwm.setPwm(250);
+//        console.println("PWM rate is: " + pwm.getPwm());
+//        console.println("Press ENTER to set the PWM to a rate to 0 (stop PWM)");
+//        System.console().readLine();
+//        // set the PWM rate to 0
+//        pwm.setPwm(0);
+//        console.println("PWM rate is: " + pwm.getPwm());
 
         
     }
     // stop all GPIO activity/threads by shutting down the GPIO controller
     // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
     //Stop the pump 
-    public void stopWithPin(Pin pin){
-        
+    public void setPinLow(Pin pin){
+        gpio.provisionPwmOutputPin(pin);
         //TODO 设置所有针脚都为低电位 ------- pwm.setPwm(0);
-        
-        gpio.shutdown();
+        pwm.setPwm(0);
     }
     
-    
+    public void run(){
+        this.setPinHigh(Pin1);
+        this.setPinLow(Pin2);
+        
+    }
+    public void revertrun(){
+        this.setPinHigh(Pin1);
+        this.setPinLow(Pin2);
+        
+    }
+    public void stop(){
+        this.setPinLow(Pin1);
+        this.setPinLow(Pin1);
+        this.gpio.shutdown();
+    }
     //@Override
     //Pump as String Output
     public String toString(){
