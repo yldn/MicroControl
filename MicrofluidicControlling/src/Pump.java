@@ -22,6 +22,8 @@ public class Pump {
    
     int speed = 100 ; 
     
+    
+    
     int pinNumber1;
     int pinNumber2;
     //每个pump上的两个针脚
@@ -46,9 +48,9 @@ public class Pump {
         this.Pin1 = allPins[pinNumber1];
         this.Pin2 = allPins[pinNumber2];
         
-        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
-        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
-        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+//        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
+//        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
+//        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
         
         
     }
@@ -108,6 +110,10 @@ public class Pump {
     GpioPinPwmOutput pwm;
     //run methord
     public void setPinHigh(Pin pin){
+        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
+        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
+        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+        
         pwm  = gpio.provisionPwmOutputPin(pin);
         
         pwm.setPwm(type.getRange()*(speed /100));

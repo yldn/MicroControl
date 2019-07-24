@@ -1958,6 +1958,9 @@ public class MainFrame extends javax.swing.JFrame {
     
     ArrayList<Action> actionList = new ArrayList<Action>();
     
+    ArrayList<PumpType> typrlist = new ArrayList<PumpType>();
+    
+    
     private void loadPumpconfigFrame() {
         System.out.println("pin loaded !");
         System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));

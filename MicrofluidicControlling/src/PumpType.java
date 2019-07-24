@@ -13,7 +13,12 @@ public class PumpType {
     // 防止短路的最低阈值
     
     private int range = 1000;
-    private int clock = 50;
+    private int clock = 1920;
+ 
+//    0-1023
+    int dutyCycle;
+    ///default = 100;
+    int frequency;
     
     private int minSpeed = 100;
 
@@ -31,6 +36,7 @@ public class PumpType {
     }
 
     public int getRange() {
+        range = 19200000/clock/frequency;
         return range;
     }
 
