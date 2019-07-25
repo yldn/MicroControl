@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MicrofluidicControlling">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/MicrofluidicControlling.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

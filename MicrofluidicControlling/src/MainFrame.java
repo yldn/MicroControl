@@ -36,6 +36,20 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        PumpTypePage = new javax.swing.JFrame();
+        jButton14 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        typefield = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        feqField = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        minspeedField = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        clockFIeld = new javax.swing.JTextField();
         PumpconfigMainFrame = new javax.swing.JFrame();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
@@ -149,6 +163,133 @@ public class MainFrame extends javax.swing.JFrame {
         jButton11 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+
+        PumpTypePage.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        PumpTypePage.setSize(new java.awt.Dimension(450, 350));
+
+        jButton14.setText("Next>");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton17.setText("Load");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("Add");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setText("Choose Pump Type ");
+
+        jLabel23.setText("Name:");
+
+        jLabel24.setText("Frequency:");
+
+        jLabel25.setText("Minspeed:");
+
+        jLabel29.setText("Clock:");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(clockFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(typefield, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addGap(18, 18, 18)
+                        .addComponent(minspeedField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(feqField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(typefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(feqField, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clockFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(minspeedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout PumpTypePageLayout = new javax.swing.GroupLayout(PumpTypePage.getContentPane());
+        PumpTypePage.getContentPane().setLayout(PumpTypePageLayout);
+        PumpTypePageLayout.setHorizontalGroup(
+            PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PumpTypePageLayout.createSequentialGroup()
+                .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PumpTypePageLayout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PumpTypePageLayout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(57, Short.MAX_VALUE))
+            .addGroup(PumpTypePageLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
+                        .addComponent(jButton14)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
+                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48))))
+        );
+        PumpTypePageLayout.setVerticalGroup(
+            PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
+                .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PumpTypePageLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(PumpTypePageLayout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton14)
+                .addGap(21, 21, 21))
+        );
 
         PumpconfigMainFrame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         PumpconfigMainFrame.setSize(new java.awt.Dimension(720, 450));
@@ -1331,7 +1472,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        this.PumpconfigMainFrame.setVisible(true);
+        this.PumpTypePage.setVisible(true);
         loadPumpconfigFrame();
         
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -1355,6 +1496,28 @@ public class MainFrame extends javax.swing.JFrame {
         
         clearTableContent(PumpListInActionPage);
         addPumpToTable(evt,PumpListInActionPage);
+        
+        
+        
+        //检查action里面有没有多余pump如果有则删掉
+        ////还需要debug***********************************
+//        for(int j = 0; j < this.actionList.size() ; j++){
+//            if(this.actionList.size() == 0) {
+//                break;
+//            }
+//            Action a = this.actionList.get(j);
+//            for(int i = 0 ; i < this.pumpList.size() ; i++ ){
+//                if(this.pumpList.get(i).getName().equals(a.getP().getName())){
+//                    continue;
+//                }
+//                if(i == this.pumpList.size()-1){
+//                    this.actionList.remove(a);
+//                }
+//            }
+//        }
+        /////
+        Log("Actions : "+Arrays.toString(this.actionList.toArray()));
+        
         updateActionListToTable(ActionTable);
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -1470,7 +1633,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         // TODO add your handling code here:
-        this.FileChooser.setVisible(true);
         this.Save.setVisible(true);
         this.Load.setVisible(false);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
@@ -1769,6 +1931,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     void updateActionListToTable(JTable tab){
+        
         clearTableContent(tab);
         DefaultTableModel model = (DefaultTableModel) tab.getModel();
         for(Action a : this.actionList){
@@ -1785,6 +1948,48 @@ public class MainFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton16ActionPerformed
 
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        this.PumpTypePage.setVisible(false);
+        this.PumpconfigMainFrame.setVisible(true);
+        loadTypeListToCombobox(this.pumpTypeBox);
+        this.loadPumpconfigFrame();
+        
+    }//GEN-LAST:event_jButton14ActionPerformed
+    void loadTypeListToCombobox( JComboBox<String> box){
+        DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
+        box.setModel(model);
+        box.removeAll();
+        for(int i = 0 ; i < this.typelist.size();i++){
+            model.addElement(typelist.get(i).getName());
+        }
+    }
+    
+    
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+        Log("load the pump type to the type list");
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        this.addToTypeList(this.typefield.getText() , Integer.parseInt(this.feqField.getText())
+                ,Integer.parseInt(this.clockFIeld.getText())
+                ,Integer.parseInt(this.minspeedField.getText()));
+       this.typefield.setText("");
+       this.feqField.setText("");
+       this.clockFIeld.setText("");
+       this.minspeedField.setText("");
+    }//GEN-LAST:event_jButton18ActionPerformed
+    void addToTypeList(String name , int frequency , int clock , int minSpeed ){
+        PumpType p = new PumpType(name, frequency , clock , minSpeed);
+        this.typelist.add(p);
+         Log("add a Pump Type"+ p.getName()+" to the pump List");
+         Log("PumpType:" + Arrays.toString(this.typelist.toArray()));
+         
+        
+    }
+    
+    
     //根据现有的针脚map到jcombobox box上
     private void mapPinListToComboBox(javax.swing.JComboBox<String> box){
 //    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
@@ -1848,17 +2053,23 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTable PumpListInActionPage;
     private javax.swing.JTable PumpListInExpertMode;
     private javax.swing.JTable PumpTableInPumpPage;
+    private javax.swing.JFrame PumpTypePage;
     private javax.swing.JFrame PumpconfigMainFrame;
     private javax.swing.JFileChooser Save;
     private javax.swing.JPanel SinglePumpAction;
+    private javax.swing.JTextField clockFIeld;
     private javax.swing.JSpinner delaytimeSpinner;
+    private javax.swing.JTextField feqField;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1883,10 +2094,15 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1925,6 +2141,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
@@ -1940,6 +2157,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JTextField minspeedField;
     private javax.swing.JLabel pin1Label;
     private javax.swing.JLabel pin2Label;
     private javax.swing.JTextField pumpNameField;
@@ -1948,6 +2166,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSlider pumpSpeed;
     private javax.swing.JComboBox<String> pumpTypeBox;
     private javax.swing.JSpinner runtimeSpinner;
+    private javax.swing.JTextField typefield;
     // End of variables declaration//GEN-END:variables
 
     
