@@ -1958,7 +1958,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     ArrayList<Action> actionList = new ArrayList<Action>();
     
-    ArrayList<PumpType> typrlist = new ArrayList<PumpType>();
+    ArrayList<PumpType> typelist = new ArrayList<PumpType>();
     
     
     private void loadPumpconfigFrame() {

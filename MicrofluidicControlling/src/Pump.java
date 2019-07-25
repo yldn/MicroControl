@@ -15,7 +15,7 @@ import com.pi4j.util.Console;
         
 public class Pump {
     /////////RASPERRYPI ALL PINS /////////////
-    final Pin[] allPins = allPins(RaspberryPi_3B_Plus);
+    private Pin[] allPins = allPins(RaspberryPi_3B_Plus);
     
     private String name;
     private PumpType type;
@@ -28,8 +28,8 @@ public class Pump {
     int pinNumber2;
     //每个pump上的两个针脚
     //默认Pin1高电位 Pin2低电位
-    private Pin Pin1;
-    private Pin Pin2;
+    private transient Pin Pin1;
+    private transient Pin Pin2;
     
     //GPIO控制单元
     //GpioController gpio = GpioFactory.getInstance();

@@ -11,10 +11,8 @@
 public class PumpType {
     private String Name ;
     // 防止短路的最低阈值
-    
     private int range = 1000;
     private int clock = 1920;
- 
 //    0-1023
     int dutyCycle;
     ///default = 100;

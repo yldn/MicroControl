@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  */
 public class Action implements Runnable { 
     //related Action
-    Thread t;
+    private transient Thread t;
 
     //sequence number
     int seq;
@@ -101,8 +101,7 @@ public class Action implements Runnable {
 
     @Override
     public void run() {
-        
-        
+        this.start();
     }
     public void start(){
         if(t == null){
