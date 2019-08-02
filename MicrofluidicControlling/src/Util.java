@@ -35,22 +35,22 @@ public class Util {
         return json.toJson(type);
     }
 
-    public static void main (String [] args){
-
-        PumpType type = new PumpType("OW",40);
-        PumpType type2 = new PumpType("QC",20);
-        ArrayList<PumpType> pumpTypes = new ArrayList<>();
-        pumpTypes.add(type);
-        pumpTypes.add(type2);
-
-        String out =  Util.ObjToJsonString(pumpTypes);
-        System.out.println(out);
-
-        Gson json = new Gson();
-        ArrayList parsedList = json.fromJson(out,ArrayList.class);
-        System.out.println(Arrays.toString(parsedList.toArray()));
-
-    }
+//    public static void main (String [] args){
+//
+//        PumpType type = new PumpType("OW",40);
+//        PumpType type2 = new PumpType("QC",20);
+//        ArrayList<PumpType> pumpTypes = new ArrayList<>();
+//        pumpTypes.add(type);
+//        pumpTypes.add(type2);
+//
+//        String out =  Util.ObjToJsonString(pumpTypes);
+//        System.out.println(out);
+//
+//        Gson json = new Gson();
+//        ArrayList parsedList = json.fromJson(out,ArrayList.class);
+//        System.out.println(Arrays.toString(parsedList.toArray()));
+//
+//    }
     
     
 }

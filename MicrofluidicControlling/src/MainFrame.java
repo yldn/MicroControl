@@ -38,7 +38,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         PumpTypePage = new javax.swing.JFrame();
         jButton14 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
         jLabel21 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
@@ -50,10 +49,18 @@ public class MainFrame extends javax.swing.JFrame {
         minspeedField = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         clockFIeld = new javax.swing.JTextField();
+        BumpBar2 = new javax.swing.JPanel();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        listTableInPumpconfig = new javax.swing.JTable();
+        jButton17 = new javax.swing.JButton();
+        jMenuBar3 = new javax.swing.JMenuBar();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem12 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
         PumpconfigMainFrame = new javax.swing.JFrame();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
-        AddBumpBar1 = new javax.swing.JPanel();
+        BumpBar1 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         PumpTableInPumpPage = new javax.swing.JTable();
         jButton3 = new javax.swing.JButton();
@@ -76,6 +83,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jButton19 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -97,6 +105,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         ActionTable = new javax.swing.JTable();
         jButton10 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
@@ -165,19 +174,12 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         PumpTypePage.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        PumpTypePage.setSize(new java.awt.Dimension(450, 350));
+        PumpTypePage.setSize(new java.awt.Dimension(550, 450));
 
         jButton14.setText("Next>");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
-            }
-        });
-
-        jButton17.setText("Load");
-        jButton17.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17ActionPerformed(evt);
             }
         });
 
@@ -188,7 +190,9 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel21.setText("Choose Pump Type ");
+        jLabel21.setText("Edit Pump Type ");
+
+        jPanel6.setSize(new java.awt.Dimension(190, 136));
 
         jLabel23.setText("Name:");
 
@@ -246,55 +250,122 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        BumpBar2.setBorder(javax.swing.BorderFactory.createTitledBorder("TypeList"));
+
+        listTableInPumpconfig.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Name", "Status"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
+        jScrollPane7.setViewportView(listTableInPumpconfig);
+
+        jButton17.setText("-");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout BumpBar2Layout = new javax.swing.GroupLayout(BumpBar2);
+        BumpBar2.setLayout(BumpBar2Layout);
+        BumpBar2Layout.setHorizontalGroup(
+            BumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BumpBar2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        BumpBar2Layout.setVerticalGroup(
+            BumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BumpBar2Layout.createSequentialGroup()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jMenu5.setText("File");
+
+        jMenuItem12.setText("Load");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem12);
+
+        jMenuItem13.setText("Save");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem13);
+
+        jMenuBar3.add(jMenu5);
+
+        PumpTypePage.setJMenuBar(jMenuBar3);
+
         javax.swing.GroupLayout PumpTypePageLayout = new javax.swing.GroupLayout(PumpTypePage.getContentPane());
         PumpTypePage.getContentPane().setLayout(PumpTypePageLayout);
         PumpTypePageLayout.setHorizontalGroup(
             PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PumpTypePageLayout.createSequentialGroup()
-                .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PumpTypePageLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PumpTypePageLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(60, 60, 60)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(57, Short.MAX_VALUE))
-            .addGroup(PumpTypePageLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton14)
+                .addGap(17, 17, 17))
+            .addGroup(PumpTypePageLayout.createSequentialGroup()
                 .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
-                        .addComponent(jButton14)
-                        .addGap(22, 22, 22))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
-                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48))))
+                    .addGroup(PumpTypePageLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PumpTypePageLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(PumpTypePageLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PumpTypePageLayout.setVerticalGroup(
             PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
+            .addGroup(PumpTypePageLayout.createSequentialGroup()
+                .addContainerGap(33, Short.MAX_VALUE)
                 .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PumpTypePageLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(PumpTypePageLayout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(28, 28, 28)
                 .addComponent(jButton14)
-                .addGap(21, 21, 21))
+                .addGap(35, 35, 35))
         );
+
+        BumpBar2.getAccessibleContext().setAccessibleDescription("");
 
         PumpconfigMainFrame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         PumpconfigMainFrame.setSize(new java.awt.Dimension(720, 450));
 
-        AddBumpBar1.setBorder(javax.swing.BorderFactory.createTitledBorder("PumpList"));
+        BumpBar1.setBorder(javax.swing.BorderFactory.createTitledBorder("PumpList"));
 
         PumpTableInPumpPage.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -321,19 +392,19 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout AddBumpBar1Layout = new javax.swing.GroupLayout(AddBumpBar1);
-        AddBumpBar1.setLayout(AddBumpBar1Layout);
-        AddBumpBar1Layout.setHorizontalGroup(
-            AddBumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout BumpBar1Layout = new javax.swing.GroupLayout(BumpBar1);
+        BumpBar1.setLayout(BumpBar1Layout);
+        BumpBar1Layout.setHorizontalGroup(
+            BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 311, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddBumpBar1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BumpBar1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        AddBumpBar1Layout.setVerticalGroup(
-            AddBumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddBumpBar1Layout.createSequentialGroup()
+        BumpBar1Layout.setVerticalGroup(
+            BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BumpBar1Layout.createSequentialGroup()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -509,7 +580,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(AddBumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -518,7 +589,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AddBumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32))
         );
 
@@ -533,6 +604,13 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jLabel5.setText("Pump Configuation Page");
+
+        jButton19.setText("EditType");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
 
         jMenu1.setText("File");
 
@@ -584,7 +662,9 @@ public class MainFrame extends javax.swing.JFrame {
         PumpconfigMainFrameLayout.setHorizontalGroup(
             PumpconfigMainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpconfigMainFrameLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
+                .addComponent(jButton19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(55, 55, 55))
             .addGroup(PumpconfigMainFrameLayout.createSequentialGroup()
@@ -601,7 +681,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jTabbedPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addGroup(PumpconfigMainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton19))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
@@ -745,6 +827,13 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton20.setText("Pause");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
         jMenu3.setText("File");
 
         jMenuItem4.setText("New");
@@ -793,20 +882,24 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AddBumpBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
                         .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
                             .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                                .addGap(179, 179, 179)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(225, 225, 225)
-                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 143, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addGap(6, 6, 6)
+                                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(AddBumpBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(0, 685, Short.MAX_VALUE)))
+                        .addContainerGap())
+                    .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
+                        .addGap(179, 179, 179)
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(82, 82, 82))))
         );
         ActionConfiguationMainPageLayout.setVerticalGroup(
             ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -820,7 +913,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18))
         );
 
@@ -1472,9 +1566,9 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-        this.PumpTypePage.setVisible(true);
+        this.PumpconfigMainFrame.setVisible(true);
+        Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
         loadPumpconfigFrame();
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
@@ -1588,9 +1682,9 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.ActionExpertMode.setVisible(false);
     }//GEN-LAST:event_jButton9ActionPerformed
-
+    //Run所有的pump
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
+        //pumplist里的pump逐一运行
         
         for(Action a : this.actionList){
 //           a.run();
@@ -1699,6 +1793,13 @@ public class MainFrame extends javax.swing.JFrame {
             model.removeRow(tab.getSelectedRow());
         }
     } 
+    //向table里添加一个type
+    private void addTypeToTable( JTable tab, Type p){
+        ArrayList<String> content = new ArrayList<String>();
+        
+    }
+    
+    
     ///@Parameter this function we add content of pump p to the jTable tab 
     private void addPumpToPumpTable(java.awt.event.ActionEvent evt , JTable tab, Pump p){
         ArrayList<String> content = new ArrayList<String>();
@@ -1716,6 +1817,11 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
         
     }
+    //从table里删除一个type
+    private void deleteTypeFromTable(java.awt.event.ActionEvent evt , JTable tab){
+        
+    }
+    
     
     private void deletePumpFromTable(java.awt.event.ActionEvent evt , JTable tab){
         DefaultTableModel model = (DefaultTableModel) tab.getModel();
@@ -1821,7 +1927,7 @@ public class MainFrame extends javax.swing.JFrame {
 //        pin1 = Integer.parseInt((String)this.pumpPin1.getSelectedItem());
 //        pin2 = Integer.parseInt((String)this.pumpPin2.getSelectedItem());
         
-        
+        //监听两个pin
         if (this.pin1Label.getText() == "select" || this.pin2Label.getText() == "select" ){
             //此处跳出"please select both pin"
             String message = "please select both pin!";
@@ -1848,7 +1954,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.addPumpToPumpTable(evt, this.PumpTableInPumpPage, newPump);
 ////清空左边所有值 ,更新两个pin list
         
-        resetAllConfig();
+        resetAllPumpConfig();
         
 ////////////refresh pumplists/////////
         this.pumpPin1.removeAllItems();
@@ -1865,7 +1971,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.pin2Label.setText("select");
     }//GEN-LAST:event_jButton15ActionPerformed
     //添加pump之后重置左边参数
-    private void resetAllConfig(){
+    private void resetAllPumpConfig(){
         this.pumpNameField.setText("");
     }
     /////两个combobox互相的listener
@@ -1949,8 +2055,11 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        //隐藏typepage
         this.PumpTypePage.setVisible(false);
+        //显示pumppage
         this.PumpconfigMainFrame.setVisible(true);
+        //更新typelist
         loadTypeListToCombobox(this.pumpTypeBox);
         this.loadPumpconfigFrame();
         
@@ -1965,30 +2074,71 @@ public class MainFrame extends javax.swing.JFrame {
     }
     
     
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        // TODO add your handling code here:
-        Log("load the pump type to the type list");
-    }//GEN-LAST:event_jButton17ActionPerformed
-
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
+         
+        //错误判断如果有inputfield为null则弹窗，然后停止
+         if(.getText() == null || pumpNameField.getText().equals("")){
+             Log("no pump name input");
+             String message = "PumpName should't be Empty!";
+             javax.swing.JOptionPane.showMessageDialog(this, message);
+             return ;
+        }
+            
+             pName = this.pumpNameField.getText();
+        
+        
         this.addToTypeList(this.typefield.getText() , Integer.parseInt(this.feqField.getText())
                 ,Integer.parseInt(this.clockFIeld.getText())
                 ,Integer.parseInt(this.minspeedField.getText()));
+        
+       // 更新list到table 
+       this.addTypeToTable(,);
+        
        this.typefield.setText("");
        this.feqField.setText("");
        this.clockFIeld.setText("");
        this.minspeedField.setText("");
     }//GEN-LAST:event_jButton18ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        this.PumpTypePage.setVisible(true);
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        this.deleteTypeFromTable(evt, );
+        
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+       //暂停当前所有pump的动作
+       //暂停所有的pumpthread
+       
+    }//GEN-LAST:event_jButton20ActionPerformed
+    
     void addToTypeList(String name , int frequency , int clock , int minSpeed ){
         PumpType p = new PumpType(name, frequency , clock , minSpeed);
         this.typelist.add(p);
          Log("add a Pump Type"+ p.getName()+" to the pump List");
-         Log("PumpType:" + Arrays.toString(this.typelist.toArray()));
-         
-        
+         Log("Avaliavle Types:" + Arrays.toString(this.typelist.toArray()));
     }
-    
+    private void mapListToComboBox(ArrayList list ,javax.swing.JComboBox<String> box){
+//    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
+    DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
+    box.setModel(model);
+    model.addElement("select");
+        for (int j = 0; j < list.size(); j++) {
+            model.addElement(""+list.get(j));
+        }
+    }
     
     //根据现有的针脚map到jcombobox box上
     private void mapPinListToComboBox(javax.swing.JComboBox<String> box){
@@ -2043,8 +2193,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JFrame ActionConfiguationMainPage;
     private javax.swing.JFrame ActionExpertMode;
     private javax.swing.JTable ActionTable;
-    private javax.swing.JPanel AddBumpBar1;
     private javax.swing.JPanel AddBumpBar2;
+    private javax.swing.JPanel BumpBar1;
+    private javax.swing.JPanel BumpBar2;
     private javax.swing.JFrame FileChooser;
     private javax.swing.JFileChooser Load;
     private javax.swing.JFrame PumpActionPage;
@@ -2070,7 +2221,9 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -2114,10 +2267,14 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
@@ -2149,6 +2306,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JSlider jSlider2;
     private javax.swing.JSpinner jSpinner1;
     private javax.swing.JSpinner jSpinner2;
@@ -2157,6 +2315,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JToggleButton jToggleButton2;
+    private javax.swing.JTable listTableInPumpconfig;
     private javax.swing.JTextField minspeedField;
     private javax.swing.JLabel pin1Label;
     private javax.swing.JLabel pin2Label;
@@ -2207,10 +2366,16 @@ public class MainFrame extends javax.swing.JFrame {
         System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
     }
     
+    //TODO
     
-    
-    
-    
+    //读取jsonfile并把它转化为arraylist保存到 typelist
+    private void loadTypeOnlick(){
+        
+    }
+    //吧typelist转换成jsonstring并保存文件
+    private void saveTypeOnlick(){
+        
+    }
     
     
     
