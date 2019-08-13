@@ -121,8 +121,8 @@ public class Pump {
         com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
         com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
         // PIN1为正PIN2为负
-        GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(Pin1);
-        GpioPinDigitalOutput g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
+         pwm = gpio.provisionPwmOutputPin(Pin1);
+         g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
     }
 //    //run methord
 //    public void setPinHigh(Pin pin){
@@ -140,10 +140,14 @@ public class Pump {
     GpioPinPwmOutput pwm;
     GpioPinDigitalOutput g;
     public void run(){
-        setEnv();
+        gpio = GpioFactory.getInstance();
+        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
+        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
+        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+        // PIN1为正PIN2为负
 
-        GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(Pin1);
-        GpioPinDigitalOutput g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
+         pwm = gpio.provisionPwmOutputPin(Pin1);
+         g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
 
         System.out.println("frequency now = "+ 19.2e6/type.getClock()/type.getRange());
         pwm.setPwm(0);
