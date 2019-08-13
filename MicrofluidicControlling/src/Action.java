@@ -108,14 +108,14 @@ public class Action implements Runnable {
             t = new Thread(this);
             t.start();
         }
-//        p.run();
+        p.run();
         System.out.println("Action : " + seq + " now Running !"+ "open Pump :"+getP().getName() );
         long startTime = System.currentTimeMillis();
         while (true){
             long endTime = System.currentTimeMillis();
             int currentCollapsedTime = (int) (endTime - startTime) / 1000;
             if(currentCollapsedTime == runTime){
-//                p.stop();
+                p.stop();
                 System.out.println("Action : " + seq + " now Stop !"+ "close Pump :"+getP().getName() );
                 break;
             }

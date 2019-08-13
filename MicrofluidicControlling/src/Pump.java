@@ -110,56 +110,52 @@ public class Pump {
         this.pinNumber2 = p2;
         this.Pin2 = allPins[pinNumber2];
     }
-    
-    GpioPinPwmOutput pwm;
-    //run methord
-    public void setPinHigh(Pin pin){
+
+
+    ////////////running methord///////////
+
+
+    private void  setEnv(){
+        gpio = GpioFactory.getInstance();
         com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
         com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
         com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
-        
-        pwm  = gpio.provisionPwmOutputPin(pin);
-        // speed = dutycycle
-        pwm.setPwm(type.getRange()*(speed /100));
-        
-        //use Pwm mode
-//        pwm.setPwm(500);
-//        console.println("PWM rate is: " + pwm.getPwm());
-//        console.println("Press ENTER to set the PWM to a rate of 250");
-//        System.console().readLine();
-//        // set the PWM rate to 250
-//        pwm.setPwm(250);
-//        console.println("PWM rate is: " + pwm.getPwm());
-//        console.println("Press ENTER to set the PWM to a rate to 0 (stop PWM)");
-//        System.console().readLine();
-//        // set the PWM rate to 0
-//        pwm.setPwm(0);
-//        console.println("PWM rate is: " + pwm.getPwm());
-
-        
+        // PIN1为正PIN2为负
+        GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(Pin1);
+        GpioPinDigitalOutput g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
     }
-    // stop all GPIO activity/threads by shutting down the GPIO controller
-    // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
-    //Stop the pump 
-    public void setPinLow(Pin pin) {
-        gpio.provisionDigitalOutputPin(pin);
-        //TODO 设置所有针脚都为低电位 ------- pwm.setPwm(0);
-
-    }
-    
+//    //run methord
+//    public void setPinHigh(Pin pin){
+//        GpioPinPwmOutput  pwm  = gpio.provisionPwmOutputPin(pin);
+//        // speed = dutycycle
+//        pwm.setPwm(type.getRange()*(speed /100));
+//    }
+//    // stop all GPIO activity/threads by shutting down the GPIO controller
+//    // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
+//    //Stop the pump
+//    public void setPinLow(Pin pin) {
+//        gpio.provisionDigitalOutputPin(pin);
+//
+//    }
+    GpioPinPwmOutput pwm;
+    GpioPinDigitalOutput g;
     public void run(){
-        this.setPinHigh(Pin1);
-        this.setPinLow(Pin2);
-        
+        setEnv();
+
+        GpioPinPwmOutput pwm = gpio.provisionPwmOutputPin(Pin1);
+        GpioPinDigitalOutput g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
+
+        System.out.println("frequency now = "+ 19.2e6/type.getClock()/type.getRange());
+        pwm.setPwm(0);
+        g.low();
+        pwm.setPwm(type.getRange()*(speed/100));
+
     }
     public void revertrun(){
-        this.setPinHigh(Pin1);
-        this.setPinLow(Pin2);
-        
     }
     public void stop(){
-        this.setPinLow(Pin1);
-        this.setPinLow(Pin1);
+        pwm.setPwm(0);
+        g.low();
         this.gpio.shutdown();
     }
     //@Override
@@ -169,7 +165,8 @@ public class Pump {
         return (type.getName()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/"+this.speed+"%");
     }
     
-    
+    /////EXPERTMODE~//////////////////////////////////////
+    ///专家模式可以使泵回转///////
     
     
     
