@@ -9,12 +9,18 @@
  * @author liuyang
  */
 public class PumpType {
+    /////
      String Name ;
     // 防止短路的最低阈值
     private int range = 1000;
     int clock = 1920;
 //    0-1023
     int dutyCycle;
+
+
+    int frequency = 100;
+    int minSpeed = 100;
+    /////
 
     public int getDutyCycle() {
         return dutyCycle;
@@ -32,8 +38,7 @@ public class PumpType {
     public void setFrequency(int frequency) {
         this.frequency = frequency;
     }
-    int frequency = 100;
-    int minSpeed = 100;
+
 
     public PumpType(String Name) {
         this.Name = Name;
@@ -87,7 +92,6 @@ public class PumpType {
     
     //PumpType as String Output
     public String toString(){
-        //TODO
         return ("Type:"+ this.getName() + " Range: "+ this.getRange() + " frequency: "+ this.getFrequency() + " minSpeed: "+this.getMinSpeed());
     }
     

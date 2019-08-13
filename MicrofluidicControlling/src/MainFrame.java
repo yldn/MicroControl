@@ -16,6 +16,8 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
 import java.util.*;
+import java.util.List;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.*;
 
 public class MainFrame extends javax.swing.JFrame {
@@ -51,7 +53,7 @@ public class MainFrame extends javax.swing.JFrame {
         clockFIeld = new javax.swing.JTextField();
         BumpBar2 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
-        listTableInPumpconfig = new javax.swing.JTable();
+        pListInTypepage = new javax.swing.JTable();
         jButton17 = new javax.swing.JButton();
         jMenuBar3 = new javax.swing.JMenuBar();
         jMenu5 = new javax.swing.JMenu();
@@ -84,14 +86,6 @@ public class MainFrame extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jButton19 = new javax.swing.JButton();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
         ActionConfiguationMainPage = new javax.swing.JFrame();
         jLabel7 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -252,7 +246,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         BumpBar2.setBorder(javax.swing.BorderFactory.createTitledBorder("TypeList"));
 
-        listTableInPumpconfig.setModel(new javax.swing.table.DefaultTableModel(
+        pListInTypepage.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -268,7 +262,7 @@ public class MainFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jScrollPane7.setViewportView(listTableInPumpconfig);
+        jScrollPane7.setViewportView(pListInTypepage);
 
         jButton17.setText("-");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
@@ -612,51 +606,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jMenu1.setText("File");
-
-        jMenuItem3.setText("New");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem3);
-
-        jMenuItem1.setText("Load");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
-
-        jMenuItem2.setText("Save");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem2);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-
-        jMenuItem6.setText("EditSpeed ");
-        jMenu2.add(jMenuItem6);
-
-        jMenuItem7.setText("EditPin");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem7);
-
-        jMenuBar1.add(jMenu2);
-
-        PumpconfigMainFrame.setJMenuBar(jMenuBar1);
-
         javax.swing.GroupLayout PumpconfigMainFrameLayout = new javax.swing.GroupLayout(PumpconfigMainFrame.getContentPane());
         PumpconfigMainFrame.getContentPane().setLayout(PumpconfigMainFrameLayout);
         PumpconfigMainFrameLayout.setHorizontalGroup(
@@ -684,7 +633,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(PumpconfigMainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton19))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         ActionConfiguationMainPage.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1028,9 +977,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(SinglePumpActionLayout.createSequentialGroup()
                         .addGap(7, 7, 7)
                         .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(SinglePumpActionLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton13)))
+                    .addComponent(jButton13))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1275,18 +1222,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         Save.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
         Save.setSize(new java.awt.Dimension(550, 400));
-        Save.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SaveActionPerformed(evt);
-            }
-        });
 
         Load.setSize(new java.awt.Dimension(550, 400));
-        Load.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoadActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout FileChooserLayout = new javax.swing.GroupLayout(FileChooser.getContentPane());
         FileChooser.getContentPane().setLayout(FileChooserLayout);
@@ -1568,19 +1505,14 @@ public class MainFrame extends javax.swing.JFrame {
         this.setVisible(false);
         this.PumpconfigMainFrame.setVisible(true);
         Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
+        //添加默认Pumptype
+        PumpType t = new PumpType("QW");
+        typelist.add(t);
+        
+        this.addTypeToTable(this.pListInTypepage, t);
+
         loadPumpconfigFrame();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-//        this.FileChooser.setVisible(true);
-//        this.Save.setVisible(false);
-//        this.Load.setVisible(true);   
-          this.LoadActionPerformed(evt);
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
@@ -1590,9 +1522,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         clearTableContent(PumpListInActionPage);
         addPumpToTable(evt,PumpListInActionPage);
-        
-        
-        
+
         //检查action里面有没有多余pump如果有则删掉
         ////还需要debug***********************************
 //        for(int j = 0; j < this.actionList.size() ; j++){
@@ -1630,9 +1560,7 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
     }
-    
-    
-    
+
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
         this.FileChooser.setVisible(true);
@@ -1691,36 +1619,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton10ActionPerformed
 
-    private void LoadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoadActionPerformed
-        // TODO add your handling code here:
-        JFileChooser jfc=new JFileChooser();
-        jfc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES );
-        jfc.showDialog(new JLabel(), "Load");
-        try{
-        File file=jfc.getSelectedFile();
-        if(file.isDirectory()){
-            System.out.println("Folder AbsolutePath:"+file.getAbsolutePath());
-        }else if(file.isFile()){
-            System.out.println("File AbsolutePath:"+file.getAbsolutePath());
-        }
-        System.out.println("file Load:"+jfc.getSelectedFile().getName());
-        }catch (NullPointerException e){
-            System.out.println("No file Load");
-        }
-    }//GEN-LAST:event_LoadActionPerformed
-
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
-
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        // TODO add your handling code here:
-//        this.FileChooser.setVisible(true);
-//        this.Save.setVisible(true);
-//        this.Load.setVisible(false);
-    this.SaveActionPerformed(evt);
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
-
     private void pumpTypeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pumpTypeBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pumpTypeBoxActionPerformed
@@ -1754,7 +1652,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
+
         
         this.PumpActionPage.setVisible(false);
         this.ActionConfiguationMainPage.setVisible(true);
@@ -1768,6 +1666,9 @@ public class MainFrame extends javax.swing.JFrame {
         Log("Actions : "+Arrays.toString(this.actionList.toArray()));
         this.updateActionListToTable(ActionTable);
     }//GEN-LAST:event_jButton12ActionPerformed
+
+
+    ////////////////private functions./////////////////////////////////
     void deleteAction(JTable tab){
         DefaultTableModel model = (DefaultTableModel) tab.getModel();
         if(tab.getSelectedRow()!= -1){
@@ -1794,9 +1695,12 @@ public class MainFrame extends javax.swing.JFrame {
         }
     } 
     //向table里添加一个type
-    private void addTypeToTable( JTable tab, Type p){
+    private void addTypeToTable( JTable tab, PumpType t){
         ArrayList<String> content = new ArrayList<String>();
-        
+        content.add(t.getName());
+        content.add(t.toString());
+        DefaultTableModel model = (DefaultTableModel) tab.getModel();
+        model.addRow(content.toArray());
     }
     
     
@@ -1809,7 +1713,7 @@ public class MainFrame extends javax.swing.JFrame {
         model.addRow(content.toArray());
         //add结束之后从pinlist里删除对应的针脚并更新Pinlist
         System.out.println("add Pump to table");
-        Log("p.name: "+ p.getName() +" " + p.pinNumber1 + " " + p.pinNumber2 +"should be deleted from list");
+        Log("p.name: "+ p.getName() +" " + p.pinNumber1 + " " + p.pinNumber2 +"now being deleted from list");
         System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
         this.pinList.remove((Integer)p.pinNumber1);
         System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
@@ -1819,8 +1723,34 @@ public class MainFrame extends javax.swing.JFrame {
     }
     //从table里删除一个type
     private void deleteTypeFromTable(java.awt.event.ActionEvent evt , JTable tab){
-        
+        DefaultTableModel model = (DefaultTableModel) tab.getModel();
+        //从表格删除row
+        if(tab.getSelectedRow()!= -1){
+            String tName =(String) model.getValueAt(tab.getSelectedRow(),0);
+            int in = findTypeByName(tName);
+            if(in == -1){
+                Log("can't find type "+ tName);
+                return ;
+            }
+//            PumpType t = typelist.get(in);
+            typelist.remove(in);
+            model.removeRow(tab.getSelectedRow());
+        }
     }
+    private int findTypeByName(String str){
+        if(str == ""|| str == null){
+            System.out.println("can't find the pump the given pump name is null");
+            return -1;
+        }
+        for(int i=0 ; i < typelist.size();i++){
+            PumpType t = typelist.get(i);
+            if( t.getName().equals(str) ){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     
     
     private void deletePumpFromTable(java.awt.event.ActionEvent evt , JTable tab){
@@ -1874,25 +1804,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     
     
-    private void SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveActionPerformed
-        // TODO add your handling code here:
-        JFileChooser jfc=new JFileChooser();
-        jfc.setFileSelectionMode(JFileChooser.FILES_AND_DIRECTORIES );
-        jfc.showDialog(new JLabel(), "Save");
-        try{
-        File file=jfc.getSelectedFile();
-        if(file.isDirectory()){
-            System.out.println("Folder AbsolutePath:"+file.getAbsolutePath());
-        }else if(file.isFile()){
-            System.out.println("File AbsolutePath:"+file.getAbsolutePath());
-        }
-        System.out.println("file Saved:"+jfc.getSelectedFile().getName());
-        }catch (NullPointerException e){
-            System.out.println("No file Saved");
-        }
-        
-    }//GEN-LAST:event_SaveActionPerformed
-
     private void jButton12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton12MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton12MouseClicked
@@ -1978,7 +1889,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void pumpPin1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pumpPin1ItemStateChanged
          
         if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
-            System.out.println("Pin1 selected: "+evt.getItem().toString());
+//            System.out.println("Pin1 selected: "+evt.getItem().toString());
             //如果选择pin1 则更新pin2
             if(evt.getItem().toString() != "select"){
                 ArrayList<Integer> inBox2 = (ArrayList<Integer>)this.pinList.clone();
@@ -1996,7 +1907,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void pumpPin2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pumpPin2ItemStateChanged
         if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
             
-             System.out.println("Pin2 selected: "+evt.getItem().toString());
+//             System.out.println("Pin2 selected: "+evt.getItem().toString());
              if(evt.getItem().toString() != "select"){
                 ArrayList<Integer> inBox1 = (ArrayList<Integer>)this.pinList.clone();
                 inBox1.remove((Integer)Integer.parseInt((String)this.pumpPin2.getSelectedItem()));
@@ -2060,14 +1971,20 @@ public class MainFrame extends javax.swing.JFrame {
         //显示pumppage
         this.PumpconfigMainFrame.setVisible(true);
         //更新typelist
-        loadTypeListToCombobox(this.pumpTypeBox);
+        this.mapTypelistToComboBox(typelist, this.pumpTypeBox);
         this.loadPumpconfigFrame();
+        showTypeList();
+        //TODO更新
+        //删除pumpableInPumpPage里被删掉的pumptype
+        
+        
         
     }//GEN-LAST:event_jButton14ActionPerformed
     void loadTypeListToCombobox( JComboBox<String> box){
         DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
         box.setModel(model);
-        box.removeAll();
+        model.removeAllElements();
+        
         for(int i = 0 ; i < this.typelist.size();i++){
             model.addElement(typelist.get(i).getName());
         }
@@ -2077,44 +1994,137 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
          
         //错误判断如果有inputfield为null则弹窗，然后停止
-         if(.getText() == null || pumpNameField.getText().equals("")){
-             Log("no pump name input");
-             String message = "PumpName should't be Empty!";
+         if(typefield.getText() == null || typefield.getText().equals("")
+                 ||feqField.getText() == null || feqField.getText().equals("")
+                 ||clockFIeld.getText() == null || clockFIeld.getText().equals("")
+                 ||minspeedField.getText() == null || minspeedField.getText().equals("")){
+             Log("null String input!");
+             String message = "null String Input (Invalid)!";
              javax.swing.JOptionPane.showMessageDialog(this, message);
              return ;
         }
-            
-             pName = this.pumpNameField.getText();
-        
-        
-        this.addToTypeList(this.typefield.getText() , Integer.parseInt(this.feqField.getText())
-                ,Integer.parseInt(this.clockFIeld.getText())
-                ,Integer.parseInt(this.minspeedField.getText()));
-        
-       // 更新list到table 
-       this.addTypeToTable(,);
-        
+
+        PumpType p = new PumpType(this.typefield.getText(), Integer.parseInt(this.feqField.getText())
+                , Integer.parseInt(this.clockFIeld.getText()) , Integer.parseInt(this.minspeedField.getText()) );
+        this.typelist.add(p);
+       // 更新list到table'
+       this.addTypeToTable(pListInTypepage,p);
+        Log("add a Pump Type"+ p.getName()+" to the pump List");
+//        Log("Avaliavle Types:" + Arrays.toString(this.typelist.toArray()));
+
+
        this.typefield.setText("");
        this.feqField.setText("");
        this.clockFIeld.setText("");
        this.minspeedField.setText("");
+
+
+       showTypeList();
+
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
         // TODO add your handling code here:
+        // 进入typeconfig界面
         this.PumpTypePage.setVisible(true);
+
+        clearTableContent(pListInTypepage);
+        for(PumpType t : typelist){
+            ArrayList<String> content = new ArrayList<String>();
+            content.add(t.getName());
+            content.add(t.toString());
+            DefaultTableModel model = (DefaultTableModel) pListInTypepage.getModel();
+            model.addRow(content.toArray());
+        }
+
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        // TODO add your handling code here:
+        JFileChooser chooser = new JFileChooser();
+        //update -------add filefilter
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
+        chooser.setFileFilter(filter);
+        //jsonparse转化为typelist
+        int value = chooser.showSaveDialog(PumpTypePage);
+        String out = "";
+        if(value == JFileChooser.APPROVE_OPTION){
+            File file = chooser.getSelectedFile();
+
+            StringBuffer buffer = new StringBuffer();
+            try{
+                FileInputStream fis = new FileInputStream(file);
+                InputStreamReader isr = new InputStreamReader(fis,"GBK");
+                Reader in = new BufferedReader(isr);
+                int i ;
+                while ((i = in.read()) > -1){
+                    buffer.append((char) i);
+                }
+                in.close();
+//                Log(buffer.toString());
+                out = buffer.toString();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+        Log(out);
+//        ArrayList list = (ArrayList)Util.jsonStringToObj(out,ArrayList.class);
+        List list = Util.stringToArray(out,PumpType[].class );
+        typelist = new ArrayList<PumpType>(list);
+//        typelist = ArrayList(PumpType) list ;
+        Log("type[0] : "+typelist.get(0));
+        //更新table
+        clearTableContent(pListInTypepage);
+
+        for(PumpType t : typelist){
+            ArrayList<String> content = new ArrayList<String>();
+            content.add(t.getName());
+            content.add(t.toString());
+            DefaultTableModel model = (DefaultTableModel) pListInTypepage.getModel();
+            model.addRow(content.toArray());
+        }
+        
+
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        // TODO add your handling code here:
+
+        //将list 转化成jsonstring
+        String out =  Util.objToJsonString(typelist);
+        Log(out);
+        //将jsonstring保存为文件
+        JFileChooser chooser = new JFileChooser();
+        //update -------add filefilter
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
+        chooser.setFileFilter(filter);
+
+        int value = chooser.showSaveDialog(PumpTypePage);
+        if(value == JFileChooser.APPROVE_OPTION){
+            try{
+                File newFile = chooser.getSelectedFile();
+//                if(!newFile.exists()){
+//                    newFile.createNewFile();
+//                }
+                //add extensions
+                String fname = newFile.getName();
+                if(fname.indexOf(".json") == -1){
+                    Log("add extensions");
+                    newFile = new File(chooser.getCurrentDirectory(),fname+".json");
+                }
+                FileOutputStream outputStream = new FileOutputStream(newFile);
+                outputStream.write(out.getBytes());
+                outputStream.close();
+                Log("Typelist saved!");
+
+            }catch (Exception e ){
+                e.printStackTrace();
+            }
+        }
+
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        this.deleteTypeFromTable(evt, );
+        this.deleteTypeFromTable(evt, pListInTypepage);
+
         
     }//GEN-LAST:event_jButton17ActionPerformed
 
@@ -2123,20 +2133,18 @@ public class MainFrame extends javax.swing.JFrame {
        //暂停所有的pumpthread
        
     }//GEN-LAST:event_jButton20ActionPerformed
-    
-    void addToTypeList(String name , int frequency , int clock , int minSpeed ){
-        PumpType p = new PumpType(name, frequency , clock , minSpeed);
-        this.typelist.add(p);
-         Log("add a Pump Type"+ p.getName()+" to the pump List");
-         Log("Avaliavle Types:" + Arrays.toString(this.typelist.toArray()));
-    }
-    private void mapListToComboBox(ArrayList list ,javax.swing.JComboBox<String> box){
+
+    private void mapTypelistToComboBox(ArrayList<PumpType> list ,javax.swing.JComboBox<String> box){
 //    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
+    box.removeAllItems();
     DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
     box.setModel(model);
+
+
     model.addElement("select");
+
         for (int j = 0; j < list.size(); j++) {
-            model.addElement(""+list.get(j));
+            model.addElement(""+list.get(j).getName());
         }
     }
     
@@ -2263,24 +2271,16 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;
@@ -2315,8 +2315,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JToggleButton jToggleButton2;
-    private javax.swing.JTable listTableInPumpconfig;
     private javax.swing.JTextField minspeedField;
+    private javax.swing.JTable pListInTypepage;
     private javax.swing.JLabel pin1Label;
     private javax.swing.JLabel pin2Label;
     private javax.swing.JTextField pumpNameField;
@@ -2333,19 +2333,35 @@ public class MainFrame extends javax.swing.JFrame {
     //selfDefined Vars
     ArrayList<Integer> pinList = new ArrayList<Integer>() ;
     ArrayList<Pump> pumpList = new ArrayList<Pump>() ;
-    
+
     ArrayList<Action> actionList = new ArrayList<Action>();
     
     ArrayList<PumpType> typelist = new ArrayList<PumpType>();
-    
-    
+
+    private void showPumpList(){
+        Log("Pumps : " +  Arrays.toString(pumpList.toArray()));
+    }
+    private void showActionList() {
+        Log("Actions : " + Arrays.toString(actionList.toArray()));
+    }
+    private void showTypeList() {
+        Log("Types : " + Arrays.toString(typelist.toArray()));
+    }
+    private void showPinList() {
+        Log("Pins : " + Arrays.toString(pinList.toArray()));
+    }
+
     private void loadPumpconfigFrame() {
-        System.out.println("pin loaded !");
-        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+//        System.out.println("pin loaded !");
+//        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+
         this.updatePinList();
+        //更新两个combobox
         this.mapPinListToComboBox(this.pumpPin1);
         this.mapPinListToComboBox(this.pumpPin2);
         this.PumpTableInPumpPage.removeAll();
+
+        mapTypelistToComboBox(typelist,pumpTypeBox);
     }
     //移除所有已经被占用的针脚留下可用的针脚
     private void updatePinList(){
@@ -2362,20 +2378,10 @@ public class MainFrame extends javax.swing.JFrame {
             this.pinList.remove(p.getPinNumber1());
             this.pinList.remove(p.getPinNumber2());
         }
-        System.out.println("pinList update !");
-        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+
     }
-    
-    //TODO
-    
-    //读取jsonfile并把它转化为arraylist保存到 typelist
-    private void loadTypeOnlick(){
-        
-    }
-    //吧typelist转换成jsonstring并保存文件
-    private void saveTypeOnlick(){
-        
-    }
+
+
     
     
     
