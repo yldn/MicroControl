@@ -113,7 +113,7 @@ public class Action implements Runnable {
         long startTime = System.currentTimeMillis();
         while (true){
             long endTime = System.currentTimeMillis();
-            int currentCollapsedTime = (int) (endTime - startTime) / 100;
+            int currentCollapsedTime = (int) (endTime - startTime) / 1000;
             if(currentCollapsedTime == runTime){
 //                p.stop();
                 System.out.println("Action : " + seq + " now Stop !"+ "close Pump :"+getP().getName() );
