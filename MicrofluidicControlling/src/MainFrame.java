@@ -17,6 +17,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemListener;
 import java.util.*;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.*;
 
@@ -102,9 +106,10 @@ public class MainFrame extends javax.swing.JFrame {
         jButton20 = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem9 = new javax.swing.JMenuItem();
         jMenuItem10 = new javax.swing.JMenuItem();
@@ -785,10 +790,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jMenu3.setText("File");
 
-        jMenuItem4.setText("New");
-        jMenu3.add(jMenuItem4);
-
-        jMenuItem5.setText("Load");
+        jMenuItem5.setText("Load Action");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
@@ -796,13 +798,29 @@ public class MainFrame extends javax.swing.JFrame {
         });
         jMenu3.add(jMenuItem5);
 
-        jMenuItem8.setText("Save");
+        jMenuItem8.setText("Save Action");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
             }
         });
         jMenu3.add(jMenuItem8);
+
+        jMenuItem6.setText("Load Pump");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem6);
+
+        jMenuItem11.setText("Save Pmp");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem11);
 
         jMenuBar2.add(jMenu3);
 
@@ -1504,7 +1522,7 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
         this.PumpconfigMainFrame.setVisible(true);
-        Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
+//        Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
         //添加默认Pumptype
         PumpType t = new PumpType("QW");
         typelist.add(t);
@@ -1540,8 +1558,8 @@ public class MainFrame extends javax.swing.JFrame {
 //            }
 //        }
         /////
-        Log("Actions : "+Arrays.toString(this.actionList.toArray()));
-        
+        showPumpList();
+        showActionList();
         updateActionListToTable(ActionTable);
 
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -1562,10 +1580,54 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-        this.FileChooser.setVisible(true);
-        this.Save.setVisible(false);
-        this.Load.setVisible(true);
+        //读取到Actionlist
+        JFileChooser chooser = new JFileChooser();
+        //update -------add filefilter
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
+        chooser.setFileFilter(filter);
+        //jsonparse转化为Actionlist
+        int value = chooser.showSaveDialog(ActionConfiguationMainPage);
+        String out = "";
+        if(value == JFileChooser.APPROVE_OPTION){
+            File file = chooser.getSelectedFile();
+
+            StringBuffer buffer = new StringBuffer();
+            try{
+                FileInputStream fis = new FileInputStream(file);
+                InputStreamReader isr = new InputStreamReader(fis,"GBK");
+                Reader in = new BufferedReader(isr);
+                int i ;
+                while ((i = in.read()) > -1){
+                    buffer.append((char) i);
+                }
+                in.close();
+//                Log(buffer.toString());
+                out = buffer.toString();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+//        Log(out);
+//        ArrayList list = (ArrayList)Util.jsonStringToObj(out,ArrayList.class);
+        List list = Util.stringToArray(out,Action[].class );
+        actionList = new ArrayList<Action>(list);
+        
+        //更新table
+        clearTableContent(ActionTable);
+
+        showTypeList();
+        showPumpList();
+        showActionList();
+
+        for(Action t : actionList){
+            ArrayList<String> content = new ArrayList<String>();
+            content.add(""+t.getSeq());
+            content.add(t.toString());
+            DefaultTableModel model = (DefaultTableModel) ActionTable.getModel();
+            model.addRow(content.toArray());
+        }
+
+
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
@@ -1613,10 +1675,36 @@ public class MainFrame extends javax.swing.JFrame {
     //Run所有的pump
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         //pumplist里的pump逐一运行
-        
-        for(Action a : this.actionList){
-//           a.run();
+        String message = "Program Now Running !";
+        javax.swing.JOptionPane.showMessageDialog(this, message);
+
+
+        //开始时间线程序
+        //测试逻辑1
+        //开始无限循环并记录当前运行时间
+        //遍历所有actionlist检查所有的action 的delaytime
+        //如果当前运行时间等于delaytime则该action开始运行
+        //如果当前运行时间等于delaytime+runtime 则从list里移除。
+        //跳出循环直到list为空、
+
+
+
+
+        //测试逻辑2
+        //使用schedueled excuterservice 将其添加进Action类里
+        //遍历一次list然后启动所有的executer service.
+        ArrayList executeList = (ArrayList) actionList.clone();
+
+        ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(executeList.size());
+
+        for(Action a : actionList){
+            scheduledThreadPool.schedule(
+              a
+            ,a.getDelayTime(), TimeUnit.SECONDS);
         }
+
+
+
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void pumpTypeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pumpTypeBoxActionPerformed
@@ -1624,9 +1712,38 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_pumpTypeBoxActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        // TODO add your handling code here:
-        this.Save.setVisible(true);
-        this.Load.setVisible(false);
+        //actionlist 转化成jsonstring
+        String out =  Util.objToJsonString(actionList);
+//        Log(out);
+        //将jsonstring保存为文件
+        JFileChooser chooser = new JFileChooser();
+        //update -------add filefilter
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
+        chooser.setFileFilter(filter);
+
+        int value = chooser.showSaveDialog(ActionConfiguationMainPage);
+        if(value == JFileChooser.APPROVE_OPTION){
+            try{
+                File newFile = chooser.getSelectedFile();
+//                if(!newFile.exists()){
+//                    newFile.createNewFile();
+//                }
+                //add extensions
+                String fname = newFile.getName();
+                if(fname.indexOf(".json") == -1){
+                    Log("add extensions");
+                    newFile = new File(chooser.getCurrentDirectory(),fname+".json");
+                }
+                FileOutputStream outputStream = new FileOutputStream(newFile);
+                outputStream.write(out.getBytes());
+                outputStream.close();
+                Log("Actionlist saved!");
+
+            }catch (Exception e ){
+                e.printStackTrace();
+            }
+        }
+
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -1712,13 +1829,13 @@ public class MainFrame extends javax.swing.JFrame {
         DefaultTableModel model = (DefaultTableModel) tab.getModel();
         model.addRow(content.toArray());
         //add结束之后从pinlist里删除对应的针脚并更新Pinlist
-        System.out.println("add Pump to table");
-        Log("p.name: "+ p.getName() +" " + p.pinNumber1 + " " + p.pinNumber2 +"now being deleted from list");
-        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+//        System.out.println("add Pump to table");
+//        Log("p.name: "+ p.getName() +" " + p.pinNumber1 + " " + p.pinNumber2 +"now being deleted from list");
+//        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
         this.pinList.remove((Integer)p.pinNumber1);
-        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+//        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
         this.pinList.remove((Integer)p.pinNumber2);
-        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+//        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
         
     }
     //从table里删除一个type
@@ -1773,11 +1890,11 @@ public class MainFrame extends javax.swing.JFrame {
             this.pinList.add(pump.getPinNumber2());
             Collections.sort(pinList);
             
-            Log("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+//            Log("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
             
             //remove from pump .remove from table
             this.pumpList.remove(in);
-            Log("Pumps :"+ Arrays.toString(this.pumpList.toArray()));
+            showPumpList();
             model.removeRow(tab.getSelectedRow());
             
             //update  两个combobox的值
@@ -1819,6 +1936,11 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         //pump attr
         String pType = (String)this.pumpTypeBox.getSelectedItem();
+        if(pType.equals("select")){
+             String message = "please select a pumptype!";
+             javax.swing.JOptionPane.showMessageDialog(this, message);
+             return ;
+        }
         String pName = "";
         
         if(pumpNameField.getText() == null || pumpNameField.getText().equals("")){
@@ -1855,7 +1977,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         addToPumpList(newPump);
         //DEBUG
-        System.out.println("A pump is added to the PumpList ! ");
+//        System.out.println("A pump is added to the PumpList ! ");
        //update avalible pinList
        
         //add pump to the pumplist on the right 
@@ -2040,6 +2162,7 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton19ActionPerformed
 
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        //读取到typelist
         JFileChooser chooser = new JFileChooser();
         //update -------add filefilter
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
@@ -2066,12 +2189,12 @@ public class MainFrame extends javax.swing.JFrame {
                 e.printStackTrace();
             }
         }
-        Log(out);
+//        Log(out);
 //        ArrayList list = (ArrayList)Util.jsonStringToObj(out,ArrayList.class);
         List list = Util.stringToArray(out,PumpType[].class );
         typelist = new ArrayList<PumpType>(list);
 //        typelist = ArrayList(PumpType) list ;
-        Log("type[0] : "+typelist.get(0));
+//        Log("type[0] : "+typelist.get(0));
         //更新table
         clearTableContent(pListInTypepage);
 
@@ -2082,15 +2205,15 @@ public class MainFrame extends javax.swing.JFrame {
             DefaultTableModel model = (DefaultTableModel) pListInTypepage.getModel();
             model.addRow(content.toArray());
         }
-        
+
 
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
 
-        //将list 转化成jsonstring
+        //将typelist 转化成jsonstring
         String out =  Util.objToJsonString(typelist);
-        Log(out);
+//        Log(out);
         //将jsonstring保存为文件
         JFileChooser chooser = new JFileChooser();
         //update -------add filefilter
@@ -2133,6 +2256,103 @@ public class MainFrame extends javax.swing.JFrame {
        //暂停所有的pumpthread
        
     }//GEN-LAST:event_jButton20ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        //读取到Actionlist
+        JFileChooser chooser = new JFileChooser();
+        //update -------add filefilter
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
+        chooser.setFileFilter(filter);
+        //jsonparse转化为Actionlist
+        int value = chooser.showSaveDialog(ActionConfiguationMainPage);
+        String out = "";
+        if(value == JFileChooser.APPROVE_OPTION){
+            File file = chooser.getSelectedFile();
+
+            StringBuffer buffer = new StringBuffer();
+            try{
+                FileInputStream fis = new FileInputStream(file);
+                InputStreamReader isr = new InputStreamReader(fis,"GBK");
+                Reader in = new BufferedReader(isr);
+                int i ;
+                while ((i = in.read()) > -1){
+                    buffer.append((char) i);
+                }
+                in.close();
+//                Log(buffer.toString());
+                out = buffer.toString();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+//        Log(out);
+//        ArrayList list = (ArrayList)Util.jsonStringToObj(out,ArrayList.class);
+        List list = Util.stringToArray(out,Pump[].class );
+        pumpList = new ArrayList<Pump>(list);
+
+//        Log("pumplist [0] type : "+pumpList.get(0).getType());
+        //更新table
+        clearTableContent(PumpListInActionPage);
+        clearTableContent(PumpListInExpertMode);
+        clearTableContent(PumpTableInPumpPage);
+        for(Pump t : pumpList){
+            ArrayList<String> content = new ArrayList<String>();
+            content.add(t.getName());
+            content.add(t.toString());
+            DefaultTableModel model = (DefaultTableModel) PumpListInActionPage.getModel();
+            model.addRow(content.toArray());
+        }
+        for(Pump t : pumpList){
+            ArrayList<String> content = new ArrayList<String>();
+            content.add(t.getName());
+            content.add(t.toString());
+            DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
+            model.addRow(content.toArray());
+        }
+        for(Pump t : pumpList){
+            ArrayList<String> content = new ArrayList<String>();
+            content.add(t.getName());
+            content.add(t.toString());
+            DefaultTableModel model = (DefaultTableModel) PumpTableInPumpPage.getModel();
+            model.addRow(content.toArray());
+        }
+
+
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        //pumplist 转化成jsonstring
+        String out =  Util.objToJsonString(pumpList);
+//        Log(out);
+        //将jsonstring保存为文件
+        JFileChooser chooser = new JFileChooser();
+        //update -------add filefilter
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
+        chooser.setFileFilter(filter);
+
+        int value = chooser.showSaveDialog(ActionConfiguationMainPage);
+        if(value == JFileChooser.APPROVE_OPTION){
+            try{
+                File newFile = chooser.getSelectedFile();
+//                if(!newFile.exists()){
+//                    newFile.createNewFile();
+//                }
+                //add extensions
+                String fname = newFile.getName();
+                if(fname.indexOf(".json") == -1){
+                    Log("add extensions");
+                    newFile = new File(chooser.getCurrentDirectory(),fname+".json");
+                }
+                FileOutputStream outputStream = new FileOutputStream(newFile);
+                outputStream.write(out.getBytes());
+                outputStream.close();
+                Log("Pumplist saved!");
+
+            }catch (Exception e ){
+                e.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void mapTypelistToComboBox(ArrayList<PumpType> list ,javax.swing.JComboBox<String> box){
 //    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
@@ -2277,10 +2497,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuBar jMenuBar3;
     private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
     private javax.swing.JMenuItem jMenuItem13;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel1;

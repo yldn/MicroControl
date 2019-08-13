@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.time.*;
 import java.util.*;
+
+import com.google.gson.annotations.Expose;
 import com.pi4j.io.gpio.Pin;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -23,21 +25,19 @@ public class Action implements Runnable {
     private transient Thread t;
 
     //sequence number
+    @Expose
     int seq;
-    
+
     //delayTime;
+    @Expose
     int delayTime;
     //runtime
+    @Expose
     int runTime;
     //cur pump that take action
+    @Expose
     Pump p;
-    
-    //speed 阈值 > pumptype.minSpeed ,,,,
-    //pwmRange
-    int pumpRenge;
-    //pwm value 
-    int pwmValue;
-    
+
     //检查是否在执行
     boolean isActive;
 
@@ -108,6 +108,20 @@ public class Action implements Runnable {
             t = new Thread(this);
             t.start();
         }
+//        p.run();
+        System.out.println("Action : " + seq + " now Running !"+ "open Pump :"+getP().getName() );
+        long startTime = System.currentTimeMillis();
+        while (true){
+            long endTime = System.currentTimeMillis();
+            int currentCollapsedTime = (int) (endTime - startTime) / 100;
+            if(currentCollapsedTime == runTime){
+//                p.stop();
+                System.out.println("Action : " + seq + " now Stop !"+ "close Pump :"+getP().getName() );
+                break;
+            }
+        }
+        System.out.println("Action :"+ seq + "finished running !");
+
     }
 
     public String toString(){

@@ -8,6 +8,7 @@
  *
  * @author liuyang
  */
+import com.google.gson.annotations.Expose;
 import com.pi4j.io.gpio.*;
 import static com.pi4j.io.gpio.RaspiPin.allPins;
 import static com.pi4j.system.SystemInfo.BoardType.RaspberryPi_3B_Plus;
@@ -15,16 +16,19 @@ import com.pi4j.util.Console;
         
 public class Pump {
     /////////RASPERRYPI ALL PINS /////////////
-    private Pin[] allPins = allPins(RaspberryPi_3B_Plus);
+    private transient Pin[] allPins = allPins(RaspberryPi_3B_Plus);
     
+    @Expose
     private String name;
+    @Expose
     private PumpType type;
-   
-    int speed = 100 ; 
-    
-    
-    
+    @Expose
+    int speed = 100 ;
+
+
+    @Expose
     int pinNumber1;
+    @Expose
     int pinNumber2;
     //每个pump上的两个针脚
     //默认Pin1高电位 Pin2低电位
@@ -33,10 +37,10 @@ public class Pump {
     
     //GPIO控制单元
     //GpioController gpio = GpioFactory.getInstance();
-    GpioController gpio ;
+    transient GpioController gpio ;
     
     //For Debugging
-    final Console console = new Console();
+    transient final Console console = new Console();
 
     public Pump(String name, String typeName, int pinNumber1, int pinNumber2) {
         this.name = name;
@@ -115,7 +119,7 @@ public class Pump {
         com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
         
         pwm  = gpio.provisionPwmOutputPin(pin);
-        
+        // speed = dutycycle
         pwm.setPwm(type.getRange()*(speed /100));
         
         //use Pwm mode
@@ -137,10 +141,10 @@ public class Pump {
     // stop all GPIO activity/threads by shutting down the GPIO controller
     // (this method will forcefully shutdown all GPIO monitoring threads and scheduled tasks)
     //Stop the pump 
-    public void setPinLow(Pin pin){
-        gpio.provisionPwmOutputPin(pin);
+    public void setPinLow(Pin pin) {
+        gpio.provisionDigitalOutputPin(pin);
         //TODO 设置所有针脚都为低电位 ------- pwm.setPwm(0);
-        pwm.setPwm(0);
+
     }
     
     public void run(){
@@ -162,7 +166,7 @@ public class Pump {
     //Pump as String Output
     public String toString(){
         
-        return (type.getName()+"/"+Pin1.getName()+"/"+Pin2.getName()+"/"+this.speed+"%");
+        return (type.getName()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/"+this.speed+"%");
     }
     
     
