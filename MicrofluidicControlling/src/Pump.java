@@ -17,6 +17,9 @@ import com.pi4j.util.Console;
 import com.pi4j.wiringpi.Gpio;
 import com.pi4j.wiringpi.SoftPwm;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
 public class Pump {
     /////////RASPERRYPI ALL PINS /////////////
     Pump p ;
@@ -37,7 +40,26 @@ public class Pump {
     //默认Pin1高电位 Pin2低电位
     private  Pin Pin1;
     private  Pin Pin2;
-    
+
+    private PriorityQueue<Action> aq;
+
+    public PriorityQueue<Action> getAq() {
+        return aq;
+    }
+
+    public void setAq(PriorityQueue<Action> aq) {
+        this.aq = aq;
+    }
+
+    public PriorityQueue<Action> getEq() {
+        return eq;
+    }
+
+    public void setEq(PriorityQueue<Action> eq) {
+        this.eq = eq;
+    }
+
+    private PriorityQueue<Action> eq;
     //GPIO控制单元
     //GpioController gpio = GpioFactory.getInstance();
 //    transient GpioController gpio ;
@@ -51,7 +73,29 @@ public class Pump {
         this.speed = speed;
         this.pinNumber1 = pinNumber1;
         this.pinNumber2 = pinNumber2;
+        Comparator<Action> com = actionComparator();
+        aq = new PriorityQueue<Action>(com);
+        System.out.println("pump" + name + "loaded !");
     }
+    Comparator<Action> actionComparator(){
+        Comparator<Action> actionComparator = new Comparator<Action>() {
+            @Override
+            public int compare(Action a1, Action a2) {
+                if(a1.getStartTime() - a2.getStartTime() < 0){
+                    return -1;
+                }else if (a1.getStartTime() - a2.getStartTime() == 0){
+                    return 0;
+                }else {
+                    return 1;
+                }
+            }
+        };
+        return  actionComparator;
+    }
+    void initEq(){
+        eq = new PriorityQueue<>(aq);
+    }
+
 
     public Pump(String name, String typeName, int pinNumber1, int pinNumber2) {
         this.name = name;
@@ -105,6 +149,14 @@ public class Pump {
     }
    ////////////////////setter/////////////////
 
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
 
     public void setPinNumber1(int pinNumber1) {
         this.pinNumber1 = pinNumber1;
@@ -236,9 +288,8 @@ public class Pump {
         
         return (type.getName()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/"+this.speed+"%");
     }
-    
-    /////EXPERTMODE~//////////////////////////////////////
-    ///专家模式可以使泵回转///////
+
+
     
     
     

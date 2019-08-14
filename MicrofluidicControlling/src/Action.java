@@ -30,10 +30,10 @@ public class Action  {
 
     //delayTime;
     @Expose
-    int startTime;
+    long startTime;
     //runtime
     @Expose
-    int endTime;
+    long endTime;
     //cur pump that take action
     @Expose
     Pump p;
@@ -41,11 +41,12 @@ public class Action  {
     //检查是否在执行
     public boolean isActive;
 
-    public Action(int seq, int startTime, int endTime, Pump p) {
+    public Action(int seq, long startTime, long endTime, Pump p) {
         this.seq = seq;
         this.startTime = startTime;
         this.endTime = endTime;
         this.p = p;
+        p.getAq().add(this);
     }
 //    deprecated
 //    public void run2(long runTime){
@@ -67,6 +68,22 @@ public class Action  {
 //        executor.shutdown();
 //    }
 
+    public long getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(long startTime) {
+        this.startTime = startTime;
+    }
+
+    public long getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(long endTime) {
+        this.endTime = endTime;
+    }
+
     public int getSeq() {
         return seq;
     }
@@ -75,21 +92,7 @@ public class Action  {
         this.seq = seq;
     }
 
-    public int getStartTime() {
-        return startTime;
-    }
 
-    public void setStartTime(int startTime) {
-        this.startTime = startTime;
-    }
-
-    public int getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(int endTime) {
-        this.endTime = endTime;
-    }
 
     public Pump getP() {
         return p;
