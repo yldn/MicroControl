@@ -14,30 +14,54 @@ import java.util.List;
  */
 public class Configuation {
     private String name ;
-    List<Pump> pumps = new ArrayList<Pump>();
-    
+    ArrayList<Action> actions = new ArrayList<Action>();
+    ArrayList<PumpType> types=new ArrayList<PumpType>();;
+    ArrayList<Pump> pumps = new ArrayList<Pump>();
+
+    public Configuation(String name, ArrayList<Action> actions, ArrayList<PumpType> types, ArrayList<Pump> pumps) {
+        this.name = name;
+        this.actions = actions;
+        this.types = types;
+        this.pumps = pumps;
+    }
+
     public Configuation(String name) {
         this.name = name;
     }
-    //////getter //////
+
     public String getName() {
         return name;
     }
-
-    public List<Pump> getPumps() {
-        return pumps;
-    }
-    /////////setter ///////
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setPumps(List<Pump> pumps) {
+    public ArrayList<Action> getActions() {
+        return actions;
+    }
+
+    public void setActions(ArrayList<Action> actions) {
+        this.actions = actions;
+    }
+
+    public ArrayList<PumpType> getTypes() {
+        return types;
+    }
+
+    public void setTypes(ArrayList<PumpType> types) {
+        this.types = types;
+    }
+
+    public ArrayList<Pump> getPumps() {
+        return pumps;
+    }
+
+    public void setPumps(ArrayList<Pump> pumps) {
         this.pumps = pumps;
     }
-    
-    //add 
+
+    //add
     public void addPump(Pump pump){
         pumps.add(pump);
         System.out.println("new Pump added");

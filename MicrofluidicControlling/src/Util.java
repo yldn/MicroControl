@@ -11,6 +11,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static com.pi4j.io.gpio.RaspiPin.allPins;
+import static com.pi4j.system.SystemInfo.BoardType.RaspberryPi_3B_Plus;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -25,8 +28,18 @@ import java.util.List;
 
 public class Util {
 
+    
 
+    public static GpioController getGpio() {
+        GpioController gpio = GpioFactory.getInstance();
+        
+        return gpio;
+    }
 
+    public static Pin[] getAllPins() {
+         Pin[] allPins = allPins(RaspberryPi_3B_Plus);
+        return allPins;
+    }
 
     //决定按需求在主页面用Gson进行parse
     //parse json --> pump
@@ -46,25 +59,30 @@ public class Util {
         return Arrays.asList(arr);
 
     }
+    static <T> T stringToObj(String s , Class<T> classs){{
+        T a = new Gson().fromJson(s,classs);
+        return a ;
 
-    public static void main (String [] args){
+    }}
 
-        PumpType type = new PumpType("OW");
-        PumpType type2 = new PumpType("QC",100,100,100);
-        ArrayList<PumpType> pumpTypes = new ArrayList<>();
-        pumpTypes.add(type);
-        pumpTypes.add(type2);
-
-        String out =  Util.objToJsonString(pumpTypes);
-        System.out.println(out);
-
-//        Gson json = new Gson();
-//        ArrayList parsedList = json.fromJson(out,ArrayList.class);
-        ArrayList parsedList = (ArrayList)jsonStringToObj(out,ArrayList.class);
-
-        System.out.println(parsedList.get(1));
-
-    }
+//    public static void main (String [] args){
+//
+//        PumpType type = new PumpType("OW");
+//        PumpType type2 = new PumpType("QC",100,100,100);
+//        ArrayList<PumpType> pumpTypes = new ArrayList<>();
+//        pumpTypes.add(type);
+//        pumpTypes.add(type2);
+//
+//        String out =  Util.objToJsonString(pumpTypes);
+//        System.out.println(out);
+//
+////        Gson json = new Gson();
+////        ArrayList parsedList = json.fromJson(out,ArrayList.class);
+//        ArrayList parsedList = (ArrayList)jsonStringToObj(out,ArrayList.class);
+//
+//        System.out.println(parsedList.get(1));
+//
+//    }
 
 //    class ResponseDataTypeAdaptor extends TypeAdapter<ResponseDataTypeAdaptor> {
 //

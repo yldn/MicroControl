@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b72c781-4af6-46fd-bf71-bc5bd553243a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Action$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Configuation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Configuation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$34.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$35.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$37.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Pump.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000055b00000010" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000055c00000011" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000055d00000012" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000055e00000013" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000055f00000014" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000056000000015" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000056100000016" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000056200000017" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000056300000018" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lib/.fuse_hidden0000056400000019" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Pump.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configuation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1320064838">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="3303" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="3303" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="7" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="2284" column="25" lean-forward="true" selection-start-line="2284" selection-start-column="25" selection-end-line="2284" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#952#1041#0" expanded="true" />
+                <element signature="e#7390#7391#0" expanded="true" />
+                <element signature="e#7451#7452#0" expanded="true" />
+                <element signature="e#7646#7647#0" expanded="true" />
+                <element signature="e#7707#7708#0" expanded="true" />
+                <element signature="e#12753#12754#0" expanded="true" />
+                <element signature="e#12811#12812#0" expanded="true" />
+                <element signature="e#13059#13060#0" expanded="true" />
+                <element signature="e#13120#13121#0" expanded="true" />
+                <element signature="e#14662#14663#0" expanded="true" />
+                <element signature="e#14725#14726#0" expanded="true" />
+                <element signature="e#14958#14959#0" expanded="true" />
+                <element signature="e#15021#15022#0" expanded="true" />
+                <element signature="e#19393#19394#0" expanded="true" />
+                <element signature="e#19451#19452#0" expanded="true" />
+                <element signature="e#19701#19702#0" expanded="true" />
+                <element signature="e#19761#19762#0" expanded="true" />
+                <element signature="e#21396#21397#0" expanded="true" />
+                <element signature="e#21457#21458#0" expanded="true" />
+                <element signature="e#21685#21686#0" expanded="true" />
+                <element signature="e#21746#21747#0" expanded="true" />
+                <element signature="e#24569#24570#0" expanded="true" />
+                <element signature="e#24632#24633#0" expanded="true" />
+                <element signature="e#24981#24982#0" expanded="true" />
+                <element signature="e#25039#25040#0" expanded="true" />
+                <element signature="e#30626#30627#0" expanded="true" />
+                <element signature="e#30686#30687#0" expanded="true" />
+                <element signature="e#30886#30887#0" expanded="true" />
+                <element signature="e#30947#30948#0" expanded="true" />
+                <element signature="e#31143#31144#0" expanded="true" />
+                <element signature="e#31204#31205#0" expanded="true" />
+                <element signature="e#36350#36351#0" expanded="true" />
+                <element signature="e#36408#36409#0" expanded="true" />
+                <element signature="e#36662#36663#0" expanded="true" />
+                <element signature="e#36722#36723#0" expanded="true" />
+                <element signature="e#38240#38241#0" expanded="true" />
+                <element signature="e#38300#38301#0" expanded="true" />
+                <element signature="e#38581#38582#0" expanded="true" />
+                <element signature="e#38641#38642#0" expanded="true" />
+                <element signature="e#38723#38896#0" expanded="true" />
+                <element signature="e#38895#38896#0" expanded="true" />
+                <element signature="e#39045#39046#0" expanded="true" />
+                <element signature="e#39106#39107#0" expanded="true" />
+                <element signature="e#39726#39727#0" expanded="true" />
+                <element signature="e#39784#39785#0" expanded="true" />
+                <element signature="e#41433#41434#0" expanded="true" />
+                <element signature="e#41494#41495#0" expanded="true" />
+                <element signature="e#41691#41692#0" expanded="true" />
+                <element signature="e#41752#41753#0" expanded="true" />
+                <element signature="e#41990#41991#0" expanded="true" />
+                <element signature="e#42052#42053#0" expanded="true" />
+                <element signature="e#42289#42290#0" expanded="true" />
+                <element signature="e#42352#42353#0" expanded="true" />
+                <element signature="e#42592#42593#0" expanded="true" />
+                <element signature="e#42655#42656#0" expanded="true" />
+                <element signature="e#42958#42959#0" expanded="true" />
+                <element signature="e#43020#43021#0" expanded="true" />
+                <element signature="e#43255#43256#0" expanded="true" />
+                <element signature="e#43317#43318#0" expanded="true" />
+                <element signature="e#43556#43557#0" expanded="true" />
+                <element signature="e#43619#43620#0" expanded="true" />
+                <element signature="e#50970#50971#0" expanded="true" />
+                <element signature="e#51031#51032#0" expanded="true" />
+                <element signature="e#53916#53917#0" expanded="true" />
+                <element signature="e#53977#53978#0" expanded="true" />
+                <element signature="e#56515#56516#0" expanded="true" />
+                <element signature="e#56573#56574#0" expanded="true" />
+                <element signature="e#57907#57908#0" expanded="true" />
+                <element signature="e#57968#57969#0" expanded="true" />
+                <element signature="e#59521#59522#0" expanded="true" />
+                <element signature="e#59587#59588#0" expanded="true" />
+                <element signature="e#59792#59793#0" expanded="true" />
+                <element signature="e#59858#59859#0" expanded="true" />
+                <element signature="e#62767#62768#0" expanded="true" />
+                <element signature="e#62827#62828#0" expanded="true" />
+                <element signature="e#63024#63025#0" expanded="true" />
+                <element signature="e#63085#63086#0" expanded="true" />
+                <element signature="e#70770#70771#0" expanded="true" />
+                <element signature="e#70830#70831#0" expanded="true" />
+                <element signature="e#76196#76197#0" expanded="true" />
+                <element signature="e#76256#76257#0" expanded="true" />
+                <element signature="e#79280#79281#0" expanded="true" />
+                <element signature="e#79341#79342#0" expanded="true" />
+                <element signature="e#82249#82250#0" expanded="true" />
+                <element signature="e#82309#82310#0" expanded="true" />
+                <element signature="e#86783#86791#0" expanded="true" />
+                <element signature="e#88788#88796#0" expanded="true" />
+                <element signature="e#89973#89981#0" expanded="true" />
+                <element signature="e#97252#97260#0" expanded="true" />
+                <element signature="e#97675#97683#0" expanded="true" />
+                <element signature="e#101904#101905#0" expanded="true" />
+                <element signature="e#101943#101944#0" expanded="true" />
+                <element signature="e#105150#105151#0" expanded="true" />
+                <element signature="e#105196#105197#0" expanded="true" />
+                <element signature="e#108310#108318#0" expanded="true" />
+                <element signature="e#109399#109407#0" expanded="true" />
+                <element signature="e#111367#111375#0" expanded="true" />
+                <element signature="e#113295#113303#0" expanded="true" />
+                <element signature="e#117170#117178#0" expanded="true" />
+                <element signature="e#117490#117498#0" expanded="true" />
+                <element signature="e#117810#117818#0" expanded="true" />
+                <element signature="e#123723#123731#0" expanded="true" />
+                <element signature="e#124199#124207#0" expanded="true" />
+                <element signature="e#124414#124415#0" expanded="true" />
+                <element signature="e#124450#124451#0" expanded="true" />
+                <element signature="e#124610#124697#0" expanded="true" />
+                <element signature="e#129377#129378#0" expanded="true" />
+                <element signature="e#129441#129442#0" expanded="true" />
+                <element signature="e#128728#128729#0" expanded="true" />
+                <element signature="e#128798#128799#0" expanded="true" />
+                <element signature="e#128834#128835#0" expanded="true" />
+                <element signature="e#128907#128908#0" expanded="true" />
+                <element signature="e#128941#128942#0" expanded="true" />
+                <element signature="e#129010#129011#0" expanded="true" />
+                <element signature="e#129043#129044#0" expanded="true" />
+                <element signature="e#129110#129111#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Action.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Pump.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="208" column="25" selection-start-line="208" selection-start-column="25" selection-end-line="208" selection-end-column="25" />
+              <folding>
+                <element signature="e#1916#1917#0" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#1976#1977#0" expanded="true" />
+                <element signature="e#2003#2004#0" expanded="true" />
+                <element signature="e#2031#2032#0" expanded="true" />
+                <element signature="e#2058#2059#0" expanded="true" />
+                <element signature="e#2086#2087#0" expanded="true" />
+                <element signature="e#2113#2114#0" expanded="true" />
+                <element signature="e#2147#2148#0" expanded="true" />
+                <element signature="e#2180#2181#0" expanded="true" />
+                <element signature="e#2214#2215#0" expanded="true" />
+                <element signature="e#2247#2248#0" expanded="true" />
+                <element signature="e#2344#2345#0" expanded="true" />
+                <element signature="e#2388#2389#0" expanded="true" />
+                <element signature="e#2437#2438#0" expanded="true" />
+                <element signature="e#2481#2482#0" expanded="true" />
+                <element signature="e#2521#2522#0" expanded="true" />
+                <element signature="e#2553#2554#0" expanded="true" />
+                <element signature="e#2595#2596#0" expanded="true" />
+                <element signature="e#2627#2628#0" expanded="true" />
+                <element signature="e#5628#5629#0" expanded="true" />
+                <element signature="e#5698#5699#0" expanded="true" />
+                <element signature="e#5725#5726#0" expanded="true" />
+                <element signature="e#5763#5764#0" expanded="true" />
+                <element signature="e#5271#5272#0" expanded="true" />
+                <element signature="e#5293#5294#0" expanded="true" />
+                <element signature="e#5882#5883#0" expanded="true" />
+                <element signature="e#5918#5919#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Configuation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="e#368#376#0" expanded="true" />
+                <element signature="e#423#433#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#854#855#0" expanded="true" />
+                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#926#927#0" expanded="true" />
+                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#1001#1002#0" expanded="true" />
+                <element signature="e#1058#1059#0" expanded="true" />
+                <element signature="e#1096#1097#0" expanded="true" />
+                <element signature="e#1141#1142#0" expanded="true" />
+                <element signature="e#1169#1170#0" expanded="true" />
+                <element signature="e#1224#1225#0" expanded="true" />
+                <element signature="e#1258#1259#0" expanded="true" />
+                <element signature="e#1299#1300#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="e#1378#1379#0" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PumpType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-125">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jMenuItem5</find>
+      <find>getselectedRow</find>
+      <find>showMessage</find>
+      <find>getSele</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/Action.java" />
+        <option value="$PROJECT_DIR$/src/Pump.java" />
+        <option value="$PROJECT_DIR$/src/Configuation.java" />
+        <option value="$PROJECT_DIR$/src/Util.java" />
+        <option value="$PROJECT_DIR$/src/MainFrame.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="777" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicrofluidicControlling" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MicrofluidicControlling" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565758327025" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainFrame" />
+      <module name="MicrofluidicControlling" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainFrame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b72c781-4af6-46fd-bf71-bc5bd553243a" name="Default Changelist" comment="" />
+      <created>1564020295739</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564020295739</updated>
+      <workItem from="1564020299760" duration="773000" />
+      <workItem from="1564446403171" duration="636000" />
+      <workItem from="1564729977556" duration="156000" />
+      <workItem from="1564733671973" duration="10095000" />
+      <workItem from="1565101689051" duration="182000" />
+      <workItem from="1565641192186" duration="20257000" />
+      <workItem from="1565669809590" duration="2964000" />
+      <workItem from="1565674343323" duration="778000" />
+      <workItem from="1565675198810" duration="6007000" />
+      <workItem from="1565695587716" duration="24942000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31017000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1280" height="712" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21567044" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3109489" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39869282" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3299539" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/PumpType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-125">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="208" column="25" selection-start-line="208" selection-start-column="25" selection-end-line="208" selection-end-column="25" />
+          <folding>
+            <element signature="e#1916#1917#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2003#2004#0" expanded="true" />
+            <element signature="e#2031#2032#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="e#2086#2087#0" expanded="true" />
+            <element signature="e#2113#2114#0" expanded="true" />
+            <element signature="e#2147#2148#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2214#2215#0" expanded="true" />
+            <element signature="e#2247#2248#0" expanded="true" />
+            <element signature="e#2344#2345#0" expanded="true" />
+            <element signature="e#2388#2389#0" expanded="true" />
+            <element signature="e#2437#2438#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
+            <element signature="e#2521#2522#0" expanded="true" />
+            <element signature="e#2553#2554#0" expanded="true" />
+            <element signature="e#2595#2596#0" expanded="true" />
+            <element signature="e#2627#2628#0" expanded="true" />
+            <element signature="e#5628#5629#0" expanded="true" />
+            <element signature="e#5698#5699#0" expanded="true" />
+            <element signature="e#5725#5726#0" expanded="true" />
+            <element signature="e#5763#5764#0" expanded="true" />
+            <element signature="e#5271#5272#0" expanded="true" />
+            <element signature="e#5293#5294#0" expanded="true" />
+            <element signature="e#5882#5883#0" expanded="true" />
+            <element signature="e#5918#5919#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Configuation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#368#376#0" expanded="true" />
+            <element signature="e#423#433#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#854#855#0" expanded="true" />
+            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#926#927#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1141#1142#0" expanded="true" />
+            <element signature="e#1169#1170#0" expanded="true" />
+            <element signature="e#1224#1225#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+            <element signature="e#1299#1300#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="2284" column="25" lean-forward="true" selection-start-line="2284" selection-start-column="25" selection-end-line="2284" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#952#1041#0" expanded="true" />
+            <element signature="e#7390#7391#0" expanded="true" />
+            <element signature="e#7451#7452#0" expanded="true" />
+            <element signature="e#7646#7647#0" expanded="true" />
+            <element signature="e#7707#7708#0" expanded="true" />
+            <element signature="e#12753#12754#0" expanded="true" />
+            <element signature="e#12811#12812#0" expanded="true" />
+            <element signature="e#13059#13060#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="true" />
+            <element signature="e#14662#14663#0" expanded="true" />
+            <element signature="e#14725#14726#0" expanded="true" />
+            <element signature="e#14958#14959#0" expanded="true" />
+            <element signature="e#15021#15022#0" expanded="true" />
+            <element signature="e#19393#19394#0" expanded="true" />
+            <element signature="e#19451#19452#0" expanded="true" />
+            <element signature="e#19701#19702#0" expanded="true" />
+            <element signature="e#19761#19762#0" expanded="true" />
+            <element signature="e#21396#21397#0" expanded="true" />
+            <element signature="e#21457#21458#0" expanded="true" />
+            <element signature="e#21685#21686#0" expanded="true" />
+            <element signature="e#21746#21747#0" expanded="true" />
+            <element signature="e#24569#24570#0" expanded="true" />
+            <element signature="e#24632#24633#0" expanded="true" />
+            <element signature="e#24981#24982#0" expanded="true" />
+            <element signature="e#25039#25040#0" expanded="true" />
+            <element signature="e#30626#30627#0" expanded="true" />
+            <element signature="e#30686#30687#0" expanded="true" />
+            <element signature="e#30886#30887#0" expanded="true" />
+            <element signature="e#30947#30948#0" expanded="true" />
+            <element signature="e#31143#31144#0" expanded="true" />
+            <element signature="e#31204#31205#0" expanded="true" />
+            <element signature="e#36350#36351#0" expanded="true" />
+            <element signature="e#36408#36409#0" expanded="true" />
+            <element signature="e#36662#36663#0" expanded="true" />
+            <element signature="e#36722#36723#0" expanded="true" />
+            <element signature="e#38240#38241#0" expanded="true" />
+            <element signature="e#38300#38301#0" expanded="true" />
+            <element signature="e#38581#38582#0" expanded="true" />
+            <element signature="e#38641#38642#0" expanded="true" />
+            <element signature="e#38723#38896#0" expanded="true" />
+            <element signature="e#38895#38896#0" expanded="true" />
+            <element signature="e#39045#39046#0" expanded="true" />
+            <element signature="e#39106#39107#0" expanded="true" />
+            <element signature="e#39726#39727#0" expanded="true" />
+            <element signature="e#39784#39785#0" expanded="true" />
+            <element signature="e#41433#41434#0" expanded="true" />
+            <element signature="e#41494#41495#0" expanded="true" />
+            <element signature="e#41691#41692#0" expanded="true" />
+            <element signature="e#41752#41753#0" expanded="true" />
+            <element signature="e#41990#41991#0" expanded="true" />
+            <element signature="e#42052#42053#0" expanded="true" />
+            <element signature="e#42289#42290#0" expanded="true" />
+            <element signature="e#42352#42353#0" expanded="true" />
+            <element signature="e#42592#42593#0" expanded="true" />
+            <element signature="e#42655#42656#0" expanded="true" />
+            <element signature="e#42958#42959#0" expanded="true" />
+            <element signature="e#43020#43021#0" expanded="true" />
+            <element signature="e#43255#43256#0" expanded="true" />
+            <element signature="e#43317#43318#0" expanded="true" />
+            <element signature="e#43556#43557#0" expanded="true" />
+            <element signature="e#43619#43620#0" expanded="true" />
+            <element signature="e#50970#50971#0" expanded="true" />
+            <element signature="e#51031#51032#0" expanded="true" />
+            <element signature="e#53916#53917#0" expanded="true" />
+            <element signature="e#53977#53978#0" expanded="true" />
+            <element signature="e#56515#56516#0" expanded="true" />
+            <element signature="e#56573#56574#0" expanded="true" />
+            <element signature="e#57907#57908#0" expanded="true" />
+            <element signature="e#57968#57969#0" expanded="true" />
+            <element signature="e#59521#59522#0" expanded="true" />
+            <element signature="e#59587#59588#0" expanded="true" />
+            <element signature="e#59792#59793#0" expanded="true" />
+            <element signature="e#59858#59859#0" expanded="true" />
+            <element signature="e#62767#62768#0" expanded="true" />
+            <element signature="e#62827#62828#0" expanded="true" />
+            <element signature="e#63024#63025#0" expanded="true" />
+            <element signature="e#63085#63086#0" expanded="true" />
+            <element signature="e#70770#70771#0" expanded="true" />
+            <element signature="e#70830#70831#0" expanded="true" />
+            <element signature="e#76196#76197#0" expanded="true" />
+            <element signature="e#76256#76257#0" expanded="true" />
+            <element signature="e#79280#79281#0" expanded="true" />
+            <element signature="e#79341#79342#0" expanded="true" />
+            <element signature="e#82249#82250#0" expanded="true" />
+            <element signature="e#82309#82310#0" expanded="true" />
+            <element signature="e#86783#86791#0" expanded="true" />
+            <element signature="e#88788#88796#0" expanded="true" />
+            <element signature="e#89973#89981#0" expanded="true" />
+            <element signature="e#97252#97260#0" expanded="true" />
+            <element signature="e#97675#97683#0" expanded="true" />
+            <element signature="e#101904#101905#0" expanded="true" />
+            <element signature="e#101943#101944#0" expanded="true" />
+            <element signature="e#105150#105151#0" expanded="true" />
+            <element signature="e#105196#105197#0" expanded="true" />
+            <element signature="e#108310#108318#0" expanded="true" />
+            <element signature="e#109399#109407#0" expanded="true" />
+            <element signature="e#111367#111375#0" expanded="true" />
+            <element signature="e#113295#113303#0" expanded="true" />
+            <element signature="e#117170#117178#0" expanded="true" />
+            <element signature="e#117490#117498#0" expanded="true" />
+            <element signature="e#117810#117818#0" expanded="true" />
+            <element signature="e#123723#123731#0" expanded="true" />
+            <element signature="e#124199#124207#0" expanded="true" />
+            <element signature="e#124414#124415#0" expanded="true" />
+            <element signature="e#124450#124451#0" expanded="true" />
+            <element signature="e#124610#124697#0" expanded="true" />
+            <element signature="e#129377#129378#0" expanded="true" />
+            <element signature="e#129441#129442#0" expanded="true" />
+            <element signature="e#128728#128729#0" expanded="true" />
+            <element signature="e#128798#128799#0" expanded="true" />
+            <element signature="e#128834#128835#0" expanded="true" />
+            <element signature="e#128907#128908#0" expanded="true" />
+            <element signature="e#128941#128942#0" expanded="true" />
+            <element signature="e#129010#129011#0" expanded="true" />
+            <element signature="e#129043#129044#0" expanded="true" />
+            <element signature="e#129110#129111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>MicrofluidicControlling</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>gson-2.2.2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

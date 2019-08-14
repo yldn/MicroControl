@@ -10,14 +10,17 @@
  */
 import com.google.gson.annotations.Expose;
 import com.pi4j.io.gpio.*;
-import static com.pi4j.io.gpio.RaspiPin.allPins;
+
+import static com.pi4j.io.gpio.RaspiPin.*;
 import static com.pi4j.system.SystemInfo.BoardType.RaspberryPi_3B_Plus;
 import com.pi4j.util.Console;
-        
+import com.pi4j.wiringpi.Gpio;
+import com.pi4j.wiringpi.SoftPwm;
+
 public class Pump {
     /////////RASPERRYPI ALL PINS /////////////
-    private transient Pin[] allPins = allPins(RaspberryPi_3B_Plus);
-    
+    Pump p ;
+
     @Expose
     private String name;
     @Expose
@@ -32,15 +35,23 @@ public class Pump {
     int pinNumber2;
     //每个pump上的两个针脚
     //默认Pin1高电位 Pin2低电位
-    private transient Pin Pin1;
-    private transient Pin Pin2;
+    private  Pin Pin1;
+    private  Pin Pin2;
     
     //GPIO控制单元
     //GpioController gpio = GpioFactory.getInstance();
-    transient GpioController gpio ;
+//    transient GpioController gpio ;
     
     //For Debugging
     transient final Console console = new Console();
+
+    public Pump(String name, PumpType type, int speed, int pinNumber1, int pinNumber2) {
+        this.name = name;
+        this.type = type;
+        this.speed = speed;
+        this.pinNumber1 = pinNumber1;
+        this.pinNumber2 = pinNumber2;
+    }
 
     public Pump(String name, String typeName, int pinNumber1, int pinNumber2) {
         this.name = name;
@@ -49,13 +60,23 @@ public class Pump {
         this.pinNumber1= pinNumber1;
         this.pinNumber2= pinNumber2;
         
-        this.Pin1 = allPins[pinNumber1];
-        this.Pin2 = allPins[pinNumber2];
+        this.Pin1 = Util.getAllPins()[pinNumber1];
+        this.Pin2 = Util.getAllPins()[pinNumber2];
         
 //        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
 //        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
 //        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+        Util.getGpio().setShutdownOptions(true, PinState.LOW);
+
         
+//        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
+//        com.pi4j.wiringpi.Gpio.pwmSetMode(Gpio.PWM_OUTPUT);
+        Gpio.wiringPiSetup();
+        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
+        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+
+        SoftPwm.softPwmCreate(pinNumber1,0,100);
+
         
     }
 ////////////getter /////////////////////
@@ -103,27 +124,25 @@ public class Pump {
 
     public void setPin1(int p1) {
         this.pinNumber1 = p1;
-        this.Pin1 = allPins[pinNumber1];
+        this.Pin1 = Util.getAllPins()[pinNumber1];
     }
 
     public void setPin2(int p2) {
         this.pinNumber2 = p2;
-        this.Pin2 = allPins[pinNumber2];
+        this.Pin2 = Util.getAllPins()[pinNumber2];
     }
 
 
-    ////////////running methord///////////
-
-
-    private void  setEnv(){
-        gpio = GpioFactory.getInstance();
-        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
-        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
-        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
-        // PIN1为正PIN2为负
-         pwm = gpio.provisionPwmOutputPin(Pin1);
-         g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
-    }
+    ////////////running methord///////////(hardware PWM deprecated )
+//    private void  setEnv(){
+//        gpio = GpioFactory.getInstance();
+//        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
+//        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
+//        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+//        // PIN1为正PIN2为负
+//         pwm = gpio.provisionPwmOutputPin(Pin1);
+//         g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
+//    }
 //    //run methord
 //    public void setPinHigh(Pin pin){
 //        GpioPinPwmOutput  pwm  = gpio.provisionPwmOutputPin(pin);
@@ -137,31 +156,80 @@ public class Pump {
 //        gpio.provisionDigitalOutputPin(pin);
 //
 //    }
-    GpioPinPwmOutput pwm;
-    GpioPinDigitalOutput g;
+//    GpioPinPwmOutput pwm;
+//    GpioPinDigitalOutput g;
+//    public void run(){
+//        gpio = GpioFactory.getInstance();
+//        gpio.setShutdownOptions(true, PinState.LOW);
+//        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
+//        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
+//        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
+//        // PIN1为正PIN2为负
+//
+//         pwm = gpio.provisionPwmOutputPin(Pin1);
+//         g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
+//
+//        System.out.println("frequency now = "+ 19.2e6/type.getClock()/type.getRange());
+//        pwm.setPwm(0);
+//        g.low();
+//        pwm.setPwm(type.getRange()*(speed/100));
+//    }
+//    GpioPinPwmOutput pwm ;
+//    GpioPinDigitalOutput g ;
+    
     public void run(){
-        gpio = GpioFactory.getInstance();
-        com.pi4j.wiringpi.Gpio.pwmSetMode(com.pi4j.wiringpi.Gpio.PWM_MODE_MS);
-        com.pi4j.wiringpi.Gpio.pwmSetRange(this.type.getRange());
-        com.pi4j.wiringpi.Gpio.pwmSetClock(this.type.getClock());
-        // PIN1为正PIN2为负
-
-         pwm = gpio.provisionPwmOutputPin(Pin1);
-         g = gpio.provisionDigitalOutputPin(Pin2,PinState.LOW);
-
-        System.out.println("frequency now = "+ 19.2e6/type.getClock()/type.getRange());
-        pwm.setPwm(0);
-        g.low();
-        pwm.setPwm(type.getRange()*(speed/100));
-
+        run(speed);
     }
     public void revertrun(){
+        revertrun(speed);
     }
-    public void stop(){
-        pwm.setPwm(0);
-        g.low();
-        this.gpio.shutdown();
+    
+    public void run(int speed){
+        initServo();
+        stop(pinNumber2);
+        provisionPin(pinNumber1, 0 , type.getRange());
+        System.out.println("frequency now = "+ 19.2e6/type.getClock()/type.getRange());
+            try{
+                start(pinNumber1,type.getRange()*speed /100 );
+            }catch(Exception e ){
+                e.printStackTrace();
+            }
     }
+    public void provisionPin(int pin ,int base , int range){
+        SoftPwm.softPwmCreate(pin, base , range);
+    }
+    public void start(int pinNumber , int dutyCycle){
+        SoftPwm.softPwmWrite(pinNumber,dutyCycle);
+    }
+    public void stop(int pinNumber){
+        SoftPwm.softPwmStop(pinNumber);
+    }
+    public void shutdown(){
+        stop(pinNumber1);
+        stop(pinNumber2);
+    }
+
+    void initServo(){
+        Gpio.wiringPiSetup();
+    }
+
+    
+    public void revertrun(int speed ){
+        initServo();
+        stop(pinNumber1);
+        SoftPwm.softPwmCreate(pinNumber2, 0 , type.getRange());
+        System.out.println("REVERSED :: frequency now = "+ 19.2e6/type.getClock()/type.getRange());
+        try{
+            SoftPwm.softPwmWrite(pinNumber2,speed);
+        }catch(Exception e ){
+            e.printStackTrace();
+        }
+    }
+//    public void stop(){
+//        pwm.setPwm(0);
+//        g.low();
+//        Util.getGpio().shutdown();
+//    }
     //@Override
     //Pump as String Output
     public String toString(){

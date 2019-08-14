@@ -20,9 +20,9 @@ import java.util.logging.Logger;
  *
  * @author liuyang
  */
-public class Action implements Runnable { 
+public class Action  { 
     //related Action
-    private transient Thread t;
+//    private transient Thread t;
 
     //sequence number
     @Expose
@@ -30,42 +30,42 @@ public class Action implements Runnable {
 
     //delayTime;
     @Expose
-    int delayTime;
+    int startTime;
     //runtime
     @Expose
-    int runTime;
+    int endTime;
     //cur pump that take action
     @Expose
     Pump p;
 
     //检查是否在执行
-    boolean isActive;
+    public boolean isActive;
 
-    public Action(int seq, int delayTime, int runTime, Pump p) {
+    public Action(int seq, int startTime, int endTime, Pump p) {
         this.seq = seq;
-        this.delayTime = delayTime;
-        this.runTime = runTime;
+        this.startTime = startTime;
+        this.endTime = endTime;
         this.p = p;
     }
-    
-    public void runWithPin(Pin pin,long runTime){
-        ScheduledExecutorService  executor =  Executors.newScheduledThreadPool(1);
-        executor.scheduleWithFixedDelay(new Runnable(){
-            @Override
-                public void run() {
-                try {
-                    p.run();
-                    Thread.sleep(runTime);
-                    p.stop();
-                } catch (InterruptedException ex) {
-                    Logger.getLogger(Action.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                }
-        }, delayTime, 0, TimeUnit.SECONDS);
-        
-        
-        executor.shutdown();
-    }
+//    deprecated
+//    public void run2(long runTime){
+//        ScheduledExecutorService  executor =  Executors.newScheduledThreadPool(1);
+//        executor.scheduleWithFixedDelay(new Runnable(){
+//            @Override
+//                public void run() {
+//                try {
+//                    p.run();
+//                    Thread.sleep(runTime);
+//                    p.stop();
+//                } catch (InterruptedException ex) {
+//                    Logger.getLogger(Action.class.getName()).log(Level.SEVERE, null, ex);
+//                }
+//                }
+//        }, delayTime, 0, TimeUnit.SECONDS);
+//        
+//        
+//        executor.shutdown();
+//    }
 
     public int getSeq() {
         return seq;
@@ -75,20 +75,20 @@ public class Action implements Runnable {
         this.seq = seq;
     }
 
-    public int getDelayTime() {
-        return delayTime;
+    public int getStartTime() {
+        return startTime;
     }
 
-    public void setDelayTime(int delayTime) {
-        this.delayTime = delayTime;
+    public void setStartTime(int startTime) {
+        this.startTime = startTime;
     }
 
-    public int getRunTume() {
-        return runTime;
+    public int getEndTime() {
+        return endTime;
     }
 
-    public void setRunTume(int runTume) {
-        this.runTime = runTume;
+    public void setEndTime(int endTime) {
+        this.endTime = endTime;
     }
 
     public Pump getP() {
@@ -99,33 +99,62 @@ public class Action implements Runnable {
         this.p = p;
     }
 
-    @Override
-    public void run() {
-        this.start();
-    }
-    public void start(){
-        if(t == null){
-            t = new Thread(this);
-            t.start();
-        }
-        p.run();
-        System.out.println("Action : " + seq + " now Running !"+ "open Pump :"+getP().getName() );
-        long startTime = System.currentTimeMillis();
-        while (true){
-            long endTime = System.currentTimeMillis();
-            int currentCollapsedTime = (int) (endTime - startTime) / 1000;
-            if(currentCollapsedTime == runTime){
-                p.stop();
-                System.out.println("Action : " + seq + " now Stop !"+ "close Pump :"+getP().getName() );
-                break;
-            }
-        }
-        System.out.println("Action :"+ seq + "finished running !");
 
+    public void st(){
+        //singleton call
+//        if(t == null){
+//            t = new Thread(this);
+//            t.start();
+//        }
+        //逻辑2
+        System.out.println("Action : " + seq + " now Running !"+ "open Pump :"+getP().getName() );
+        p.run(100);
+
+//        long startTime = System.currentTimeMillis();
+            
+            ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
+            
+            executor.scheduleWithFixedDelay(new Runnable() {
+                int it = 0 ;
+                @Override
+                public void run() {
+                    it = it + 1;
+//                    long endTime = System.currentTimeMillis();
+//                    int currentCollapsedTime = (int) (endTime - startTime) / 1000;
+//                    boolean t = currentCollapsedTime == runTime;
+                    boolean eq = (it == getEndTime() - getStartTime() );
+//                    System.out.println( Thread.currentThread().getName()+"运行 过了"+it+"秒！");
+                    if(eq){
+                        
+                        p.stop(p.pinNumber1);
+                        System.out.println("Action : " + seq + " now Stop ! "+ "close Pump :"+getP().getName() );
+//                        t.interrupt();
+                        executor.shutdown();
+                    }
+                }
+            },0,1000,TimeUnit.MILLISECONDS);
+           this.isActive = false;
+            //逻辑1
+//        try {
+//            while (true) {
+//                long endTime = System.currentTimeMillis();
+//                int currentCollapsedTime = (int) (endTime - startTime) / 1000;
+//                boolean t = currentCollapsedTime == runTime;
+//                System.out.println(t);
+//                if (t) {
+//                    p.stop();
+//                    System.out.println("Action : " + seq + " now Stop ! " + "close Pump :" + getP().getName());
+//                    break;
+//                }
+//                Thread.sleep(1000);
+//            }
+//        }catch (Exception e ){
+//            e.printStackTrace();
+//        }
     }
 
     public String toString(){
-        return "seq:"+ seq +"/Delay:"+this.delayTime+ "/RunTime:"+this.runTime+"/Pump:"+this.p.getName();
+        return "seq:"+ seq +"/StartTime:"+getStartTime()+ "/EndTime:"+getEndTime()+"/Pump:"+this.p.getName();
     }
     
     
