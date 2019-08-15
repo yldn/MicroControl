@@ -1468,7 +1468,7 @@ public class MainFrame extends javax.swing.JFrame {
     
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         //pumplist里的pump逐一运行
-        
+        this.jButton10.setEnabled(false);
         String message = "Program Now Running !";
         javax.swing.JOptionPane.showMessageDialog(this, message);
         Gpio.wiringPiSetup();
@@ -1541,7 +1541,7 @@ public class MainFrame extends javax.swing.JFrame {
                     if(currentCollapsedTime >= a.getEndTime()){
                             Log("Quit running Action :" + a.getSeq());
                             a.getP().shutdown();
-
+                            
                             a.isActive = false;
                             int i = executeList.indexOf(a);
                             executeList.remove(a);
@@ -1560,10 +1560,7 @@ public class MainFrame extends javax.swing.JFrame {
                 }
             }
         },0,10,TimeUnit.MILLISECONDS );
-
-
-
-
+       this.jButton10.setEnabled(true);
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void pumpTypeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pumpTypeBoxActionPerformed
