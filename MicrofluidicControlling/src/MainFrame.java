@@ -231,6 +231,7 @@ public class MainFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        pListInTypepage.getColumnModel().getColumn(0).setMaxWidth(150);
         jScrollPane7.setViewportView(pListInTypepage);
 
         jButton17.setText("-");
@@ -347,6 +348,7 @@ public class MainFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        PumpTableInPumpPage.getColumnModel().getColumn(0).setMaxWidth(300);
         jScrollPane4.setViewportView(PumpTableInPumpPage);
 
         jButton3.setText("-");
@@ -641,6 +643,7 @@ public class MainFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        PumpListInActionPage.getColumnModel().getColumn(0).setMaxWidth(300);
         jScrollPane5.setViewportView(PumpListInActionPage);
 
         jButton6.setText("Edit");
@@ -720,6 +723,7 @@ public class MainFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        ActionTable.getColumnModel().getColumn(0).setMaxWidth(300);
         jScrollPane2.setViewportView(ActionTable);
 
         javax.swing.GroupLayout AddBumpBar2Layout = new javax.swing.GroupLayout(AddBumpBar2);
@@ -742,7 +746,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton12)
                     .addComponent(jButton8))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addGap(32, 32, 32))
         );

@@ -74,7 +74,7 @@ public class Action  {
         this.seq = seq;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.speed = (int)(p.getType().getMinSpeed()+(p.getSpeed()-p.getType().getMinSpeed() + ((double)(speed/100.0))) );
+        this.speed = (int)(p.getType().getMinSpeed()+((p.getSpeed()-p.getType().getMinSpeed()) * ((double)(speed/100.0))) );
         this.p = p;
         this.reverse = reverse;
         p.getAq().add(this);
@@ -188,7 +188,7 @@ public class Action  {
     }
 
     public String toString(){
-        return "seq:"+ seq +"/StartTime:"+getStartTime()+ "/EndTime:"+getEndTime()+"/Pump:"+this.p.getName()+"/reversed:"+this.reverse+"/Speed:"+ this.p.getSpeed()*this.getSpeed()/100;
+        return "seq:"+ seq +"/StartTime:"+getStartTime()+ "/EndTime:"+getEndTime()+"/Pump:"+this.p.getName()+"/reversed:"+this.reverse+"/Speed:"+ this.getSpeed();
     }
     
     
