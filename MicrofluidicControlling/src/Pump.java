@@ -147,7 +147,7 @@ public class Pump {
     public void run(int speed){
         initServo();
         stop(pinNumber2);
-        provisionPin(pinNumber1, 0 , type.getRange());
+        provisionPin(pinNumber1, type.getMinSpeed() , type.getRange());
         System.out.println("provision pin:"+ pinNumber1 + "now running ");
             try{
                 start(pinNumber1,type.getRange()*speed /100 );
