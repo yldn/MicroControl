@@ -68,7 +68,7 @@ public class Pump {
     public Pump(String name, PumpType type, int speed, int pinNumber1, int pinNumber2) {
         this.name = name;
         this.type = type;
-        this.speed = speed;
+        this.speed = (int)(type.getMinSpeed()+(type.getRange()- type.getMinSpeed() ) * ((double)speed/100.0));
         this.pinNumber1 = pinNumber1;
         this.pinNumber2 = pinNumber2;
         Comparator<Action> com = actionComparator();

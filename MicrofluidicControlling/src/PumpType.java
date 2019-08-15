@@ -27,10 +27,9 @@ public class PumpType {
         this.minSpeed = minSpeed;
         
     }
-    //PumpType as String Output
-//    public String toString(){
-//        return ("Type:"+ this.getName() + " Range: "+ this.getRange() + " frequency: "+ this.getFrequency() + " minSpeed: "+this.getMinSpeed());
-//    }
+    public String toString(){
+        return ("Type:"+ this.getName() + " Range: "+ this.getRange() + " minSpeed: "+this.getMinSpeed());
+    }
 
     public String getName() {
         return Name;
