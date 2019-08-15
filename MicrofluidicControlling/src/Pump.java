@@ -188,7 +188,7 @@ public class Pump {
     //Pump as String Output
     public String toString(){
         
-        return (type.getName()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/"+this.speed+"%");
+        return (type.getName()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/actualMaxSpeed"+this.speed+"%");
     }
 
 
