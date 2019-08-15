@@ -34,6 +34,17 @@ public class Action  {
     //runtime
     @Expose
     long endTime;
+    @Expose
+    int speed;
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+    
     //cur pump that take action
     @Expose
     Pump p;
@@ -41,10 +52,11 @@ public class Action  {
     //检查是否在执行
     public boolean isActive;
 
-    public Action(int seq, long startTime, long endTime, Pump p) {
+    public Action(int seq, long startTime, long endTime,int speed, Pump p) {
         this.seq = seq;
         this.startTime = startTime;
         this.endTime = endTime;
+        this.speed = speed;
         this.p = p;
         p.getAq().add(this);
     }

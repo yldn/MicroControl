@@ -121,6 +121,9 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel22 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         startTimeInput = new javax.swing.JTextField();
+        pumpActionSpeed = new javax.swing.JSlider();
+        pumpActionSpeedDisplay = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         ActionExpertMode = new javax.swing.JFrame();
@@ -942,30 +945,63 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(startTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
+        pumpActionSpeed.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                pumpActionSpeedStateChanged(evt);
+            }
+        });
+
+        pumpActionSpeedDisplay.setText("50");
+
+        jLabel15.setText("Speed:");
+
         javax.swing.GroupLayout SinglePumpActionLayout = new javax.swing.GroupLayout(SinglePumpAction);
         SinglePumpAction.setLayout(SinglePumpActionLayout);
         SinglePumpActionLayout.setHorizontalGroup(
             SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SinglePumpActionLayout.createSequentialGroup()
-                .addGap(12, 12, 12)
-                .addComponent(PumpComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(SinglePumpActionLayout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(PumpComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(SinglePumpActionLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel15)
+                        .addGap(23, 23, 23)
+                        .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pumpActionSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SinglePumpActionLayout.createSequentialGroup()
+                                .addComponent(pumpActionSpeedDisplay)
+                                .addGap(113, 113, 113)))))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
         SinglePumpActionLayout.setVerticalGroup(
             SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SinglePumpActionLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(PumpComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(SinglePumpActionLayout.createSequentialGroup()
-                .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SinglePumpActionLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(PumpComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SinglePumpActionLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(SinglePumpActionLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pumpActionSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pumpActionSpeedDisplay)
+                        .addContainerGap(12, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SinglePumpActionLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel15)
+                        .addGap(41, 41, 41))))
         );
 
         jButton16.setText("<Back");
@@ -989,19 +1025,20 @@ public class MainFrame extends javax.swing.JFrame {
             PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PumpActionPageNewLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(jButton16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton13)
-                .addGap(31, 31, 31))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(SinglePumpAction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PumpActionPageNewLayout.createSequentialGroup()
+                        .addComponent(SinglePumpAction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(22, Short.MAX_VALUE))
+                    .addGroup(PumpActionPageNewLayout.createSequentialGroup()
+                        .addComponent(jButton16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton13)
+                        .addGap(31, 31, 31))))
         );
         PumpActionPageNewLayout.setVerticalGroup(
             PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(21, 21, 21)
                 .addComponent(SinglePumpAction, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1713,7 +1750,7 @@ public class MainFrame extends javax.swing.JFrame {
                     if(!a.isActive){
                         if(currentCollapsedTime >=  a.getStartTime()){
 //                            a.st();
-//                            a.getP().run();
+                            a.getP().run(a.getP().getSpeed()*a.getSpeed()/100);
                             Log("running Action :" + a.getSeq());
                             a.isActive = true;
                         }
@@ -2104,7 +2141,7 @@ public class MainFrame extends javax.swing.JFrame {
     ///save&add the Action to the Action List
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
 
-        //找到选中的pump
+        
         String pName = (String)this.PumpComboBox.getSelectedItem();
         int in = this.findPumpByName(pName);
             if(in == -1){
@@ -2128,10 +2165,13 @@ public class MainFrame extends javax.swing.JFrame {
 //            Log("startTime:"+startTime);
 //            Log("endTime:"+endTime);
             
+        int speed = pumpActionSpeed.getValue();
+
         //利用pump生成Action
         Action t = new Action ( this.actionList.size(),
                 startTime,
                 endTime,
+                speed,
                 p);
 
         this.actionList.add(t);
@@ -2636,6 +2676,12 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_endTimeInputActionPerformed
 
+    private void pumpActionSpeedStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_pumpActionSpeedStateChanged
+        // TODO add your handling code here:
+        
+        this.pumpActionSpeedDisplay.setText(""+pumpActionSpeed.getValue());
+    }//GEN-LAST:event_pumpActionSpeedStateChanged
+
     private void mapTypelistToComboBox(ArrayList<PumpType> list ,javax.swing.JComboBox<String> box){
 //    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
     box.removeAllItems();
@@ -2751,6 +2797,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
@@ -2812,6 +2859,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTable pListInTypepage;
     private javax.swing.JLabel pin1Label;
     private javax.swing.JLabel pin2Label;
+    private javax.swing.JSlider pumpActionSpeed;
+    private javax.swing.JLabel pumpActionSpeedDisplay;
     private javax.swing.JTextField pumpNameField;
     private javax.swing.JComboBox<String> pumpPin1;
     private javax.swing.JComboBox<String> pumpPin2;
