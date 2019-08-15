@@ -51,8 +51,6 @@ public class MainFrame extends javax.swing.JFrame {
         feqField = new javax.swing.JTextField();
         jLabel25 = new javax.swing.JLabel();
         minspeedField = new javax.swing.JTextField();
-        jLabel29 = new javax.swing.JLabel();
-        clockFIeld = new javax.swing.JTextField();
         BumpBar2 = new javax.swing.JPanel();
         jScrollPane7 = new javax.swing.JScrollPane();
         pListInTypepage = new javax.swing.JTable();
@@ -194,8 +192,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel25.setText("Minspeed:");
 
-        jLabel29.setText("Clock:");
-
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -204,22 +200,18 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(clockFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(typefield, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(feqField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addComponent(jLabel25)
                         .addGap(18, 18, 18)
                         .addComponent(minspeedField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel24)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(feqField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -229,19 +221,15 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(typefield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(feqField, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(clockFIeld, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(feqField))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(minspeedField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         BumpBar2.setBorder(javax.swing.BorderFactory.createTitledBorder("TypeList"));
@@ -343,7 +331,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(35, 35, 35)
                         .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
                         .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1521,7 +1509,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.PumpconfigMainFrame.setVisible(true);
 //        Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
         //添加默认Pumptype
-        PumpType t = new PumpType("QW");
+        PumpType t = new PumpType("QW",100,100);
         typelist.add(t);
         
         this.addTypeToTable(this.pListInTypepage, t);
@@ -2246,7 +2234,6 @@ public class MainFrame extends javax.swing.JFrame {
         //错误判断如果有inputfield为null则弹窗，然后停止
          if(typefield.getText() == null || typefield.getText().equals("")
                  ||feqField.getText() == null || feqField.getText().equals("")
-                 ||clockFIeld.getText() == null || clockFIeld.getText().equals("")
                  ||minspeedField.getText() == null || minspeedField.getText().equals("")){
              Log("null String input!");
              String message = "null String Input (Invalid)!";
@@ -2254,7 +2241,7 @@ public class MainFrame extends javax.swing.JFrame {
              return ;
         }
         PumpType p = new PumpType(this.typefield.getText(), Integer.parseInt(this.feqField.getText())
-                , Integer.parseInt(this.clockFIeld.getText()) , Integer.parseInt(this.minspeedField.getText()) );
+                 , Integer.parseInt(this.minspeedField.getText()) );
         this.typelist.add(p);
        // 更新list到table'
        this.addTypeToTable(pListInTypepage,p);
@@ -2264,7 +2251,6 @@ public class MainFrame extends javax.swing.JFrame {
 
        this.typefield.setText("");
        this.feqField.setText("");
-       this.clockFIeld.setText("");
        this.minspeedField.setText("");
        showTypeList();
     }//GEN-LAST:event_jButton18ActionPerformed
@@ -2763,7 +2749,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JFileChooser Save;
     private javax.swing.JPanel SinglePumpAction;
     private javax.swing.JToggleButton actionReversed;
-    private javax.swing.JTextField clockFIeld;
     private javax.swing.JTextField endTimeInput;
     private javax.swing.JSlider expertSlider;
     private javax.swing.JTextField feqField;
@@ -2807,7 +2792,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
