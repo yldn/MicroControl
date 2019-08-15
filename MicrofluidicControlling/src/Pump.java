@@ -272,11 +272,13 @@ public class Pump {
         SoftPwm.softPwmCreate(pinNumber2, 0 , type.getRange());
         System.out.println("REVERSED :: frequency now = "+ 19.2e6/type.getClock()/type.getRange());
         try{
-            SoftPwm.softPwmWrite(pinNumber2,speed);
+            SoftPwm.softPwmWrite(pinNumber2,type.getRange()*speed /100);
         }catch(Exception e ){
             e.printStackTrace();
         }
     }
+    
+    ///hardward pwm
 //    public void stop(){
 //        pwm.setPwm(0);
 //        g.low();

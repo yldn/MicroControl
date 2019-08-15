@@ -36,6 +36,24 @@ public class Action  {
     long endTime;
     @Expose
     int speed;
+    @Expose
+    boolean reverse;
+
+    public boolean getReverse() {
+        return reverse;
+    }
+
+    public void setReverse(boolean reverse) {
+        this.reverse = reverse;
+    }
+
+    public boolean isIsActive() {
+        return isActive;
+    }
+
+    public void setIsActive(boolean isActive) {
+        this.isActive = isActive;
+    }
 
     public int getSpeed() {
         return speed;
@@ -52,12 +70,13 @@ public class Action  {
     //检查是否在执行
     public boolean isActive;
 
-    public Action(int seq, long startTime, long endTime,int speed, Pump p) {
+    public Action(int seq, long startTime, long endTime,int speed, Pump p,boolean reverse) {
         this.seq = seq;
         this.startTime = startTime;
         this.endTime = endTime;
         this.speed = speed;
         this.p = p;
+        this.reverse = reverse;
         p.getAq().add(this);
     }
 //    deprecated
@@ -169,7 +188,7 @@ public class Action  {
     }
 
     public String toString(){
-        return "seq:"+ seq +"/StartTime:"+getStartTime()+ "/EndTime:"+getEndTime()+"/Pump:"+this.p.getName();
+        return "seq:"+ seq +"/StartTime:"+getStartTime()+ "/EndTime:"+getEndTime()+"/Pump:"+this.p.getName()+"/reversed:"+this.reverse+"/Speed:"+ this.p.getSpeed()*this.getSpeed()/100;
     }
     
     
