@@ -27,11 +27,11 @@ import static com.pi4j.system.SystemInfo.BoardType.RaspberryPi_3B_Plus;
  */
 
 public class Util {
-
+    static GpioController gpio = GpioFactory.getInstance();
     
 
     public static GpioController getGpio() {
-        GpioController gpio = GpioFactory.getInstance();
+        
         
         return gpio;
     }

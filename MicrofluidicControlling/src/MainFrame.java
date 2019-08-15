@@ -1470,14 +1470,13 @@ public class MainFrame extends javax.swing.JFrame {
         String message = "Program Now Running !";
         javax.swing.JOptionPane.showMessageDialog(this, message);
         
-        final GpioController gpio = GpioFactory.getInstance();
         for(Pump p : pumpList){
-            GpioPinDigitalOutput pin = gpio.provisionDigitalOutputPin(RaspiPin.allPins()[p.getPinNumber1()], PinState.LOW);
-            GpioPinDigitalOutput pin2 = gpio.provisionDigitalOutputPin(RaspiPin.allPins()[p.getPinNumber2()], PinState.LOW);
+            GpioPinDigitalOutput pin = Util.getGpio().provisionDigitalOutputPin(RaspiPin.allPins()[p.getPinNumber1()], PinState.LOW);
+            GpioPinDigitalOutput pin2 = Util.getGpio().provisionDigitalOutputPin(RaspiPin.allPins()[p.getPinNumber2()], PinState.LOW);
             pin.low();
             pin2.low();
         }
-        gpio.shutdown();
+        Util.getGpio().shutdown();
         
         //开始时间线程序
         //测试逻辑1
