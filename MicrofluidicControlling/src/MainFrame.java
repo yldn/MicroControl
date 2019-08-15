@@ -1743,7 +1743,7 @@ public class MainFrame extends javax.swing.JFrame {
                     Log(Arrays.toString(a.getP().getEq().toArray()));
                     if(!a.isActive){
                         if(currentCollapsedTime >=  a.getStartTime()){
-                            if(a.getReverse())
+                            if(!a.getReverse())
                                 a.getP().run(a.getP().getSpeed()*a.getSpeed()/100);
                             else 
                                 a.getP().revertrun(a.getP().getSpeed()*a.getSpeed()/100);
