@@ -11,6 +11,7 @@
 
 import com.pi4j.io.gpio.*;
 import com.pi4j.io.gpio.Pin;
+import com.pi4j.wiringpi.Gpio;
 import javax.swing.*;
 import java.io.*;
 import java.awt.*;
@@ -1464,20 +1465,20 @@ public class MainFrame extends javax.swing.JFrame {
     //Run所有的pump
 
     ScheduledExecutorService worldTime;
+    
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         //pumplist里的pump逐一运行
         
         String message = "Program Now Running !";
         javax.swing.JOptionPane.showMessageDialog(this, message);
-        
+        Gpio.wiringPiSetup();
         for(Pump p : pumpList){
-            GpioPinDigitalOutput pin = Util.getGpio().provisionDigitalOutputPin(RaspiPin.allPins()[p.getPinNumber1()], PinState.LOW);
-            GpioPinDigitalOutput pin2 = Util.getGpio().provisionDigitalOutputPin(RaspiPin.allPins()[p.getPinNumber2()], PinState.LOW);
-            pin.low();
-            pin2.low();
+            p.provisionPin(p.getPinNumber1(), 0 ,10);
+            p.provisionPin(p.getPinNumber2(), 0 ,10);
+            p.start(p.getPinNumber1(), 0);
+            p.start(p.getPinNumber2(), 0);
+            p.shutdown();
         }
-        Util.getGpio().shutdown();
-        
         //开始时间线程序
         //测试逻辑1
         //开始无限循环并记录当前运行时间
