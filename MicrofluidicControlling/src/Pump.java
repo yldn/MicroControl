@@ -176,7 +176,7 @@ public class Pump {
     public void revertrun(int speed ){
         initServo();
         stop(pinNumber1);
-        SoftPwm.softPwmCreate(pinNumber2, 0 , type.getRange());
+        SoftPwm.softPwmCreate(pinNumber2, type.getMinSpeed() , type.getRange());
         System.out.println("REVERSED :: provision pin:"+ pinNumber2 + "now running ");
         try{
             SoftPwm.softPwmWrite(pinNumber2,type.getRange()*(speed /100));
