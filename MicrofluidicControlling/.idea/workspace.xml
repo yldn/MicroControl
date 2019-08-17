@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b72c781-4af6-46fd-bf71-bc5bd553243a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../JsonTest/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JsonTest/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JsonTest/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Action$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Configuation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Configuation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$11.class" afterDir="false" />
@@ -47,7 +44,6 @@
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$41.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$42.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$43.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$44.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$7.class" afterDir="false" />
@@ -55,55 +51,17 @@
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Pump.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Configuation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Configuation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$31.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$32.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$33.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$34.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$35.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$36.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$37.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$38.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Pump.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/PumpType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/PumpType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/build-impl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/genfiles.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PumpType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PumpType.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -112,181 +70,15 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1320064838">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.1" value="2" />
-          <entry key="project.opened" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="3303" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="3303" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="7" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="1766352772">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.open.time.11" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="1305" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1305" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-463">
-              <caret line="1699" column="45" lean-forward="true" selection-start-line="1699" selection-start-column="45" selection-end-line="1699" selection-end-column="45" />
+            <state relative-caret-position="16">
+              <caret line="1699" column="40" selection-start-line="1699" selection-start-column="40" selection-end-line="1699" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#952#1041#0" expanded="true" />
-                <element signature="e#7300#7301#0" expanded="true" />
-                <element signature="e#7361#7362#0" expanded="true" />
-                <element signature="e#7556#7557#0" expanded="true" />
-                <element signature="e#7617#7618#0" expanded="true" />
-                <element signature="e#12663#12664#0" expanded="true" />
-                <element signature="e#12721#12722#0" expanded="true" />
-                <element signature="e#12969#12970#0" expanded="true" />
-                <element signature="e#13030#13031#0" expanded="true" />
-                <element signature="e#14572#14573#0" expanded="true" />
-                <element signature="e#14635#14636#0" expanded="true" />
-                <element signature="e#14868#14869#0" expanded="true" />
-                <element signature="e#14931#14932#0" expanded="true" />
-                <element signature="e#19303#19304#0" expanded="true" />
-                <element signature="e#19361#19362#0" expanded="true" />
-                <element signature="e#19611#19612#0" expanded="true" />
-                <element signature="e#19671#19672#0" expanded="true" />
-                <element signature="e#21306#21307#0" expanded="true" />
-                <element signature="e#21367#21368#0" expanded="true" />
-                <element signature="e#21595#21596#0" expanded="true" />
-                <element signature="e#21656#21657#0" expanded="true" />
-                <element signature="e#24479#24480#0" expanded="true" />
-                <element signature="e#24542#24543#0" expanded="true" />
-                <element signature="e#24891#24892#0" expanded="true" />
-                <element signature="e#24949#24950#0" expanded="true" />
-                <element signature="e#30536#30537#0" expanded="true" />
-                <element signature="e#30596#30597#0" expanded="true" />
-                <element signature="e#30796#30797#0" expanded="true" />
-                <element signature="e#30857#30858#0" expanded="true" />
-                <element signature="e#31053#31054#0" expanded="true" />
-                <element signature="e#31114#31115#0" expanded="true" />
-                <element signature="e#36260#36261#0" expanded="true" />
-                <element signature="e#36318#36319#0" expanded="true" />
-                <element signature="e#36572#36573#0" expanded="true" />
-                <element signature="e#36632#36633#0" expanded="true" />
-                <element signature="e#38150#38151#0" expanded="true" />
-                <element signature="e#38210#38211#0" expanded="true" />
-                <element signature="e#38491#38492#0" expanded="true" />
-                <element signature="e#38551#38552#0" expanded="true" />
-                <element signature="e#38633#38806#0" expanded="true" />
-                <element signature="e#38805#38806#0" expanded="true" />
-                <element signature="e#38955#38956#0" expanded="true" />
-                <element signature="e#39016#39017#0" expanded="true" />
-                <element signature="e#39636#39637#0" expanded="true" />
-                <element signature="e#39694#39695#0" expanded="true" />
-                <element signature="e#41343#41344#0" expanded="true" />
-                <element signature="e#41404#41405#0" expanded="true" />
-                <element signature="e#41601#41602#0" expanded="true" />
-                <element signature="e#41662#41663#0" expanded="true" />
-                <element signature="e#41900#41901#0" expanded="true" />
-                <element signature="e#41962#41963#0" expanded="true" />
-                <element signature="e#42199#42200#0" expanded="true" />
-                <element signature="e#42262#42263#0" expanded="true" />
-                <element signature="e#42502#42503#0" expanded="true" />
-                <element signature="e#42565#42566#0" expanded="true" />
-                <element signature="e#42868#42869#0" expanded="true" />
-                <element signature="e#42930#42931#0" expanded="true" />
-                <element signature="e#43165#43166#0" expanded="true" />
-                <element signature="e#43227#43228#0" expanded="true" />
-                <element signature="e#43466#43467#0" expanded="true" />
-                <element signature="e#43529#43530#0" expanded="true" />
-                <element signature="e#47712#47713#0" expanded="true" />
-                <element signature="e#47776#47777#0" expanded="true" />
-                <element signature="e#52778#52779#0" expanded="true" />
-                <element signature="e#52839#52840#0" expanded="true" />
-                <element signature="e#53094#53095#0" expanded="true" />
-                <element signature="e#53155#53156#0" expanded="true" />
-                <element signature="e#56069#56070#0" expanded="true" />
-                <element signature="e#56127#56128#0" expanded="true" />
-                <element signature="e#57461#57462#0" expanded="true" />
-                <element signature="e#57522#57523#0" expanded="true" />
-                <element signature="e#59075#59076#0" expanded="true" />
-                <element signature="e#59141#59142#0" expanded="true" />
-                <element signature="e#59346#59347#0" expanded="true" />
-                <element signature="e#59412#59413#0" expanded="true" />
-                <element signature="e#62321#62322#0" expanded="true" />
-                <element signature="e#62381#62382#0" expanded="true" />
-                <element signature="e#62578#62579#0" expanded="true" />
-                <element signature="e#62639#62640#0" expanded="true" />
-                <element signature="e#70324#70325#0" expanded="true" />
-                <element signature="e#70384#70385#0" expanded="true" />
-                <element signature="e#75750#75751#0" expanded="true" />
-                <element signature="e#75810#75811#0" expanded="true" />
-                <element signature="e#78834#78835#0" expanded="true" />
-                <element signature="e#78895#78896#0" expanded="true" />
-                <element signature="e#81803#81804#0" expanded="true" />
-                <element signature="e#81863#81864#0" expanded="true" />
-                <element signature="e#86337#86345#0" expanded="true" />
-                <element signature="e#88342#88350#0" expanded="true" />
-                <element signature="e#89658#89666#0" expanded="true" />
-                <element signature="e#97539#97547#0" expanded="true" />
-                <element signature="e#97962#97970#0" expanded="true" />
-                <element signature="e#102976#102977#0" expanded="true" />
-                <element signature="e#103015#103016#0" expanded="true" />
-                <element signature="e#106222#106223#0" expanded="true" />
-                <element signature="e#106268#106269#0" expanded="true" />
-                <element signature="e#109520#109528#0" expanded="true" />
-                <element signature="e#110609#110617#0" expanded="true" />
-                <element signature="e#112577#112585#0" expanded="true" />
-                <element signature="e#114505#114513#0" expanded="true" />
-                <element signature="e#118350#118356#0" expanded="true" />
-                <element signature="e#118711#118719#0" expanded="true" />
-                <element signature="e#128601#128609#0" expanded="true" />
-                <element signature="e#129077#129085#0" expanded="true" />
-                <element signature="e#129931#129932#0" expanded="true" />
-                <element signature="e#129967#129968#0" expanded="true" />
-                <element signature="e#129488#129575#0" expanded="true" />
-                <element signature="e#129855#129856#0" expanded="true" />
-                <element signature="e#129919#129920#0" expanded="true" />
-                <element signature="e#137586#137587#0" expanded="true" />
-                <element signature="e#137656#137657#0" expanded="true" />
-                <element signature="e#137692#137693#0" expanded="true" />
-                <element signature="e#137765#137766#0" expanded="true" />
-                <element signature="e#137799#137800#0" expanded="true" />
-                <element signature="e#137868#137869#0" expanded="true" />
-                <element signature="e#137901#137902#0" expanded="true" />
-                <element signature="e#137968#137969#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -295,18 +87,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
+            <state relative-caret-position="528">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
               <folding>
-                <element signature="e#1800#1801#0" expanded="true" />
-                <element signature="e#1832#1833#0" expanded="true" />
-                <element signature="e#1880#1881#0" expanded="true" />
-                <element signature="e#1922#1923#0" expanded="true" />
-                <element signature="e#1954#1955#0" expanded="true" />
-                <element signature="e#1984#1985#0" expanded="true" />
-                <element signature="e#2028#2029#0" expanded="true" />
-                <element signature="e#2066#2067#0" expanded="true" />
-                <element signature="method#st#0;class#Action#0" />
+                <element signature="e#3014#5111#0" />
               </folding>
             </state>
           </provider>
@@ -315,25 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pump.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
+            <state relative-caret-position="880">
               <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
-              <folding>
-                <element signature="e#987#988#0" expanded="true" />
-                <element signature="e#1012#1013#0" expanded="true" />
-                <element signature="e#1063#1064#0" expanded="true" />
-                <element signature="e#1091#1092#0" expanded="true" />
-                <element signature="e#1135#1136#0" expanded="true" />
-                <element signature="e#1160#1161#0" expanded="true" />
-                <element signature="e#1211#1212#0" expanded="true" />
-                <element signature="e#1239#1240#0" expanded="true" />
-                <element signature="e#2062#2063#0" expanded="true" />
-                <element signature="e#2103#2104#0" expanded="true" />
-                <element signature="e#1292#2301#0" />
-                <element signature="e#3953#3954#0" expanded="true" />
-                <element signature="e#3981#3982#0" expanded="true" />
-                <element signature="e#4020#4021#0" expanded="true" />
-                <element signature="e#4054#4055#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -341,7 +108,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Configuation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
+            <state relative-caret-position="464">
               <caret line="34" selection-start-line="34" selection-end-line="34" />
               <folding>
                 <element signature="e#827#828#0" expanded="true" />
@@ -368,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PumpType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="176">
+              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -377,7 +144,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="768">
               <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
             </state>
           </provider>
@@ -407,12 +174,6 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="139" />
     <option name="y" value="23" />
@@ -425,6 +186,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -437,23 +199,15 @@
               <item name="MicrofluidicControlling" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565808572425" />
@@ -509,16 +263,18 @@
       <workItem from="1565675198810" duration="6007000" />
       <workItem from="1565695587716" duration="25087000" />
       <workItem from="1565786912692" duration="14999000" />
+      <workItem from="1566012877577" duration="10000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46161000" />
+    <option name="totallyTimeSpent" value="46171000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="139" y="23" width="1280" height="704" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21890146" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22213115" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -537,6 +293,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3299539" />
+      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -555,9 +312,36 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1699" column="40" selection-start-line="1699" selection-start-column="40" selection-end-line="1699" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#3014#5111#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pump.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Configuation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
+        <state relative-caret-position="464">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#827#828#0" expanded="true" />
@@ -582,184 +366,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PumpType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="176">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
+        <state relative-caret-position="768">
           <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="61" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pump.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
-          <folding>
-            <element signature="e#987#988#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1091#1092#0" expanded="true" />
-            <element signature="e#1135#1136#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2103#2104#0" expanded="true" />
-            <element signature="e#1292#2301#0" />
-            <element signature="e#3953#3954#0" expanded="true" />
-            <element signature="e#3981#3982#0" expanded="true" />
-            <element signature="e#4020#4021#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
-          <folding>
-            <element signature="e#1800#1801#0" expanded="true" />
-            <element signature="e#1832#1833#0" expanded="true" />
-            <element signature="e#1880#1881#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#1954#1955#0" expanded="true" />
-            <element signature="e#1984#1985#0" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-            <element signature="e#2066#2067#0" expanded="true" />
-            <element signature="method#st#0;class#Action#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-463">
-          <caret line="1699" column="45" lean-forward="true" selection-start-line="1699" selection-start-column="45" selection-end-line="1699" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#952#1041#0" expanded="true" />
-            <element signature="e#7300#7301#0" expanded="true" />
-            <element signature="e#7361#7362#0" expanded="true" />
-            <element signature="e#7556#7557#0" expanded="true" />
-            <element signature="e#7617#7618#0" expanded="true" />
-            <element signature="e#12663#12664#0" expanded="true" />
-            <element signature="e#12721#12722#0" expanded="true" />
-            <element signature="e#12969#12970#0" expanded="true" />
-            <element signature="e#13030#13031#0" expanded="true" />
-            <element signature="e#14572#14573#0" expanded="true" />
-            <element signature="e#14635#14636#0" expanded="true" />
-            <element signature="e#14868#14869#0" expanded="true" />
-            <element signature="e#14931#14932#0" expanded="true" />
-            <element signature="e#19303#19304#0" expanded="true" />
-            <element signature="e#19361#19362#0" expanded="true" />
-            <element signature="e#19611#19612#0" expanded="true" />
-            <element signature="e#19671#19672#0" expanded="true" />
-            <element signature="e#21306#21307#0" expanded="true" />
-            <element signature="e#21367#21368#0" expanded="true" />
-            <element signature="e#21595#21596#0" expanded="true" />
-            <element signature="e#21656#21657#0" expanded="true" />
-            <element signature="e#24479#24480#0" expanded="true" />
-            <element signature="e#24542#24543#0" expanded="true" />
-            <element signature="e#24891#24892#0" expanded="true" />
-            <element signature="e#24949#24950#0" expanded="true" />
-            <element signature="e#30536#30537#0" expanded="true" />
-            <element signature="e#30596#30597#0" expanded="true" />
-            <element signature="e#30796#30797#0" expanded="true" />
-            <element signature="e#30857#30858#0" expanded="true" />
-            <element signature="e#31053#31054#0" expanded="true" />
-            <element signature="e#31114#31115#0" expanded="true" />
-            <element signature="e#36260#36261#0" expanded="true" />
-            <element signature="e#36318#36319#0" expanded="true" />
-            <element signature="e#36572#36573#0" expanded="true" />
-            <element signature="e#36632#36633#0" expanded="true" />
-            <element signature="e#38150#38151#0" expanded="true" />
-            <element signature="e#38210#38211#0" expanded="true" />
-            <element signature="e#38491#38492#0" expanded="true" />
-            <element signature="e#38551#38552#0" expanded="true" />
-            <element signature="e#38633#38806#0" expanded="true" />
-            <element signature="e#38805#38806#0" expanded="true" />
-            <element signature="e#38955#38956#0" expanded="true" />
-            <element signature="e#39016#39017#0" expanded="true" />
-            <element signature="e#39636#39637#0" expanded="true" />
-            <element signature="e#39694#39695#0" expanded="true" />
-            <element signature="e#41343#41344#0" expanded="true" />
-            <element signature="e#41404#41405#0" expanded="true" />
-            <element signature="e#41601#41602#0" expanded="true" />
-            <element signature="e#41662#41663#0" expanded="true" />
-            <element signature="e#41900#41901#0" expanded="true" />
-            <element signature="e#41962#41963#0" expanded="true" />
-            <element signature="e#42199#42200#0" expanded="true" />
-            <element signature="e#42262#42263#0" expanded="true" />
-            <element signature="e#42502#42503#0" expanded="true" />
-            <element signature="e#42565#42566#0" expanded="true" />
-            <element signature="e#42868#42869#0" expanded="true" />
-            <element signature="e#42930#42931#0" expanded="true" />
-            <element signature="e#43165#43166#0" expanded="true" />
-            <element signature="e#43227#43228#0" expanded="true" />
-            <element signature="e#43466#43467#0" expanded="true" />
-            <element signature="e#43529#43530#0" expanded="true" />
-            <element signature="e#47712#47713#0" expanded="true" />
-            <element signature="e#47776#47777#0" expanded="true" />
-            <element signature="e#52778#52779#0" expanded="true" />
-            <element signature="e#52839#52840#0" expanded="true" />
-            <element signature="e#53094#53095#0" expanded="true" />
-            <element signature="e#53155#53156#0" expanded="true" />
-            <element signature="e#56069#56070#0" expanded="true" />
-            <element signature="e#56127#56128#0" expanded="true" />
-            <element signature="e#57461#57462#0" expanded="true" />
-            <element signature="e#57522#57523#0" expanded="true" />
-            <element signature="e#59075#59076#0" expanded="true" />
-            <element signature="e#59141#59142#0" expanded="true" />
-            <element signature="e#59346#59347#0" expanded="true" />
-            <element signature="e#59412#59413#0" expanded="true" />
-            <element signature="e#62321#62322#0" expanded="true" />
-            <element signature="e#62381#62382#0" expanded="true" />
-            <element signature="e#62578#62579#0" expanded="true" />
-            <element signature="e#62639#62640#0" expanded="true" />
-            <element signature="e#70324#70325#0" expanded="true" />
-            <element signature="e#70384#70385#0" expanded="true" />
-            <element signature="e#75750#75751#0" expanded="true" />
-            <element signature="e#75810#75811#0" expanded="true" />
-            <element signature="e#78834#78835#0" expanded="true" />
-            <element signature="e#78895#78896#0" expanded="true" />
-            <element signature="e#81803#81804#0" expanded="true" />
-            <element signature="e#81863#81864#0" expanded="true" />
-            <element signature="e#86337#86345#0" expanded="true" />
-            <element signature="e#88342#88350#0" expanded="true" />
-            <element signature="e#89658#89666#0" expanded="true" />
-            <element signature="e#97539#97547#0" expanded="true" />
-            <element signature="e#97962#97970#0" expanded="true" />
-            <element signature="e#102976#102977#0" expanded="true" />
-            <element signature="e#103015#103016#0" expanded="true" />
-            <element signature="e#106222#106223#0" expanded="true" />
-            <element signature="e#106268#106269#0" expanded="true" />
-            <element signature="e#109520#109528#0" expanded="true" />
-            <element signature="e#110609#110617#0" expanded="true" />
-            <element signature="e#112577#112585#0" expanded="true" />
-            <element signature="e#114505#114513#0" expanded="true" />
-            <element signature="e#118350#118356#0" expanded="true" />
-            <element signature="e#118711#118719#0" expanded="true" />
-            <element signature="e#128601#128609#0" expanded="true" />
-            <element signature="e#129077#129085#0" expanded="true" />
-            <element signature="e#129931#129932#0" expanded="true" />
-            <element signature="e#129967#129968#0" expanded="true" />
-            <element signature="e#129488#129575#0" expanded="true" />
-            <element signature="e#129855#129856#0" expanded="true" />
-            <element signature="e#129919#129920#0" expanded="true" />
-            <element signature="e#137586#137587#0" expanded="true" />
-            <element signature="e#137656#137657#0" expanded="true" />
-            <element signature="e#137692#137693#0" expanded="true" />
-            <element signature="e#137765#137766#0" expanded="true" />
-            <element signature="e#137799#137800#0" expanded="true" />
-            <element signature="e#137868#137869#0" expanded="true" />
-            <element signature="e#137901#137902#0" expanded="true" />
-            <element signature="e#137968#137969#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

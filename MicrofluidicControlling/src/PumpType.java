@@ -28,7 +28,7 @@ public class PumpType {
         
     }
     public String toString(){
-        return ("Type:"+ this.getName() + " Range: "+ this.getRange() + " minSpeed: "+this.getMinSpeed());
+        return ("Type: "+ this.getName() + " ["+this.getMinSpeed()+","+this.getRange()+"] " );
     }
 
     public String getName() {

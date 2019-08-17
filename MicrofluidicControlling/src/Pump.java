@@ -179,7 +179,7 @@ public class Pump {
         SoftPwm.softPwmCreate(pinNumber2, type.getMinSpeed() , type.getRange());
         System.out.println("REVERSED :: provision pin:"+ pinNumber2 + "now running ");
         try{
-            SoftPwm.softPwmWrite(pinNumber2,type.getRange()*(speed /100));
+             start(pinNumber2,type.getRange()*speed /100 );
         }catch(Exception e ){
 //            e.printStackTrace();
         }
@@ -188,7 +188,7 @@ public class Pump {
     //Pump as String Output
     public String toString(){
         
-        return (type.getName()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/actualMaxSpeed"+this.speed+"%");
+        return (type.toString()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/actualMaxSpeed"+this.speed+"%");
     }
 
 

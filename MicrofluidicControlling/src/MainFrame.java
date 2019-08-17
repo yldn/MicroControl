@@ -84,9 +84,9 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         pumpSpeed = new javax.swing.JSlider();
         speedDisplay = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jButton19 = new javax.swing.JButton();
         jButton15 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jLabel5 = new javax.swing.JLabel();
         ActionConfiguationMainPage = new javax.swing.JFrame();
@@ -101,8 +101,8 @@ public class MainFrame extends javax.swing.JFrame {
         jButton12 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         ActionTable = new javax.swing.JTable();
-        jButton10 = new javax.swing.JButton();
         jButton20 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem8 = new javax.swing.JMenuItem();
@@ -165,8 +165,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel21.setText("Edit Pump Type ");
 
-        jPanel6.setSize(new java.awt.Dimension(190, 136));
-
         jLabel23.setText("Name:");
 
         jLabel24.setText("Frequency:");
@@ -178,23 +176,20 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addContainerGap(18, Short.MAX_VALUE)
                         .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(31, 31, 31)
                         .addComponent(typefield, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel24)
                         .addGap(14, 14, 14)
                         .addComponent(feqField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(jLabel25)
                         .addGap(18, 18, 18)
-                        .addComponent(minspeedField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)))
+                        .addComponent(minspeedField, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
@@ -330,10 +325,13 @@ public class MainFrame extends javax.swing.JFrame {
         BumpBar2.getAccessibleContext().setAccessibleDescription("");
 
         PumpconfigMainFrame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        PumpconfigMainFrame.setSize(new java.awt.Dimension(870, 500));
+        PumpconfigMainFrame.setSize(new java.awt.Dimension(1010, 510));
 
-        BumpBar1.setBorder(javax.swing.BorderFactory.createTitledBorder("PumpList"));
+        jTabbedPane2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
 
+        BumpBar1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PumpList", 0, 0, new java.awt.Font("Arial", 0, 18))); // NOI18N
+
+        PumpTableInPumpPage.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         PumpTableInPumpPage.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -353,6 +351,7 @@ public class MainFrame extends javax.swing.JFrame {
         PumpTableInPumpPage.getColumnModel().getColumn(0).setMaxWidth(300);
         jScrollPane4.setViewportView(PumpTableInPumpPage);
 
+        jButton3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton3.setText("-");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -364,24 +363,27 @@ public class MainFrame extends javax.swing.JFrame {
         BumpBar1.setLayout(BumpBar1Layout);
         BumpBar1Layout.setHorizontalGroup(
             BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BumpBar1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(BumpBar1Layout.createSequentialGroup()
+                .addGroup(BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BumpBar1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE))
                 .addContainerGap())
         );
         BumpBar1Layout.setVerticalGroup(
             BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BumpBar1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17))
         );
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder("PumpConfiguation"));
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PumpConfiguation", 0, 0, new java.awt.Font("Arial", 0, 18))); // NOI18N
 
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel12.setText("Pos:");
 
         pumpPin1.setAutoscrolls(true);
@@ -391,8 +393,10 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        pin1Label.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pin1Label.setText("select");
 
+        jLabel26.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel26.setText("Neg:");
 
         pumpPin2.addItemListener(new java.awt.event.ItemListener() {
@@ -401,6 +405,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        pin2Label.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pin2Label.setText("select");
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
@@ -424,7 +429,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel16Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pin1Label, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -435,9 +440,10 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(pumpPin2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel26)
                     .addComponent(pin2Label))
-                .addGap(0, 17, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
+        pumpTypeBox.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         pumpTypeBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "QW" }));
         pumpTypeBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -445,10 +451,13 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel13.setText("Type:");
 
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel9.setText("Name: ");
 
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("MaxSpeed:");
 
@@ -458,6 +467,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        speedDisplay.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         speedDisplay.setText("50");
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
@@ -471,14 +481,14 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
                             .addComponent(jLabel9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pumpTypeBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pumpNameField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(pumpNameField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pumpSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(pumpSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE))
                     .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
@@ -488,55 +498,33 @@ public class MainFrame extends javax.swing.JFrame {
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel14Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(pumpTypeBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(pumpNameField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pumpNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
                         .addComponent(jLabel10)
                         .addGap(35, 35, 35))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addComponent(pumpSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(speedDisplay)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pumpTypeBox.getAccessibleContext().setAccessibleName("");
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
-
-        jButton2.setText("Next>");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
+        jButton19.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton19.setText("EditType");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -544,10 +532,46 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton15.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton15.setText("Add>");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(2, 2, 2)))
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton2.setText("Next>");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
             }
         });
 
@@ -556,22 +580,12 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jButton19)
-                        .addGap(122, 122, 122)
-                        .addComponent(jButton15))
-                    .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(50, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
-                        .addGap(45, 45, 45))))
+                    .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -579,19 +593,17 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton2)
-                        .addComponent(jButton19))
-                    .addComponent(jButton15))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Standard", jPanel3);
         jTabbedPane2.addTab("Advnced", jTabbedPane3);
 
+        jLabel5.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jLabel5.setText("Pump Configuation Page");
 
         javax.swing.GroupLayout PumpconfigMainFrameLayout = new javax.swing.GroupLayout(PumpconfigMainFrame.getContentPane());
@@ -612,19 +624,22 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(PumpconfigMainFrameLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane2)
-                .addGap(16, 16, 16))
+                .addContainerGap())
         );
 
         ActionConfiguationMainPage.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         ActionConfiguationMainPage.setLocation(new java.awt.Point(100, 100));
-        ActionConfiguationMainPage.setSize(new java.awt.Dimension(800, 550));
+        ActionConfiguationMainPage.setSize(new java.awt.Dimension(1120, 550));
 
+        jLabel7.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jLabel7.setText("Action Page");
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder("Pumps:"));
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pumps:", 0, 0, new java.awt.Font("Arial", 1, 18))); // NOI18N
+        jPanel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
 
+        PumpListInActionPage.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         PumpListInActionPage.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Pump1", "GPIO(12.13) 100% "},
@@ -648,6 +663,7 @@ public class MainFrame extends javax.swing.JFrame {
         PumpListInActionPage.getColumnModel().getColumn(0).setMaxWidth(300);
         jScrollPane5.setViewportView(PumpListInActionPage);
 
+        jButton6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton6.setText("Edit");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -655,28 +671,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton6))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
-        );
-
+        jButton4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton4.setText("Expert >");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -684,8 +679,38 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        AddBumpBar2.setBorder(javax.swing.BorderFactory.createTitledBorder("Actions:"));
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(237, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(17, 17, 17))))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
+        AddBumpBar2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actions:", 0, 0, new java.awt.Font("Arial", 1, 18))); // NOI18N
+
+        jButton8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jButton8.setText("+");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -693,6 +718,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton12.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jButton12.setText("-");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -705,20 +731,21 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        ActionTable.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         ActionTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"SingleAction", "Pump 1 run * sec "},
-                {"WaitingPumpAction", "After Pump 1 stop Pump 2 run * sec"},
-                {null, null},
-                {null, null},
-                {null, null}
+                {"SingleAction", "Pump 1 run * sec ", null},
+                {"WaitingPumpAction", "After Pump 1 stop Pump 2 run * sec", null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Action", "Content"
+                "Action", "Content", "Active"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.Object.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -726,33 +753,18 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
         ActionTable.getColumnModel().getColumn(0).setMaxWidth(300);
+        ActionTable.getColumnModel().getColumn(2).setMaxWidth(300);
         jScrollPane2.setViewportView(ActionTable);
 
-        javax.swing.GroupLayout AddBumpBar2Layout = new javax.swing.GroupLayout(AddBumpBar2);
-        AddBumpBar2.setLayout(AddBumpBar2Layout);
-        AddBumpBar2Layout.setHorizontalGroup(
-            AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddBumpBar2Layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(jButton12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(AddBumpBar2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-        );
-        AddBumpBar2Layout.setVerticalGroup(
-            AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AddBumpBar2Layout.createSequentialGroup()
-                .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12)
-                    .addComponent(jButton8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addGap(32, 32, 32))
-        );
+        jButton20.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jButton20.setText("Stop");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
 
+        jButton10.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
         jButton10.setText("Run");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -760,14 +772,46 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton20.setText("Pause");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout AddBumpBar2Layout = new javax.swing.GroupLayout(AddBumpBar2);
+        AddBumpBar2.setLayout(AddBumpBar2Layout);
+        AddBumpBar2Layout.setHorizontalGroup(
+            AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddBumpBar2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(AddBumpBar2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddBumpBar2Layout.createSequentialGroup()
+                        .addGap(0, 319, Short.MAX_VALUE)
+                        .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddBumpBar2Layout.createSequentialGroup()
+                                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(35, 35, 35))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AddBumpBar2Layout.createSequentialGroup()
+                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14))))))
+        );
+        AddBumpBar2Layout.setVerticalGroup(
+            AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AddBumpBar2Layout.createSequentialGroup()
+                .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
 
-        jMenu3.setText("File");
+        jMenu3.setText("Save");
+        jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         jMenuItem8.setText("Save Action");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
@@ -796,6 +840,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenuBar2.add(jMenu3);
 
         jMenu4.setText("Load");
+        jMenu4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         jMenuItem5.setText("Load Action");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
@@ -833,22 +878,14 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(AddBumpBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
                         .addComponent(jLabel7)
-                        .addGap(0, 685, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(AddBumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))))
         );
         ActionConfiguationMainPageLayout.setVerticalGroup(
             ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -856,26 +893,25 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel7)
                 .addGap(14, 14, 14)
-                .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(AddBumpBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18))
         );
+
+        jPanel7.getAccessibleContext().setAccessibleDescription("");
 
         PumpActionPageNew.setLocation(new java.awt.Point(100, 100));
         PumpActionPageNew.setMinimumSize(new java.awt.Dimension(468, 300));
         PumpActionPageNew.setPreferredSize(new java.awt.Dimension(468, 300));
-        PumpActionPageNew.setSize(new java.awt.Dimension(468, 300));
+        PumpActionPageNew.setSize(new java.awt.Dimension(500, 350));
 
-        SinglePumpAction.setBorder(javax.swing.BorderFactory.createTitledBorder("SinglePumpAction:"));
+        SinglePumpAction.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SinglePumpAction:", 0, 0, new java.awt.Font("Arial", 2, 18))); // NOI18N
 
+        PumpComboBox.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         PumpComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pump 1 " }));
 
+        jLabel19.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel19.setText("End Time:");
 
         endTimeInput.addActionListener(new java.awt.event.ActionListener() {
@@ -891,19 +927,20 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel18Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel19)
-                .addGap(52, 52, 52)
+                .addGap(44, 44, 44)
                 .addComponent(endTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel18Layout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(endTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
+        jLabel28.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel28.setText("Start Time:");
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
@@ -913,17 +950,18 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel28)
-                .addGap(46, 46, 46)
+                .addGap(30, 30, 30)
                 .addComponent(startTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(26, 26, 26))
         );
         jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
-                    .addComponent(startTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(startTimeInput, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(3, 3, 3))
         );
 
         pumpActionSpeed.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -932,28 +970,22 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        pumpActionSpeedDisplay.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         pumpActionSpeedDisplay.setText("50");
 
+        jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel15.setText("Speed:");
 
+        actionReversed.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         actionReversed.setText("Reversed");
 
         javax.swing.GroupLayout SinglePumpActionLayout = new javax.swing.GroupLayout(SinglePumpAction);
         SinglePumpAction.setLayout(SinglePumpActionLayout);
         SinglePumpActionLayout.setHorizontalGroup(
             SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, SinglePumpActionLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(pumpActionSpeedDisplay)
-                .addGap(197, 197, 197))
             .addGroup(SinglePumpActionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(SinglePumpActionLayout.createSequentialGroup()
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(pumpActionSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(SinglePumpActionLayout.createSequentialGroup()
                         .addComponent(PumpComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -961,7 +993,14 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(actionReversed, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(actionReversed, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(pumpActionSpeedDisplay)
+                        .addGroup(SinglePumpActionLayout.createSequentialGroup()
+                            .addComponent(jLabel15)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(pumpActionSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
         SinglePumpActionLayout.setVerticalGroup(
             SinglePumpActionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -987,9 +1026,10 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(jLabel15)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pumpActionSpeedDisplay)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
+        jButton16.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton16.setText("<Back");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -997,8 +1037,8 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton13.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton13.setText("Save");
-        jButton13.setSize(new java.awt.Dimension(58, 32));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
@@ -1031,10 +1071,11 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        ActionExpertMode.setSize(new java.awt.Dimension(902, 500));
+        ActionExpertMode.setSize(new java.awt.Dimension(920, 500));
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("Bumps:"));
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pumps:", 0, 0, new java.awt.Font("Arial", 1, 24))); // NOI18N
 
+        PumpListInExpertMode.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         PumpListInExpertMode.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 { new Integer(1), "Pump1", "QW/GPIO(12,13)/100%"},
@@ -1071,14 +1112,17 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(77, Short.MAX_VALUE))
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
+        jLabel11.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 153, 51));
         jLabel11.setText("Expert Mode:");
 
         jPanel11.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
 
+        jLabel22.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel22.setText("Speed:");
 
         expertSlider.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -1095,20 +1139,21 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jLabel22)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(expertSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel15Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jLabel22)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(expertSlider, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
+        jToggleButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jToggleButton1.setText("Run/Reverse");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1116,6 +1161,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jToggleButton2.setText("Run");
         jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1123,6 +1169,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        speedDisplayExpert.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         speedDisplayExpert.setText("50");
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
@@ -1132,13 +1179,13 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addContainerGap(466, Short.MAX_VALUE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(speedDisplayExpert, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)))
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(jToggleButton1)
                 .addGap(18, 18, 18)
                 .addComponent(jToggleButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36))
@@ -1159,6 +1206,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jButton9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton9.setText("<Back");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1166,6 +1214,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton21.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jButton21.setText("Pause");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1209,16 +1258,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
 
         FileChooser.setSize(new java.awt.Dimension(586, 412));
         FileChooser.setType(java.awt.Window.Type.POPUP);
 
         Save.setDialogType(javax.swing.JFileChooser.SAVE_DIALOG);
-        Save.setSize(new java.awt.Dimension(550, 400));
-
-        Load.setSize(new java.awt.Dimension(550, 400));
 
         javax.swing.GroupLayout FileChooserLayout = new javax.swing.GroupLayout(FileChooser.getContentPane());
         FileChooser.getContentPane().setLayout(FileChooserLayout);
@@ -1296,12 +1342,11 @@ public class MainFrame extends javax.swing.JFrame {
         this.PumpconfigMainFrame.setVisible(true);
 //        Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
         //添加默认Pumptype
-        PumpType t = new PumpType("QW",100,100);
+        PumpType t = new PumpType("QW",100,80);
         typelist.add(t);
-        
-        this.addTypeToTable(this.pListInTypepage, t);
+        this.mapTypeListToTable(this.pListInTypepage, typelist);
+       //安排slider
         setTS(pumpSpeed);
-
         loadPumpconfigFrame();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -1311,22 +1356,13 @@ public class MainFrame extends javax.swing.JFrame {
         slider.setMinorTickSpacing(1);
         slider.setPaintTicks(true);
 
-        ///设置一些label标签
-//        Hashtable<Integer,JComponent> hashtable = new Hashtable<Integer , JComponent>();
-//        JLabel base = new JLabel("fit");
-//        hashtable.put(0,base);
-//        slider.setLabelTable(hashtable);
-//        slider.setPaintLabels(true);
-
     }
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         ActionConfiguationMainPage.setVisible(true);
         this.PumpconfigMainFrame.setVisible(false);
         ////先清空table
-        
-        clearTableContent(PumpListInActionPage);
-        addPumpToTable(evt,PumpListInActionPage);
+        this.mapPumplistToTable(PumpListInActionPage);
 
         //检查action里面有没有多余pump如果有则删掉
         ////还需要debug***********************************
@@ -1345,26 +1381,16 @@ public class MainFrame extends javax.swing.JFrame {
 //            }
 //        }
         /////
+        updateActionListToTable(ActionTable);
         showPumpList();
         showActionList();
-        updateActionListToTable(ActionTable);
-
     }//GEN-LAST:event_jButton2ActionPerformed
     
     private void clearTableContent(JTable tab){
         DefaultTableModel model = (DefaultTableModel) tab.getModel();
         model.setRowCount(0);
     }
-    private void addPumpToTable(java.awt.event.ActionEvent evt , JTable tab){
-        for(Pump p : this.pumpList){
-            ArrayList<String> content = new ArrayList<String>();
-            content.add(p.getName());
-            content.add(p.toString());
-            DefaultTableModel model = (DefaultTableModel) tab.getModel();
-            model.addRow(content.toArray());
-        }
-        
-    }
+
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         //读取到Actionlist
@@ -1504,45 +1530,81 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
         worldTime = Executors.newScheduledThreadPool(1);
-
+        
+        
+        DefaultTableCellRenderer tcr = new DefaultTableCellRenderer() {
+                    public Component getTableCellRendererComponent(JTable table,
+                                                                   Object value, boolean isSelected, boolean hasFocus,
+                                                                   int row, int column) {
+                        if (row % 2 == 0) {
+                            setBackground(Color.white); //设置奇数行底色
+                        } else if (row % 2 == 1) {
+                            setBackground(new Color(206, 231, 255)); //设置偶数行底色
+                        }
+                        if (table.getValueAt(row, 2).equals("true")) {
+                            setBackground(Color.red); 
+                        }
+                        //如果需要设置某一个Cell颜色，需要加上column过滤条件即可
+                        return super.getTableCellRendererComponent(table, value,
+                                isSelected, hasFocus, row, column);
+                    }
+                };
+                for (int i = 0; i < ActionTable.getColumnCount(); i++) {
+                    if(i==2){
+                    ActionTable.getColumn(ActionTable.getColumnName(i)).setCellRenderer(tcr);
+                    }
+                }
+        
+        this.updateActionListToTable(ActionTable);
+        
         final ScheduledFuture<?> timeHandler = worldTime.scheduleAtFixedRate(new Runnable() {
             long startTime = System.currentTimeMillis() + 1000;
+            JTable tab  = ActionTable;
             @Override
             public void run() {
+                
                 long endTime = System.currentTimeMillis();
                 //结束计时
+                long currentCollapsedTime = (endTime - startTime);
+                Log("Running Time"+currentCollapsedTime);
                 if(executeList.isEmpty()){
                     Log("Finished Running!");
                     worldTime.shutdown();
                 }
-                long currentCollapsedTime = (endTime - startTime);
-                Log("Running Time"+currentCollapsedTime);
-                
                 //Run the Application
-                Action tmp = executeList.get(0);
-
-
+//                Action tmp = executeList.get(0);
                 for (Action a : executeList){
-
-                    Log(Arrays.toString(a.getP().getEq().toArray()));
+                    //高亮
+                    
+//                    Log(Arrays.toString(a.getP().getEq().toArray()));
+                    
                     if(!a.isActive){
+                        
+                        
                         if(currentCollapsedTime >=  a.getStartTime()){
-                            if(!a.getReverse())
+                            
+                            if(!a.getReverse()){
                                 a.getP().run(a.getP().getSpeed()*a.getSpeed()/100);
-                            else 
+                            }
+                            else {
                                 a.getP().revertrun(a.getP().getSpeed()*a.getSpeed()/100);
+                            }
                             
                             Log("Pump :"+ a.getP().getName()+"running with speed : "+ a.getP().getSpeed()*a.getSpeed()/100);
 //                            Log("running Action :" + a.getSeq());
                             a.isActive = true;
+                            tab.setValueAt("true", a.getSeq(), 2);
                         }
                         ////
                     }
+                    
                     if(currentCollapsedTime >= a.getEndTime()){
                             Log("Quit running Action :" + a.getSeq());
                             a.getP().shutdown();
                             
                             a.isActive = false;
+                            tab.setValueAt("false", a.getSeq(), 2);
+                            
                             int i = executeList.indexOf(a);
                             executeList.remove(a);
                             try {
@@ -1656,9 +1718,15 @@ public class MainFrame extends javax.swing.JFrame {
         model.addRow(content.toArray());
     }
     
+    private void mapTypeListToTable(JTable tab , ArrayList<PumpType> tl){
+        this.clearTableContent(tab);
+        for(PumpType t : tl){
+            addTypeToTable(tab,t);
+        }
+    }
     
     ///@Parameter this function we add content of pump p to the jTable tab 
-    private void addPumpToPumpTable(java.awt.event.ActionEvent evt , JTable tab, Pump p){
+    private void addPumpToPumpTable(JTable tab, Pump p){
         ArrayList<String> content = new ArrayList<String>();
         content.add(p.getName());
         content.add(p.toString());
@@ -1668,9 +1736,13 @@ public class MainFrame extends javax.swing.JFrame {
 //        System.out.println("add Pump to table");
 //        Log("p.name: "+ p.getName() +" " + p.pinNumber1 + " " + p.pinNumber2 +"now being deleted from list");
 //        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
-        this.pinList.remove((Integer)p.pinNumber1);
-//        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
-        this.pinList.remove((Integer)p.pinNumber2);
+    
+//        if(pinList.contains(p.getPinNumber1())){
+//        this.pinList.remove((Integer)p.pinNumber1);
+//        }
+////        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
+//        if(pinList.contains(p.getPinNumber2())){
+//            this.pinList.remove((Integer)p.pinNumber2);
 //        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
         
     }
@@ -1682,10 +1754,12 @@ public class MainFrame extends javax.swing.JFrame {
             String tName =(String) model.getValueAt(tab.getSelectedRow(),0);
             int in = findTypeByName(tName);
             if(in == -1){
-                Log("can't find type "+ tName);
+                Log("can't find type remove anyway"+ tName);
+                 model.removeRow(tab.getSelectedRow());
                 return ;
             }
 //            PumpType t = typelist.get(in);
+            
             typelist.remove(in);
             model.removeRow(tab.getSelectedRow());
         }
@@ -1722,11 +1796,11 @@ public class MainFrame extends javax.swing.JFrame {
             //释放可用针脚，检查pumplist
             Log("pump: "+pName+" deleted");
             Pump pump = this.pumpList.get(in);
-            if(!pumpList.contains(pump.getPinNumber1())) {
-                this.pinList.add(pump.getPinNumber1());
+            if(!pumpList.contains((Integer)pump.getPinNumber1())) {
+                this.pinList.add((Integer)pump.getPinNumber1());
             }
-            if(!pumpList.contains(pump.getPinNumber2())) {
-                this.pinList.add(pump.getPinNumber2());
+            if(!pumpList.contains((Integer)pump.getPinNumber2())) {
+                this.pinList.add((Integer)pump.getPinNumber2());
             }
             Collections.sort(pinList);
             
@@ -1783,7 +1857,7 @@ public class MainFrame extends javax.swing.JFrame {
         }
         int pts = findTypeByName(pType);
         if(pts == -1){
-            String message = "null String Input (Invalid)!";
+            String message = "type don't exist! (Invalid)!";
             javax.swing.JOptionPane.showMessageDialog(this, message);
             return;
         }
@@ -1822,7 +1896,6 @@ public class MainFrame extends javax.swing.JFrame {
         //生成默认速度为100 的Pump
 //        Pump newPump = new Pump(pName,pType,pin1,pin2);
         //生成默认速度为读条的 Pump
-
         PumpType pt = typelist.get(pts);
 
         Pump newPump = new Pump(pName,pt,pumpSpeed.getValue(),pin1,pin2);
@@ -1836,28 +1909,42 @@ public class MainFrame extends javax.swing.JFrame {
         //show in the list
         // 滚轴装载table
 //        JScrollPane jsp = new JScrollPane(this.PumpTableInPumpPage);
-        this.addPumpToPumpTable(evt, this.PumpTableInPumpPage, newPump);
+        this.mapPumplistToTable(this.PumpTableInPumpPage);
 ////清空左边所有值 ,更新两个pin list
         
         resetAllPumpConfig();
         
 ////////////refresh pumplists/////////
-        this.pumpPin1.removeAllItems();
-        this.pumpPin2.removeAllItems();
-        
-        pumpPin1.addItem("select");
-        pumpPin2.addItem("select");
-        for(int i = 0 ; i< this.pinList.size();i++){
-            pumpPin1.addItem(""+this.pinList.get(i));
-            pumpPin2.addItem(""+this.pinList.get(i));
-        }
-        
-        this.pin1Label.setText("select");
-        this.pin2Label.setText("select");
+//        this.pumpPin1.removeAllItems();
+//        this.pumpPin2.removeAllItems();
+//        
+//        pumpPin1.addItem("select");
+//        pumpPin2.addItem("select");
+//        for(int i = 0 ; i< this.pinList.size();i++){
+//            pumpPin1.addItem(""+this.pinList.get(i));
+//            pumpPin2.addItem(""+this.pinList.get(i));
+//        }
+//        
+//        this.pin1Label.setText("select");
+//        this.pin2Label.setText("select");
+        this.mapPinListToComboBox(pumpPin1);
+        this.mapPinListToComboBox(pumpPin2);
     }//GEN-LAST:event_jButton15ActionPerformed
-    //添加pump之后重置左边参数
+    void addToPumpList(Pump p){
+        this.pumpList.add(p);
+        this.showPinList();
+        this.pinList.remove((Integer)p.getPinNumber1());
+        this.showPinList();
+        this.pinList.remove((Integer)p.getPinNumber2());
+        this.showPinList();
+    }
+
+//添加pump之后重置左边参数
     private void resetAllPumpConfig(){
         this.pumpNameField.setText("");
+        //根据pumplist更新pinlist 此处保证pumplist和pinlist同步
+        this.updatePinList();
+        this.showPinList();
     }
     /////两个combobox互相的listener
     private void pumpPin1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pumpPin1ItemStateChanged
@@ -1938,7 +2025,7 @@ public class MainFrame extends javax.swing.JFrame {
         showActionList();
         updateActionListToTable(this.ActionTable);
         }catch (Exception e ){
-            String message = "pinput false";
+            String message = "input false";
             javax.swing.JOptionPane.showMessageDialog(this, message);
             this.PumpActionPageNew.setVisible(false);
             return;
@@ -1965,6 +2052,7 @@ public class MainFrame extends javax.swing.JFrame {
             ArrayList<String> content = new ArrayList<String>();
             content.add(""+a.getSeq());
             content.add(a.toString());
+            content.add(""+a.isActive);
             model.addRow(content.toArray());
         }
     }
@@ -2016,9 +2104,10 @@ public class MainFrame extends javax.swing.JFrame {
                  , Integer.parseInt(this.minspeedField.getText()) );
         this.typelist.add(p);
        // 更新list到table'
-       this.addTypeToTable(pListInTypepage,p);
-        Log("add a Pump Type"+ p.getName()+" to the pump List");
+//       this.addTypeToTable(pListInTypepage,p);
+        Log("add a Pump Type"+ p.getName()+" to the type List");
 //        Log("Avaliavle Types:" + Arrays.toString(this.typelist.toArray()));
+        this.mapTypeListToTable(pListInTypepage, typelist);
 
 
        this.typefield.setText("");
@@ -2258,10 +2347,12 @@ public class MainFrame extends javax.swing.JFrame {
             int in = findPumpByName(pn);
             Pump p = pumpList.get(in);
             if(!jToggleButton1.isSelected()){
-                p.run(expertSlider.getValue());
+//                p.run(expertSlider.getValue());
+                Color cl = new Color(expertSlider.getValue()*255/100,0,0);
+                speedDisplayExpert.setForeground(cl);
             }
             else {
-                p.revertrun(expertSlider.getValue());
+//                p.revertrun(expertSlider.getValue());
             }
 
         }
@@ -2442,7 +2533,7 @@ public class MainFrame extends javax.swing.JFrame {
     private void mapTypelistToComboBox(ArrayList<PumpType> list ,javax.swing.JComboBox<String> box){
 //    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
     box.removeAllItems();
-    DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
+    DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
     box.setModel(model);
     model.addElement("select");
 
@@ -2454,16 +2545,14 @@ public class MainFrame extends javax.swing.JFrame {
     //根据现有的针脚map到jcombobox box上
     private void mapPinListToComboBox(javax.swing.JComboBox<String> box){
 //    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
-    DefaultComboBoxModel<String> model = new DefaultComboBoxModel<String>();
+    DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>();
     box.setModel(model);
     model.addElement("select");
         for (int j = 0; j < pinList.size(); j++) {
             model.addElement(""+pinList.get(j));
         }
     }
-    void addToPumpList(Pump p){
-        this.pumpList.add(p);
-    }
+
     /**
      * @param args the command line arguments
      */
@@ -2634,16 +2723,25 @@ public class MainFrame extends javax.swing.JFrame {
     private void loadPumpconfigFrame() {
 //        System.out.println("pin loaded !");
 //        System.out.println("Avaliable Pins :"+ Arrays.toString(this.pinList.toArray()));
-
+//使得pinlist最新
         this.updatePinList();
-        //更新两个combobox
+        //然后更新两个combobox
         this.mapPinListToComboBox(this.pumpPin1);
         this.mapPinListToComboBox(this.pumpPin2);
-        this.PumpTableInPumpPage.removeAll();
-
+        this.mapPumplistToTable(PumpTableInPumpPage);
+        
         mapTypelistToComboBox(typelist,pumpTypeBox);
     }
-    //移除所有已经被占用的针脚留下可用的针脚
+    
+    private void mapPumplistToTable(javax.swing.JTable tab){
+        this.clearTableContent(tab);
+        for(Pump p : this.pumpList){
+            this.addPumpToPumpTable(tab, p);
+        }
+        
+    }
+            
+    //根据pumplist移除所有已经被占用的针脚留下可用的针脚
     private void updatePinList(){
         pinList.clear();
         
@@ -2655,8 +2753,8 @@ public class MainFrame extends javax.swing.JFrame {
         Iterator iter = pumpList.iterator();
         while (iter.hasNext()){
             Pump p = (Pump)iter.next();
-            this.pinList.remove(p.getPinNumber1());
-            this.pinList.remove(p.getPinNumber2());
+            this.pinList.remove((Integer)p.getPinNumber1());
+            this.pinList.remove((Integer)p.getPinNumber2());
         }
 
     }
