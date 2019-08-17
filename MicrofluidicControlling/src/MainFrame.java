@@ -338,7 +338,7 @@ public class MainFrame extends javax.swing.JFrame {
         PumpconfigMainFrame.setAutoRequestFocus(false);
         PumpconfigMainFrame.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         PumpconfigMainFrame.setFocusable(false);
-        PumpconfigMainFrame.setLocationByPlatform(true);
+        PumpconfigMainFrame.setLocation(new java.awt.Point(0, 0));
         PumpconfigMainFrame.setSize(new java.awt.Dimension(1010, 510));
 
         jTabbedPane2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -645,7 +645,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         ActionConfiguationMainPage.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         ActionConfiguationMainPage.setTitle("ActionConfig");
-        ActionConfiguationMainPage.setLocation(new java.awt.Point(100, 100));
+        ActionConfiguationMainPage.setLocation(new java.awt.Point(0, 0));
         ActionConfiguationMainPage.setSize(new java.awt.Dimension(1150, 550));
 
         jLabel7.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
@@ -917,7 +917,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel7.getAccessibleContext().setAccessibleDescription("");
 
         PumpActionPageNew.setTitle("newAction");
-        PumpActionPageNew.setLocation(new java.awt.Point(100, 100));
+        PumpActionPageNew.setLocation(new java.awt.Point(0, 0));
         PumpActionPageNew.setMinimumSize(new java.awt.Dimension(468, 300));
         PumpActionPageNew.setSize(new java.awt.Dimension(600, 350));
 
@@ -1085,7 +1085,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(4, 4, 4)
                         .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)))
+                        .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 36, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
