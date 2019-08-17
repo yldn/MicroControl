@@ -1371,7 +1371,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.PumpconfigMainFrame.setVisible(true);
 //        Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
         //添加默认Pumptype
-        PumpType t = new PumpType("QW",100,80);
+        PumpType t = new PumpType("RP-Q1.2N-P20Z-DC3V",100,10);
         typelist.add(t);
         this.mapTypeListToTable(this.pListInTypepage, typelist);
        //安排slider
