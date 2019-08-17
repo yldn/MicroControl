@@ -179,9 +179,9 @@ public class Pump {
         SoftPwm.softPwmCreate(pinNumber2, type.getMinSpeed() , type.getRange());
         System.out.println("REVERSED :: provision pin:"+ pinNumber2 + "now running ");
         try{
-             start(pinNumber2,type.getRange()*speed /100 );
+             start(pinNumber2 , (type.getRange() * speed) /100 );
         }catch(Exception e ){
-//            e.printStackTrace();
+            e.printStackTrace();
         }
     }
     
