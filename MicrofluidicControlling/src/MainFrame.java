@@ -534,10 +534,11 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel14Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel13)
                             .addComponent(jLabel9))
@@ -547,14 +548,12 @@ public class MainFrame extends javax.swing.JFrame {
                             .addComponent(pumpTypeBox, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(pumpSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(pumpSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(speedDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(speedDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-            .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -564,22 +563,22 @@ public class MainFrame extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel13))
                     .addComponent(pumpTypeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(6, 6, 6)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pumpNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel9)
-                        .addGap(36, 36, 36)
-                        .addComponent(jLabel10)
-                        .addGap(29, 29, 29))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(pumpNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pumpSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(speedDisplay)))
+                        .addComponent(pumpSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel10)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(speedDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pumpTypeBox.getAccessibleContext().setAccessibleName("");
@@ -1778,16 +1777,14 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(ActionExpertModeLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ActionExpertModeLayout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(643, 643, 643))
                     .addComponent(jLabel11)
                     .addGroup(ActionExpertModeLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
                         .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ActionExpertModeLayout.createSequentialGroup()
-                                .addGap(642, 642, 642)
+                                .addGap(6, 6, 6)
+                                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(366, 366, 366)
                                 .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGap(10, 10, 10))
                             .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1805,8 +1802,8 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40))
         );
 
@@ -2910,7 +2907,35 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void expertSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_expertSliderStateChanged
-       
+        this.speedDisplayExpert.setText(""+expertSlider.getValue());
+        try{
+        DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
+        String pn =((String) model.getValueAt(PumpListInExpertMode.getSelectedRow(), 1));
+
+        int in = findPumpByName(pn);
+        if (in == -1) {
+            String message = "current pump not exist!";
+            javax.swing.JOptionPane.showMessageDialog(this, message);
+            return;
+        }
+        Log("bp 1");
+        Pump p = pumpList.get(in);
+        
+        if(!this.runButton.isEnabled()){
+            int speed = p.getType().getMinSpeed()+((p.getType().getMinSpeed()+ p.getType().getRange()) * expertSlider.getValue() /100) ;
+            p.run(expertSlider.getValue() );
+            
+//            Log(p.getName()+ speed);
+            Log("bp 2");
+        }
+        }catch( Exception e){ 
+            String message = "no selection";
+            javax.swing.JOptionPane.showMessageDialog(this, message);
+            return;
+        }
+        
+        
+        
     }//GEN-LAST:event_expertSliderStateChanged
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
@@ -2919,6 +2944,7 @@ public class MainFrame extends javax.swing.JFrame {
            
            for (Pump ps : pumpList){
                ps.shutdown();
+//                Log("pump"+ps.getName()+"now stop!");
            }
             String message = "Pause all pumps!";
             javax.swing.JOptionPane.showMessageDialog(this, message);
@@ -3296,10 +3322,9 @@ public class MainFrame extends javax.swing.JFrame {
             return;
         }
         Pump p = pumpList.get(in);
-        //start pump
         p.shutdown();
         p.isActive = false;
-        Log("stop pump!"+ p.getName());
+//        Log("stop pump!"+ p.getName());
         
         this.updatepumpListOnExpertTable();
         runButton.setEnabled(true);
@@ -3328,22 +3353,21 @@ public class MainFrame extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, message);
             return;
         }
-        Log("now Running Pump : "+in);
-        Pump p = pumpList.get(in);
         
+        Pump p = pumpList.get(in);
         
             if(!jToggleButton1.isSelected()){
                 p.run(expertSlider.getValue());
+                
             }
             else {
                 p.revertrun(expertSlider.getValue());
             }
+            
             p.isActive = true;
             this.updatepumpListOnExpertTable();
 
             this.runButton.setEnabled(false);
-            
-        
         
         }catch( Exception e){ 
             String message = "no selection";

@@ -160,15 +160,26 @@ public class Pump {
             }
            
     }
+//    fundmebtal functions
     public void provisionPin(int pin ,int initvalue , int range){
-        SoftPwm.softPwmCreate(pin, initvalue , range);
+        
+//        SoftPwm.softPwmCreate(pin, initvalue , range);
+        System.out.println("provision pin :"+pin+"["+initvalue+";"+range+ "]" );
     }
     public void start(int pinNumber , int value){
-        SoftPwm.softPwmWrite(pinNumber,value);
+//        SoftPwm.softPwmWrite(pinNumber,value);
+        System.out.println("pwm write pin :"+pinNumber+"["+value+ "]" );
     }
     public void stop(int pinNumber){
-        SoftPwm.softPwmStop(pinNumber);
+//        SoftPwm.softPwmStop(pinNumber);
+        System.out.println("stop now "+ pinNumber);
     }
+    public void initServo(){
+//        Gpio.wiringPiSetup();
+        System.out.println("InitServi :" );
+    }
+    
+//    
     public void shutdown(){
         stop(pinNumber1);
         stop(pinNumber2);
@@ -176,9 +187,7 @@ public class Pump {
         System.out.println("now pump "+ name + "stopped ! ");
     }
 
-    void initServo(){
-        Gpio.wiringPiSetup();
-    }
+
 
     public void revertrun(int speed ){
         initServo();
