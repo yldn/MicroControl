@@ -177,9 +177,9 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel22 = new javax.swing.JLabel();
         expertSlider = new javax.swing.JSlider();
         jToggleButton1 = new javax.swing.JToggleButton();
-        jToggleButton2 = new javax.swing.JToggleButton();
         speedDisplayExpert = new javax.swing.JLabel();
         Stopbtn = new javax.swing.JButton();
+        runButton = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
         FileChooser = new javax.swing.JFrame();
@@ -376,7 +376,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         PumpconfigMainFrame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         PumpconfigMainFrame.setTitle("PumpConfig");
-        PumpconfigMainFrame.setAlwaysOnTop(true);
         PumpconfigMainFrame.setAutoRequestFocus(false);
         PumpconfigMainFrame.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         PumpconfigMainFrame.setFocusable(false);
@@ -901,11 +900,12 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(AddBumpBar2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE, false)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jButton11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(AddBumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(28, 28, 28))
                     .addGroup(AddBumpBar2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1622,6 +1622,14 @@ public class MainFrame extends javax.swing.JFrame {
         });
         ActionTable.getColumnModel().getColumn(0).setMinWidth(10);
         ActionTable.getColumnModel().getColumn(1).setMaxWidth(50);
+        PumpListInExpertMode.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PumpListInExpertModeMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                PumpListInExpertModeMousePressed(evt);
+            }
+        });
         jScrollPane6.setViewportView(PumpListInExpertMode);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
@@ -1687,14 +1695,6 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jToggleButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jToggleButton2.setText("Run");
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
-            }
-        });
-
         speedDisplayExpert.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         speedDisplayExpert.setText("50");
 
@@ -1703,6 +1703,14 @@ public class MainFrame extends javax.swing.JFrame {
         Stopbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 StopbtnActionPerformed(evt);
+            }
+        });
+
+        runButton.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        runButton.setText("Run");
+        runButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                runButtonActionPerformed(evt);
             }
         });
 
@@ -1722,26 +1730,29 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToggleButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Stopbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
+                    .addComponent(Stopbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                    .addComponent(runButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(speedDisplayExpert, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addComponent(jToggleButton2)
+                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Stopbtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(speedDisplayExpert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addComponent(runButton, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Stopbtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jButton9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -2899,96 +2910,19 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void expertSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_expertSliderStateChanged
-        // TODO add your handling code here:
-        this.speedDisplayExpert.setText(""+expertSlider.getValue());
-        if(jToggleButton2.isSelected()){
-            DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
-            String pn =((String) model.getValueAt(PumpListInExpertMode.getSelectedRow(), 1));
-            try{
-            int in = findPumpByName(pn);
-            Pump p = pumpList.get(in);
-            if(!jToggleButton1.isSelected()){
-                p.run(expertSlider.getValue());
-                Color cl = new Color(expertSlider.getValue()*255/100,0,0);
-                speedDisplayExpert.setForeground(cl);
-            }
-            else {
-                p.revertrun(expertSlider.getValue());
-            }
-             }catch( Exception e){ 
-            String message = "no selection";
-            javax.swing.JOptionPane.showMessageDialog(this, message);
-            return;
-            }
-
-        }
+       
     }//GEN-LAST:event_expertSliderStateChanged
-
-    private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-        //获得pump对象
-
-        if(PumpListInExpertMode.getSelectedRow()== -1 ){
-            String message = "please select a pump!";
-            javax.swing.JOptionPane.showMessageDialog(this, message);
-            return;
-        }
-        try{
-        DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
-        String pn =((String) model.getValueAt(PumpListInExpertMode.getSelectedRow(), 1));
-
-        int in = findPumpByName(pn);
-        if (in == -1) {
-            String message = "current pump not exist!";
-            javax.swing.JOptionPane.showMessageDialog(this, message);
-            return;
-        }
-        Log("now Running Pump : "+in);
-        Pump p = pumpList.get(in);
-        //start pump
-        if(jToggleButton2.isSelected()){
-            if(!jToggleButton1.isSelected()){
-                p.run(expertSlider.getValue());
-                this.updateActionListToTable(PumpListInExpertMode);
-            }
-            else {
-                p.revertrun(expertSlider.getValue());
-                this.updateActionListToTable(PumpListInExpertMode);
-            }
-            
-        }
-        
-        }catch( Exception e){ 
-            String message = "no selection";
-            javax.swing.JOptionPane.showMessageDialog(this, message);
-            return;
-        }
-
-    }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         //获得pump对象
-        if(PumpListInExpertMode.getSelectedRow()== -1 ){
+        try{
             String message = "Pause all pumps!";
             javax.swing.JOptionPane.showMessageDialog(this, message);
 
            for (Pump ps : pumpList){
                ps.shutdown();
            }
-            return;
-        }
-        DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
-        String pn =((String) model.getValueAt(PumpListInExpertMode.getSelectedRow(), 1));
-        try{
-        int in = findPumpByName(pn);
-        if (in == -1) {
-            String message = "current pump not exist!";
-            javax.swing.JOptionPane.showMessageDialog(this, message);
-            return;
-        }
         
-        Pump p = pumpList.get(in);
-        //pause p only
-            p.shutdown();
         }catch( Exception e){ 
             String message = "no selection";
             javax.swing.JOptionPane.showMessageDialog(this, message);
@@ -3363,8 +3297,11 @@ public class MainFrame extends javax.swing.JFrame {
         Pump p = pumpList.get(in);
         //start pump
             p.shutdown();
-            jToggleButton2.setEnabled(true);
+        p.isActive = false;
+        Log("stop pump!");
         
+        this.updatepumpListOnExpertTable();
+        runButton.setEnabled(true);
         }catch( Exception e){ 
             String message = "no selection";
             javax.swing.JOptionPane.showMessageDialog(this, message);
@@ -3372,6 +3309,67 @@ public class MainFrame extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_StopbtnActionPerformed
+
+    private void runButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_runButtonActionPerformed
+        
+        if(PumpListInExpertMode.getSelectedRow()== -1 ){
+            String message = "please select a pump!";
+            javax.swing.JOptionPane.showMessageDialog(this, message);
+            return;
+        }
+        try{
+        DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
+        String pn =((String) model.getValueAt(PumpListInExpertMode.getSelectedRow(), 1));
+
+        int in = findPumpByName(pn);
+        if (in == -1) {
+            String message = "current pump not exist!";
+            javax.swing.JOptionPane.showMessageDialog(this, message);
+            return;
+        }
+        Log("now Running Pump : "+in);
+        Pump p = pumpList.get(in);
+        
+        
+            if(!jToggleButton1.isSelected()){
+                p.run(expertSlider.getValue());
+            }
+            else {
+                p.revertrun(expertSlider.getValue());
+            }
+            p.isActive = true;
+            this.updatepumpListOnExpertTable();
+
+            this.runButton.setEnabled(false);
+            
+        
+        
+        }catch( Exception e){ 
+            String message = "no selection";
+            javax.swing.JOptionPane.showMessageDialog(this, message);
+            return;
+        }
+
+    }//GEN-LAST:event_runButtonActionPerformed
+
+    private void PumpListInExpertModeMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PumpListInExpertModeMousePressed
+        DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
+        if(PumpListInExpertMode.getSelectedRow()!= -1){
+            String str = (String)model.getValueAt(PumpListInExpertMode.getSelectedRow(),3);
+            if(str == "true"){
+                this.runButton.setEnabled(false);
+            }
+            else if(str == "false"){
+                this.runButton.setEnabled(true);
+            }
+            
+        }
+    }//GEN-LAST:event_PumpListInExpertModeMousePressed
+
+    private void PumpListInExpertModeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PumpListInExpertModeMouseClicked
+        
+        
+    }//GEN-LAST:event_PumpListInExpertModeMouseClicked
 
     private void mapTypelistToComboBox(ArrayList<PumpType> list ,javax.swing.JComboBox<String> box){
 //    System.out.println("Avaliable Pins :"+ Arrays.toString(pinList.toArray())+ "in combox"+box.toString());
@@ -3555,7 +3553,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JTextField minspeedField;
     private javax.swing.JTable pListInTypepage;
     private javax.swing.JLabel pin1Label;
@@ -3571,6 +3568,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> pumpPin2;
     private javax.swing.JSlider pumpSpeed;
     private javax.swing.JComboBox<String> pumpTypeBox;
+    private javax.swing.JButton runButton;
     private javax.swing.JTextField runInterval;
     private javax.swing.JLabel speedDisplay;
     private javax.swing.JLabel speedDisplayExpert;
