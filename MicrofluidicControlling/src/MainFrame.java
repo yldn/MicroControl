@@ -2946,8 +2946,8 @@ public class MainFrame extends javax.swing.JFrame {
                ps.shutdown();
 //                Log("pump"+ps.getName()+"now stop!");
            }
-            String message = "Pause all pumps!";
-            javax.swing.JOptionPane.showMessageDialog(this, message);
+//            String message = "Pause all pumps!";
+//            javax.swing.JOptionPane.showMessageDialog(this, message);
            //enable  run / stop button
         
         }catch( Exception e){ 
@@ -3102,7 +3102,7 @@ public class MainFrame extends javax.swing.JFrame {
             String startt = startTimeInput1.getText();
             String endt = endTimeInput1.getText();
             String runInt = runInterval.getText();
-            String stopInt = runInterval.getText();
+            String stopInt = stopInterval.getText();
            //TODO 检查startt和endt的格式是否满足 "mm:ss:SSS" 如果不满足则弹窗
 
 //            Log("startTimeStr:"+startt);
