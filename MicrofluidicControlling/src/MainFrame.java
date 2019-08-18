@@ -3114,7 +3114,7 @@ public class MainFrame extends javax.swing.JFrame {
 //            Log("startTime:"+startTime);
 //            Log("endTime:"+endTime);
             
-        int speed = pumpActionSpeed.getValue();
+        int speed = pumpActionSpeed1.getValue();
         
         //利用pump生成Action
         long tmp = startTime;
