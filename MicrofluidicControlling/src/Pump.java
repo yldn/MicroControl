@@ -38,7 +38,7 @@ public class Pump {
     int pinNumber2;
     //每个pump上的两个针脚
     //默认Pin1高电位 Pin2低电位
-
+    boolean isActive = false;
     private PriorityQueue<Action> aq;
 
     public PriorityQueue<Action> getAq() {
@@ -56,7 +56,7 @@ public class Pump {
     public void setEq(PriorityQueue<Action> eq) {
         this.eq = eq;
     }
-
+    
     private PriorityQueue<Action> eq;
     //GPIO控制单元
     //GpioController gpio = GpioFactory.getInstance();
@@ -69,6 +69,7 @@ public class Pump {
         this.name = name;
         this.type = type;
         this.speed = (int)(type.getMinSpeed()+(type.getRange()- type.getMinSpeed() ) * ((double)speed/100.0));
+//        this.speed = speed ;
         this.pinNumber1 = pinNumber1;
         this.pinNumber2 = pinNumber2;
         Comparator<Action> com = actionComparator();
@@ -148,12 +149,16 @@ public class Pump {
         initServo();
         stop(pinNumber2);
         provisionPin(pinNumber1, type.getMinSpeed() , type.getRange());
+        
         System.out.println("provision pin:"+ pinNumber1 + "now running ");
             try{
                 start(pinNumber1,type.getRange()*speed /100 );
+                isActive = true;
             }catch(Exception e ){
 //                e.printStackTrace();
+            isActive = false;
             }
+           
     }
     public void provisionPin(int pin ,int initvalue , int range){
         SoftPwm.softPwmCreate(pin, initvalue , range);
@@ -167,6 +172,7 @@ public class Pump {
     public void shutdown(){
         stop(pinNumber1);
         stop(pinNumber2);
+        isActive = false;
     }
 
     void initServo(){
@@ -180,8 +186,10 @@ public class Pump {
         System.out.println("REVERSED :: provision pin:"+ pinNumber2 + "now running ");
         try{
              start(pinNumber2 , (type.getRange() * speed) /100 );
+             isActive = true;
         }catch(Exception e ){
             e.printStackTrace();
+            isActive = false;
         }
     }
     

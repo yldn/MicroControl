@@ -74,7 +74,8 @@ public class Action  {
         this.seq = seq;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.speed = (int)(p.getType().getMinSpeed()+((p.getSpeed()-p.getType().getMinSpeed()) * ((double)(speed/100.0))) );
+//        this.speed = (int)(p.getType().getMinSpeed()+((p.getSpeed()-p.getType().getMinSpeed()) * ((double)(speed/100.0))) );
+        this.speed = speed;
         this.p = p;
         this.reverse = reverse;
         p.getAq().add(this);
