@@ -2916,12 +2916,13 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
         //获得pump对象
         try{
-            String message = "Pause all pumps!";
-            javax.swing.JOptionPane.showMessageDialog(this, message);
-
+           
            for (Pump ps : pumpList){
                ps.shutdown();
            }
+            String message = "Pause all pumps!";
+            javax.swing.JOptionPane.showMessageDialog(this, message);
+           //enable  run / stop button
         
         }catch( Exception e){ 
             String message = "no selection";
@@ -3296,9 +3297,9 @@ public class MainFrame extends javax.swing.JFrame {
         }
         Pump p = pumpList.get(in);
         //start pump
-            p.shutdown();
+        p.shutdown();
         p.isActive = false;
-        Log("stop pump!");
+        Log("stop pump!"+ p.getName());
         
         this.updatepumpListOnExpertTable();
         runButton.setEnabled(true);

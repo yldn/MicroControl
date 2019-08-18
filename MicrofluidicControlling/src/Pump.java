@@ -173,6 +173,7 @@ public class Pump {
         stop(pinNumber1);
         stop(pinNumber2);
         isActive = false;
+        System.out.println("now pump "+ name + "stopped ! ");
     }
 
     void initServo(){
