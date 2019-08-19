@@ -148,9 +148,12 @@ public class Pump {
         initServo();
         stop(pinNumber2);
         provisionPin(pinNumber1, type.getMinSpeed() , type.getRange());
+        provisionPin(pinNumber2, type.getMinSpeed() , type.getRange());
         
         System.out.println("provision pin:"+ pinNumber1 + "now running ");
             try{
+                
+                start(pinNumber2,0 );
                 start(pinNumber1,type.getRange()*speed /100 );
                 isActive = true;
             }catch(Exception e ){
@@ -191,9 +194,11 @@ public class Pump {
     public void revertrun(int speed ){
         initServo();
         stop(pinNumber1);
-        SoftPwm.softPwmCreate(pinNumber2, type.getMinSpeed() , type.getRange());
+        provisionPin(pinNumber2, type.getMinSpeed() , type.getRange());
+        provisionPin(pinNumber1, type.getMinSpeed() , type.getRange());
         System.out.println("REVERSED :: provision pin:"+ pinNumber2 + "now running ");
         try{
+             start(pinNumber1,0 );
              start(pinNumber2 , (type.getRange() * speed) /100 );
              isActive = true;
         }catch(Exception e ){

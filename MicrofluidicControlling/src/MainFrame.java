@@ -3378,7 +3378,6 @@ public class MainFrame extends javax.swing.JFrame {
             
             p.isActive = true;
             this.updatepumpListOnExpertTable();
-
             this.runButton.setEnabled(false);
         
         }catch( Exception e){ 
