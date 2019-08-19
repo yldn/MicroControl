@@ -2043,7 +2043,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.jButton10.setEnabled(false);
         String message = "Program Now Running !";
         javax.swing.JOptionPane.showMessageDialog(this, message);
-//        Gpio.wiringPiSetup();
+        Gpio.wiringPiSetup();
         for(Pump p : pumpList){
             p.provisionPin(p.getPinNumber1(), 0 ,10);
             p.provisionPin(p.getPinNumber2(), 0 ,10);
