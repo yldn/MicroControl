@@ -459,11 +459,6 @@ public class MainFrame extends javax.swing.JFrame {
                 pumpPin2ItemStateChanged(evt);
             }
         });
-        pumpPin2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pumpPin2ActionPerformed(evt);
-            }
-        });
 
         pin2Label.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pin2Label.setText("select");
@@ -1852,7 +1847,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Toppan Bunkyu Gothic", 1, 13)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Welcome!");
+        jLabel4.setText("Lab on Chip ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -2048,7 +2043,7 @@ public class MainFrame extends javax.swing.JFrame {
         this.jButton10.setEnabled(false);
         String message = "Program Now Running !";
         javax.swing.JOptionPane.showMessageDialog(this, message);
-        Gpio.wiringPiSetup();
+//        Gpio.wiringPiSetup();
         for(Pump p : pumpList){
             p.provisionPin(p.getPinNumber1(), 0 ,10);
             p.provisionPin(p.getPinNumber2(), 0 ,10);
@@ -2438,13 +2433,13 @@ public class MainFrame extends javax.swing.JFrame {
 //        pin2 = Integer.parseInt((String)this.pumpPin2.getSelectedItem());
         
         //监听两个pin
-        if (this.pin1Label.getText() == "select" || this.pin2Label.getText() == "select" ){
+        if (this.pin1Label.getText() == "" || this.pin2Label.getText() == "" ){
             //此处跳出"please select both pin"
             String message = "please select both pin!";
              javax.swing.JOptionPane.showMessageDialog(this, message);
              return;
         }
-        if(this.pin1Label.getText() != "select" && this.pin2Label.getText() != "select" ){
+        if(this.pin1Label.getText() != "" && this.pin2Label.getText() != "" ){
             pin1 = Integer.parseInt(this.pin1Label.getText().substring(11));
             pin2 = Integer.parseInt(this.pin2Label.getText().substring(11));
         }
@@ -2505,38 +2500,55 @@ public class MainFrame extends javax.swing.JFrame {
     }
     /////两个combobox互相的listener
     private void pumpPin1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pumpPin1ItemStateChanged
-         
-        if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
-//            System.out.println("Pin1 selected: "+evt.getItem().toString());
-            //如果选择pin1 则更新pin2
-            if(evt.getItem().toString() != "select"){
-                ArrayList<Integer> inBox2 = (ArrayList<Integer>)this.pinList.clone();
-                inBox2.remove((Integer)Integer.parseInt((String)this.pumpPin1.getSelectedItem()));
-                this.pumpPin2.removeAllItems();
-                pumpPin2.addItem("select");
-                for(int i = 0 ; i< inBox2.size();i++){
-                    pumpPin2.addItem(""+inBox2.get(i));
+        try{
+            if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
+                //如果选择pin1 则更新pin2
+                if(evt.getItem().toString() != ""){
+                    
+                    ArrayList<Integer> inBox2 = (ArrayList<Integer>)this.pinList.clone();
+                    Integer in = (Integer)Integer.parseInt((String)this.pumpPin1.getSelectedItem());
+                    inBox2.remove(in);
+                    
+                    int pin2 = Integer.parseInt(this.pin2Label.getText().substring(11));
+                    this.pumpPin2.removeAllItems();
+                    pumpPin2.addItem("");
+                    System.out.println("Pin1 selected: "+evt.getItem().toString());
+                    for(int i = 0 ; i< inBox2.size();i++){
+                        pumpPin2.addItem(""+inBox2.get(i));
+                    }
+                    this.pin1Label.setText("Pin1Select:"+evt.getItem().toString());
                 }
-                this.pin1Label.setText("Pin1Select:"+evt.getItem().toString());
             }
+        }
+        catch(Exception e ){
+            
         }
     }//GEN-LAST:event_pumpPin1ItemStateChanged
 
     private void pumpPin2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pumpPin2ItemStateChanged
-        if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
-            
-//             System.out.println("Pin2 selected: "+evt.getItem().toString());
-             if(evt.getItem().toString() != "select"){
-                ArrayList<Integer> inBox1 = (ArrayList<Integer>)this.pinList.clone();
-                inBox1.remove((Integer)Integer.parseInt((String)this.pumpPin2.getSelectedItem()));
-                this.pumpPin1.removeAllItems();
-                pumpPin1.addItem("select");
-                for(int i = 0 ; i< inBox1.size();i++){
-                    pumpPin1.addItem(""+inBox1.get(i));
-                }
-                this.pin2Label.setText("Pin2Select:"+evt.getItem().toString());
-             }
+         try{
+             if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
 
+                 
+                 if(evt.getItem().toString() != ""){
+                     
+                    ArrayList<Integer> inBox1 = (ArrayList<Integer>)this.pinList.clone();
+                    Integer in = (Integer)Integer.parseInt((String)this.pumpPin2.getSelectedItem());
+                    inBox1.remove(in);
+                    System.out.println("Pin2 selected: "+evt.getItem().toString());
+                    int pin1 = Integer.parseInt(this.pin1Label.getText().substring(11));
+                    this.pumpPin1.removeAllItems();
+                    pumpPin1.addItem("");
+                    for(int i = 0 ; i< inBox1.size();i++){
+                        pumpPin1.addItem(""+inBox1.get(i));
+                    }
+                    this.pin2Label.setText("Pin2Select:"+evt.getItem().toString());
+                 }
+
+            }
+        }
+        catch(Exception e ){
+            
         }
     }//GEN-LAST:event_pumpPin2ItemStateChanged
 
@@ -2949,7 +2961,11 @@ public class MainFrame extends javax.swing.JFrame {
 //            String message = "Pause all pumps!";
 //            javax.swing.JOptionPane.showMessageDialog(this, message);
            //enable  run / stop button
-        
+           this.runButton.setEnabled(true);
+           this.Stopbtn.setEnabled(true);
+           
+           this.updatepumpListOnExpertTable();
+           
         }catch( Exception e){ 
             String message = "no selection";
             javax.swing.JOptionPane.showMessageDialog(this, message);
@@ -3069,10 +3085,6 @@ public class MainFrame extends javax.swing.JFrame {
         
         this.pumpActionSpeedDisplay.setText(""+pumpActionSpeed.getValue());
     }//GEN-LAST:event_pumpActionSpeedStateChanged
-
-    private void pumpPin2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pumpPin2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pumpPin2ActionPerformed
 
     private void endTimeInput1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endTimeInput1ActionPerformed
         // TODO add your handling code here:
@@ -3634,7 +3646,10 @@ public class MainFrame extends javax.swing.JFrame {
         this.updatePinList();
         //然后更新两个combobox
         this.mapPinListToComboBox(this.pumpPin1);
-        this.mapPinListToComboBox(this.pumpPin2);
+        this.mapPinListToComboBox(this.pumpPin2);                    
+        this.pin1Label.setText("Pin1Select:"+0);
+        this.pin2Label.setText("Pin2Select:"+1);
+
         this.mapPumplistToTable(PumpTableInPumpPage);
         
         mapTypelistToComboBox(typelist,pumpTypeBox);

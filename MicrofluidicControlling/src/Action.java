@@ -80,26 +80,7 @@ public class Action  {
         this.reverse = reverse;
         p.getAq().add(this);
     }
-//    deprecated
-//    public void run2(long runTime){
-//        ScheduledExecutorService  executor =  Executors.newScheduledThreadPool(1);
-//        executor.scheduleWithFixedDelay(new Runnable(){
-//            @Override
-//                public void run() {
-//                try {
-//                    p.run();
-//                    Thread.sleep(runTime);
-//                    p.stop();
-//                } catch (InterruptedException ex) {
-//                    Logger.getLogger(Action.class.getName()).log(Level.SEVERE, null, ex);
-//                }
-//                }
-//        }, delayTime, 0, TimeUnit.SECONDS);
-//        
-//        
-//        executor.shutdown();
-//    }
-
+    
     public long getStartTime() {
         return startTime;
     }
@@ -136,11 +117,7 @@ public class Action  {
 
 
     public void st(){
-        //singleton call
-//        if(t == null){
-//            t = new Thread(this);
-//            t.start();
-//        }
+       
         //逻辑2
         System.out.println("Action : " + seq + " now Running !"+ "open Pump :"+getP().getName() );
         p.run(100);
