@@ -176,7 +176,7 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel15 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         expertSlider = new javax.swing.JSlider();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        reversButton = new javax.swing.JToggleButton();
         speedDisplayExpert = new javax.swing.JLabel();
         Stopbtn = new javax.swing.JButton();
         runButton = new javax.swing.JButton();
@@ -1681,11 +1681,11 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jToggleButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jToggleButton1.setText("Run/Reverse");
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        reversButton.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        reversButton.setText("Run/Reverse");
+        reversButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                reversButtonActionPerformed(evt);
             }
         });
 
@@ -1721,7 +1721,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(413, 413, 413)
                         .addComponent(speedDisplayExpert, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(48, 48, 48)))
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(reversButton, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Stopbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
@@ -1732,7 +1732,7 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGap(12, 12, 12)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(reversButton, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2009,7 +2009,7 @@ public class MainFrame extends javax.swing.JFrame {
        updatepumpListOnExpertTable();
        
        setTS(expertSlider);
-       jToggleButton1.setText("Normal");
+       reversButton.setText("Normal");
        
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -2909,14 +2909,14 @@ public class MainFrame extends javax.swing.JFrame {
         this.speedDisplay.setText(""+pumpSpeed.getValue());
     }//GEN-LAST:event_pumpSpeedStateChanged
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        if(jToggleButton1.isSelected()) {
-            jToggleButton1.setText("Reverse");
+    private void reversButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reversButtonActionPerformed
+        if(reversButton.isSelected()) {
+            reversButton.setText("Reverse");
         }else{
-            jToggleButton1.setText("Normal");
+            reversButton.setText("Normal");
         }
 
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }//GEN-LAST:event_reversButtonActionPerformed
 
     private void expertSliderStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_expertSliderStateChanged
         this.speedDisplayExpert.setText(""+expertSlider.getValue());
@@ -2934,8 +2934,14 @@ public class MainFrame extends javax.swing.JFrame {
         Pump p = pumpList.get(in);
         
         if(!this.runButton.isEnabled()){
-            int speed = p.getType().getMinSpeed()+((p.getType().getMinSpeed()+ p.getType().getRange()) * expertSlider.getValue() /100) ;
-            p.run(expertSlider.getValue() );
+            
+            if(this.reversButton.isSelected()){
+//                int speed = p.getType().getMinSpeed()+((p.getType().getMinSpeed()+ p.getType().getRange()) * expertSlider.getValue() /100) ;
+                p.run(expertSlider.getValue() );
+            }
+            else {
+                p.revertrun(expertSlider.getValue());
+            }
             
 //            Log(p.getName()+ speed);
             Log("bp 2");
@@ -3368,7 +3374,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         Pump p = pumpList.get(in);
         
-            if(!jToggleButton1.isSelected()){
+            if(!reversButton.isSelected()){
                 p.run(expertSlider.getValue());
                 
             }
@@ -3588,7 +3594,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JTextField minspeedField;
     private javax.swing.JTable pListInTypepage;
     private javax.swing.JLabel pin1Label;
@@ -3604,6 +3609,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> pumpPin2;
     private javax.swing.JSlider pumpSpeed;
     private javax.swing.JComboBox<String> pumpTypeBox;
+    private javax.swing.JToggleButton reversButton;
     private javax.swing.JButton runButton;
     private javax.swing.JTextField runInterval;
     private javax.swing.JLabel speedDisplay;

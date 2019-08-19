@@ -2448,7 +2448,7 @@
                               <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <Component id="jToggleButton1" min="-2" pref="171" max="-2" attributes="0"/>
+                      <Component id="reversButton" min="-2" pref="171" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="Stopbtn" pref="160" max="32767" attributes="0"/>
@@ -2462,7 +2462,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                      <Component id="jToggleButton1" min="-2" pref="66" max="-2" attributes="0"/>
+                      <Component id="reversButton" min="-2" pref="66" max="-2" attributes="0"/>
                       <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
@@ -2534,7 +2534,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JToggleButton" name="jToggleButton1">
+            <Component class="javax.swing.JToggleButton" name="reversButton">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Arial" size="18" style="0"/>
@@ -2542,7 +2542,7 @@
                 <Property name="text" type="java.lang.String" value="Run/Reverse"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jToggleButton1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="reversButtonActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="speedDisplayExpert">
