@@ -1614,8 +1614,9 @@ public class MainFrame extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        ActionTable.getColumnModel().getColumn(0).setMinWidth(10);
-        ActionTable.getColumnModel().getColumn(1).setMaxWidth(50);
+        this.PumpListInExpertMode.getColumnModel().getColumn(0).setMinWidth(30);
+        this.PumpListInExpertMode.getColumnModel().getColumn(1).setMinWidth(50);
+        this.PumpListInExpertMode.getColumnModel().getColumn(2).setMinWidth(600);
         PumpListInExpertMode.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 PumpListInExpertModeMouseClicked(evt);
@@ -1885,6 +1886,19 @@ public class MainFrame extends javax.swing.JFrame {
         //添加默认Pumptype
         PumpType t = new PumpType("RP-Q1.2N-P20Z-DC3V",100,10);
         typelist.add(t);
+        
+        
+        
+        Pump p1 = new Pump("p1",t,100,14,15);
+        Pump p2 = new Pump("p2",t,100,24,25);
+        Pump p3 = new Pump("p3",t,100,28,29);
+        Pump p4 = new Pump("p4",t,100,26,27);
+        
+        this.pumpList.add(p1);
+        this.pumpList.add(p2);
+        this.pumpList.add(p3);
+        this.pumpList.add(p4);
+        
         this.mapTypeListToTable(this.pListInTypepage, typelist);
        //安排slider
         setTS(pumpSpeed);
@@ -2043,14 +2057,14 @@ public class MainFrame extends javax.swing.JFrame {
         this.jButton10.setEnabled(false);
         String message = "Program Now Running !";
         javax.swing.JOptionPane.showMessageDialog(this, message);
-        Gpio.wiringPiSetup();
-        for(Pump p : pumpList){
-            p.provisionPin(p.getPinNumber1(), 0 ,10);
-            p.provisionPin(p.getPinNumber2(), 0 ,10);
-            p.start(p.getPinNumber1(), 0);
-            p.start(p.getPinNumber2(), 0);
-            p.shutdown();
-        }
+//        Gpio.wiringPiSetup();
+//        for(Pump p : pumpList){
+//            p.provisionPin(p.getPinNumber1(), 0 ,10);
+//            p.provisionPin(p.getPinNumber2(), 0 ,10);
+//            p.start(p.getPinNumber1(), 0);
+//            p.start(p.getPinNumber2(), 0);
+//            p.shutdown();
+//        }
         //开始时间线程序
         //测试逻辑1
         //开始无限循环并记录当前运行时间
@@ -2935,7 +2949,7 @@ public class MainFrame extends javax.swing.JFrame {
         
         if(!this.runButton.isEnabled()){
             
-            if(this.reversButton.isSelected()){
+            if(!this.reversButton.isSelected()){
 //                int speed = p.getType().getMinSpeed()+((p.getType().getMinSpeed()+ p.getType().getRange()) * expertSlider.getValue() /100) ;
                 p.run(expertSlider.getValue() );
             }
