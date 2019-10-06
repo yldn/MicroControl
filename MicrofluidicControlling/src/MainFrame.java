@@ -57,10 +57,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane7 = new javax.swing.JScrollPane();
         pListInTypepage = new javax.swing.JTable();
         jButton17 = new javax.swing.JButton();
-        jMenuBar3 = new javax.swing.JMenuBar();
-        jMenu5 = new javax.swing.JMenu();
-        jMenuItem12 = new javax.swing.JMenuItem();
-        jMenuItem13 = new javax.swing.JMenuItem();
+        jLabel4 = new javax.swing.JLabel();
         PumpconfigMainFrame = new javax.swing.JFrame();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
@@ -89,6 +86,7 @@ public class MainFrame extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
         jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         ActionConfiguationMainPage = new javax.swing.JFrame();
         jLabel7 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
@@ -107,14 +105,11 @@ public class MainFrame extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         ActionDisplay = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem11 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem14 = new javax.swing.JMenuItem();
         PumpActionPageNew = new javax.swing.JFrame();
         SinglePumpAction = new javax.swing.JPanel();
@@ -131,6 +126,7 @@ public class MainFrame extends javax.swing.JFrame {
         actionReversed = new javax.swing.JToggleButton();
         jButton16 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
         PumpActionEditPage = new javax.swing.JFrame();
         SinglePumpAction2 = new javax.swing.JPanel();
         PumpComboBox2 = new javax.swing.JComboBox<>();
@@ -146,6 +142,7 @@ public class MainFrame extends javax.swing.JFrame {
         actionReversed2 = new javax.swing.JToggleButton();
         jButton24 = new javax.swing.JButton();
         jButton25 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
         PumpActionPageNewLoop = new javax.swing.JFrame();
         SinglePumpAction1 = new javax.swing.JPanel();
         PumpComboBox1 = new javax.swing.JComboBox<>();
@@ -167,6 +164,7 @@ public class MainFrame extends javax.swing.JFrame {
         stopInterval = new javax.swing.JTextField();
         jButton22 = new javax.swing.JButton();
         jButton23 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
         ActionExpertMode = new javax.swing.JFrame();
         jPanel8 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -182,11 +180,12 @@ public class MainFrame extends javax.swing.JFrame {
         runButton = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
+        jLabel33 = new javax.swing.JLabel();
         FileChooser = new javax.swing.JFrame();
         Save = new javax.swing.JFileChooser();
         Load = new javax.swing.JFileChooser();
+        jLabel34 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
 
         PumpTypePage.setTitle("newType");
         PumpTypePage.setSize(new java.awt.Dimension(580, 480));
@@ -302,32 +301,12 @@ public class MainFrame extends javax.swing.JFrame {
         BumpBar2Layout.setVerticalGroup(
             BumpBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BumpBar2Layout.createSequentialGroup()
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 234, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jMenu5.setText("File");
-
-        jMenuItem12.setText("Load");
-        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem12ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem12);
-
-        jMenuItem13.setText("Save");
-        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem13ActionPerformed(evt);
-            }
-        });
-        jMenu5.add(jMenuItem13);
-
-        jMenuBar3.add(jMenu5);
-
-        PumpTypePage.setJMenuBar(jMenuBar3);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/Type.png"))); // NOI18N
 
         javax.swing.GroupLayout PumpTypePageLayout = new javax.swing.GroupLayout(PumpTypePage.getContentPane());
         PumpTypePage.getContentPane().setLayout(PumpTypePageLayout);
@@ -348,7 +327,10 @@ public class MainFrame extends javax.swing.JFrame {
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(PumpTypePageLayout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel4)
+                        .addGap(12, 12, 12))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpTypePageLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -358,7 +340,9 @@ public class MainFrame extends javax.swing.JFrame {
             PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PumpTypePageLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(PumpTypePageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PumpTypePageLayout.createSequentialGroup()
@@ -380,9 +364,11 @@ public class MainFrame extends javax.swing.JFrame {
         PumpconfigMainFrame.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         PumpconfigMainFrame.setFocusable(false);
         PumpconfigMainFrame.setLocation(new java.awt.Point(0, 0));
-        PumpconfigMainFrame.setSize(new java.awt.Dimension(1050, 550));
+        PumpconfigMainFrame.setSize(new java.awt.Dimension(1100, 585));
 
         jTabbedPane2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+
+        jPanel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
         BumpBar1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PumpList", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 18))); // NOI18N
 
@@ -407,7 +393,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane4.setViewportView(PumpTableInPumpPage);
 
         jButton3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton3.setText("-");
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/delete.png"))); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -418,11 +404,11 @@ public class MainFrame extends javax.swing.JFrame {
         BumpBar1.setLayout(BumpBar1Layout);
         BumpBar1Layout.setHorizontalGroup(
             BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BumpBar1Layout.createSequentialGroup()
-                .addGroup(BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BumpBar1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BumpBar1Layout.createSequentialGroup()
+                .addGroup(BumpBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(BumpBar1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -432,13 +418,14 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17))
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PumpConfiguation", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 0, 18))); // NOI18N
 
-        jLabel12.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/positive.png"))); // NOI18N
         jLabel12.setText("Pos:");
 
         pumpPin1.setAutoscrolls(true);
@@ -451,7 +438,8 @@ public class MainFrame extends javax.swing.JFrame {
         pin1Label.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         pin1Label.setText("select");
 
-        jLabel26.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/negative.png"))); // NOI18N
         jLabel26.setText("Neg:");
 
         pumpPin2.addItemListener(new java.awt.event.ItemListener() {
@@ -476,7 +464,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pumpPin2, 0, 145, Short.MAX_VALUE)
                     .addComponent(pumpPin1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pin1Label, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pin2Label, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -500,22 +488,28 @@ public class MainFrame extends javax.swing.JFrame {
 
         pumpTypeBox.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         pumpTypeBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "QW" }));
+        pumpTypeBox.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pumpTypeBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pumpTypeBoxActionPerformed(evt);
             }
         });
 
-        jLabel13.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/EditType.png"))); // NOI18N
         jLabel13.setText("Type:");
 
-        jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/name.png"))); // NOI18N
         jLabel9.setText("Name: ");
 
-        jLabel10.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/speedometer.png"))); // NOI18N
         jLabel10.setText("MaxSpeed:");
 
+        pumpSpeed.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        pumpSpeed.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         pumpSpeed.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 pumpSpeedStateChanged(evt);
@@ -534,9 +528,9 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel9))
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pumpNameField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -544,7 +538,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(jLabel10)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pumpSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, 241, Short.MAX_VALUE))
+                        .addComponent(pumpSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(speedDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -553,22 +547,22 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap()
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel13))
-                    .addComponent(pumpTypeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(pumpNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9))
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(6, 6, 6))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                                .addComponent(pumpTypeBox, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pumpNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pumpSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel10)))
+                    .addComponent(jLabel10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(speedDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -579,6 +573,7 @@ public class MainFrame extends javax.swing.JFrame {
         pumpTypeBox.getAccessibleContext().setAccessibleName("");
 
         jButton19.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/EditType.png"))); // NOI18N
         jButton19.setText("EditType");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -587,7 +582,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton15.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton15.setText("Add>");
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/add.png"))); // NOI18N
+        jButton15.setText("Add");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
@@ -605,9 +601,10 @@ public class MainFrame extends javax.swing.JFrame {
                         .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -616,13 +613,13 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jPanel14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         jButton2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton2.setText("Next>");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/next.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -636,9 +633,11 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(13, 13, 13)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -646,12 +645,12 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(BumpBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(77, Short.MAX_VALUE))))
+                        .addGap(28, 28, 28))))
         );
 
         jTabbedPane2.addTab("Standard", jPanel3);
@@ -659,6 +658,8 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jLabel5.setText("Pump Configuation Page");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/home.png"))); // NOI18N
 
         javax.swing.GroupLayout PumpconfigMainFrameLayout = new javax.swing.GroupLayout(PumpconfigMainFrame.getContentPane());
         PumpconfigMainFrame.getContentPane().setLayout(PumpconfigMainFrameLayout);
@@ -669,24 +670,31 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(PumpconfigMainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PumpconfigMainFrameLayout.createSequentialGroup()
                         .addComponent(jLabel5)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jTabbedPane2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
                 .addContainerGap())
         );
         PumpconfigMainFrameLayout.setVerticalGroup(
             PumpconfigMainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PumpconfigMainFrameLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTabbedPane2)
-                .addContainerGap())
+                .addGroup(PumpconfigMainFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PumpconfigMainFrameLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(PumpconfigMainFrameLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(19, 19, 19)
+                        .addComponent(jTabbedPane2)
+                        .addGap(17, 17, 17))))
         );
 
         ActionConfiguationMainPage.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         ActionConfiguationMainPage.setTitle("ActionConfig");
         ActionConfiguationMainPage.setLocation(new java.awt.Point(0, 0));
-        ActionConfiguationMainPage.setSize(new java.awt.Dimension(1150, 550));
+        ActionConfiguationMainPage.setSize(new java.awt.Dimension(1200, 560));
 
         jLabel7.setFont(new java.awt.Font("Arial", 2, 18)); // NOI18N
         jLabel7.setText("Action Page");
@@ -719,6 +727,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane5.setViewportView(PumpListInActionPage);
 
         jButton6.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/edit.png"))); // NOI18N
         jButton6.setText("Edit");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -727,7 +736,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton4.setText("Expert >");
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/expertMode.png"))); // NOI18N
+        jButton4.setText("expert >");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -765,8 +775,9 @@ public class MainFrame extends javax.swing.JFrame {
 
         AddBumpBar2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Actions:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 18))); // NOI18N
 
-        jButton8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jButton8.setText("+");
+        jButton8.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/add.png"))); // NOI18N
+        jButton8.setText("New");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -774,6 +785,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton12.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/delete.png"))); // NOI18N
         jButton12.setText("-");
         jButton12.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -817,6 +829,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane2.setViewportView(ActionTable);
 
         jButton20.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/stop.png"))); // NOI18N
         jButton20.setText("Stop");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -825,6 +838,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton10.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/play.png"))); // NOI18N
         jButton10.setText("Run");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -833,6 +847,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton5.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/loop.png"))); // NOI18N
         jButton5.setText("Loops");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -841,7 +856,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton7.setText("DeleteAll");
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/delete.png"))); // NOI18N
+        jButton7.setText("All");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -849,6 +865,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton11.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/edit.png"))); // NOI18N
         jButton11.setText("Edit");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -909,25 +926,12 @@ public class MainFrame extends javax.swing.JFrame {
 
         ActionDisplay.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/ActionPage.png"))); // NOI18N
+
         jMenu3.setText("Save");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        jMenuItem8.setText("Save Action");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem8);
-
-        jMenuItem11.setText("Save Pump");
-        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem11ActionPerformed(evt);
-            }
-        });
-        jMenu3.add(jMenuItem11);
-
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/save.png"))); // NOI18N
         jMenuItem15.setText("Save Config");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -941,22 +945,7 @@ public class MainFrame extends javax.swing.JFrame {
         jMenu4.setText("Load");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        jMenuItem5.setText("Load Action");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem5);
-
-        jMenuItem6.setText("Load Pump");
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
-            }
-        });
-        jMenu4.add(jMenuItem6);
-
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/load.png"))); // NOI18N
         jMenuItem14.setText("Load Config");
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -974,29 +963,37 @@ public class MainFrame extends javax.swing.JFrame {
         ActionConfiguationMainPageLayout.setHorizontalGroup(
             ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(16, 16, 16)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
+                        .addGap(18, 18, 18))
+                    .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
                         .addComponent(AddBumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(22, 22, 22))
                     .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ActionDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(74, 74, 74))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel6)
+                        .addGap(30, 30, 30))))
         );
         ActionConfiguationMainPageLayout.setVerticalGroup(
             ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
                     .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(ActionDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ActionDisplay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel7)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(ActionConfiguationMainPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
@@ -1004,15 +1001,16 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18))
                     .addGroup(ActionConfiguationMainPageLayout.createSequentialGroup()
                         .addComponent(AddBumpBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(20, Short.MAX_VALUE))))
         );
 
         jPanel7.getAccessibleContext().setAccessibleDescription("");
 
         PumpActionPageNew.setTitle("newAction");
+        PumpActionPageNew.setBackground(new java.awt.Color(0, 0, 0));
         PumpActionPageNew.setLocation(new java.awt.Point(0, 0));
         PumpActionPageNew.setMinimumSize(new java.awt.Dimension(468, 300));
-        PumpActionPageNew.setSize(new java.awt.Dimension(600, 350));
+        PumpActionPageNew.setSize(new java.awt.Dimension(630, 350));
 
         SinglePumpAction.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SinglePumpAction:", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 2, 18))); // NOI18N
 
@@ -1081,7 +1079,7 @@ public class MainFrame extends javax.swing.JFrame {
         pumpActionSpeedDisplay.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         pumpActionSpeedDisplay.setText("50");
 
-        jLabel15.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jLabel15.setText("Speed:");
 
         actionReversed.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -1143,7 +1141,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jButton16.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton16.setText("<Back");
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/back.png"))); // NOI18N
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
@@ -1151,6 +1149,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton13.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/confirming.png"))); // NOI18N
         jButton13.setText("Save");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1158,24 +1157,33 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/newAction.png"))); // NOI18N
+
         javax.swing.GroupLayout PumpActionPageNewLayout = new javax.swing.GroupLayout(PumpActionPageNew.getContentPane());
         PumpActionPageNew.getContentPane().setLayout(PumpActionPageNewLayout);
         PumpActionPageNewLayout.setHorizontalGroup(
             PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PumpActionPageNewLayout.createSequentialGroup()
-                        .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(370, 370, 370)
-                        .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(SinglePumpAction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(PumpActionPageNewLayout.createSequentialGroup()
+                .addGroup(PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(PumpActionPageNewLayout.createSequentialGroup()
+                                .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)
+                                .addGap(370, 370, 370)
+                                .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 106, Short.MAX_VALUE))
+                            .addComponent(SinglePumpAction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8)))
                 .addContainerGap())
         );
         PumpActionPageNewLayout.setVerticalGroup(
             PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SinglePumpAction, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PumpActionPageNewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1314,7 +1322,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jButton24.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton24.setText("<Back");
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/back.png"))); // NOI18N
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton24ActionPerformed(evt);
@@ -1322,6 +1330,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton25.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/confirming.png"))); // NOI18N
         jButton25.setText("Save");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1329,24 +1338,33 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/edit.png"))); // NOI18N
+
         javax.swing.GroupLayout PumpActionEditPageLayout = new javax.swing.GroupLayout(PumpActionEditPage.getContentPane());
         PumpActionEditPage.getContentPane().setLayout(PumpActionEditPageLayout);
         PumpActionEditPageLayout.setHorizontalGroup(
             PumpActionEditPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionEditPageLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(PumpActionEditPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(PumpActionEditPageLayout.createSequentialGroup()
-                        .addComponent(jButton24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(370, 370, 370)
-                        .addComponent(jButton25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(SinglePumpAction2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(PumpActionEditPageLayout.createSequentialGroup()
+                .addGroup(PumpActionEditPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionEditPageLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addGroup(PumpActionEditPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(PumpActionEditPageLayout.createSequentialGroup()
+                                .addComponent(jButton24, javax.swing.GroupLayout.DEFAULT_SIZE, 68, Short.MAX_VALUE)
+                                .addGap(370, 370, 370)
+                                .addComponent(jButton25, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                            .addComponent(SinglePumpAction2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionEditPageLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel14)))
                 .addContainerGap())
         );
         PumpActionEditPageLayout.setVerticalGroup(
             PumpActionEditPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionEditPageLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
+                .addContainerGap()
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SinglePumpAction2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PumpActionEditPageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1544,7 +1562,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jButton22.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton22.setText("<Back");
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/back.png"))); // NOI18N
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton22ActionPerformed(evt);
@@ -1552,12 +1570,15 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton23.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/confirming.png"))); // NOI18N
         jButton23.setText("Save");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton23ActionPerformed(evt);
             }
         });
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/loop.png"))); // NOI18N
 
         javax.swing.GroupLayout PumpActionPageNewLoopLayout = new javax.swing.GroupLayout(PumpActionPageNewLoop.getContentPane());
         PumpActionPageNewLoop.getContentPane().setLayout(PumpActionPageNewLoopLayout);
@@ -1574,13 +1595,19 @@ public class MainFrame extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(22, 22, 22))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLoopLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel18)
+                .addContainerGap())
         );
         PumpActionPageNewLoopLayout.setVerticalGroup(
             PumpActionPageNewLoopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PumpActionPageNewLoopLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(SinglePumpAction1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(25, 25, 25)
                 .addGroup(PumpActionPageNewLoopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1633,7 +1660,7 @@ public class MainFrame extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
+                .addComponent(jScrollPane6)
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -1646,7 +1673,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 153, 51));
-        jLabel11.setText("Expert Mode:");
+        jLabel11.setText("Expert Mode");
 
         jPanel11.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, java.awt.Color.gray));
 
@@ -1727,7 +1754,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Stopbtn, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
                     .addComponent(runButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18))
+                .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1751,7 +1778,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         jButton9.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton9.setText("<Back");
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/back.png"))); // NOI18N
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -1759,47 +1786,55 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         jButton21.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        jButton21.setText("Stop All");
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/stop.png"))); // NOI18N
+        jButton21.setText("All");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton21ActionPerformed(evt);
             }
         });
 
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/expertMode.png"))); // NOI18N
+
         javax.swing.GroupLayout ActionExpertModeLayout = new javax.swing.GroupLayout(ActionExpertMode.getContentPane());
         ActionExpertMode.getContentPane().setLayout(ActionExpertModeLayout);
         ActionExpertModeLayout.setHorizontalGroup(
             ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ActionExpertModeLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ActionExpertModeLayout.createSequentialGroup()
+                .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(ActionExpertModeLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel33))
+                    .addGroup(ActionExpertModeLayout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ActionExpertModeLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(366, 366, 366)
-                                .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(10, 10, 10))
-                            .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ActionExpertModeLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(360, 360, 360)
+                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)))
                 .addGap(22, 22, 22))
         );
         ActionExpertModeLayout.setVerticalGroup(
             ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ActionExpertModeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11)
+                .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel33))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(ActionExpertModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(40, 40, 40))
         );
 
@@ -1839,38 +1874,35 @@ public class MainFrame extends javax.swing.JFrame {
         setLocation(new java.awt.Point(100, 100));
         setSize(new java.awt.Dimension(332, 167));
 
-        jButton1.setText("Start");
+        jLabel34.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(102, 255, 204));
+        jLabel34.setText("By Timiu");
+
+        jButton1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons/chip.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Toppan Bunkyu Gothic", 1, 13)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Lab on Chip ");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(69, 69, 69))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(79, 79, 79))))
+                .addGap(16, 16, 16)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel34)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 26, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(31, 31, 31))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel34))
         );
 
         getAccessibleContext().setAccessibleName("WelcomeFrame");
@@ -1946,61 +1978,6 @@ public class MainFrame extends javax.swing.JFrame {
         model.setRowCount(0);
     }
 
-
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        //读取到Actionlist
-        String out = "";
-        try{
-            JFileChooser chooser = new JFileChooser();
-            //update -------add filefilter
-            FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
-            chooser.setFileFilter(filter);
-            //jsonparse转化为Actionlist
-            int value = chooser.showSaveDialog(ActionConfiguationMainPage);
-
-            if(value == JFileChooser.APPROVE_OPTION){
-                File file = chooser.getSelectedFile();
-
-                StringBuffer buffer = new StringBuffer();
-
-                    FileInputStream fis = new FileInputStream(file);
-                    InputStreamReader isr = new InputStreamReader(fis,"GBK");
-                    Reader in = new BufferedReader(isr);
-                    int i ;
-                    while ((i = in.read()) > -1){
-                        buffer.append((char) i);
-                    }
-                    in.close();
-    //                Log(buffer.toString());
-                    out = buffer.toString();
-
-            }
-        }catch (IOException e){
-            e.printStackTrace();
-        }
-//        Log(out);
-//        ArrayList list = (ArrayList)Util.jsonStringToObj(out,ArrayList.class);
-        if(out != "") {
-            List list = Util.stringToArray(out, Action[].class);
-            actionList = new ArrayList<Action>(list);
-
-            //更新table
-            clearTableContent(ActionTable);
-
-            showTypeList();
-            showPumpList();
-            showActionList();
-
-            for (Action t : actionList) {
-                ArrayList<String> content = new ArrayList<String>();
-                content.add("" + t.getSeq());
-                content.add(t.toString());
-                DefaultTableModel model = (DefaultTableModel) ActionTable.getModel();
-                model.addRow(content.toArray());
-            }
-        }
-
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
@@ -2188,41 +2165,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void pumpTypeBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pumpTypeBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_pumpTypeBoxActionPerformed
-
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        //actionlist 转化成jsonstring
-        String out =  Util.objToJsonString(actionList);
-//        Log(out);
-        //将jsonstring保存为文件
-        JFileChooser chooser = new JFileChooser();
-        //update -------add filefilter
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
-        chooser.setFileFilter(filter);
-
-        int value = chooser.showSaveDialog(ActionConfiguationMainPage);
-        if(value == JFileChooser.APPROVE_OPTION){
-            try{
-                File newFile = chooser.getSelectedFile();
-//                if(!newFile.exists()){
-//                    newFile.createNewFile();
-//                }
-                //add extensions
-                String fname = newFile.getName();
-                if(fname.indexOf(".json") == -1){
-                    Log("add extensions");
-                    newFile = new File(chooser.getCurrentDirectory(),fname+".json");
-                }
-                FileOutputStream outputStream = new FileOutputStream(newFile);
-                outputStream.write(out.getBytes());
-                outputStream.close();
-                Log("Actionlist saved!");
-
-            }catch (Exception e ){
-                e.printStackTrace();
-            }
-        }
-
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -2726,90 +2668,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton19ActionPerformed
 
-    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
-        //读取到typelist
-        JFileChooser chooser = new JFileChooser();
-        //update -------add filefilter
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
-        chooser.setFileFilter(filter);
-        //jsonparse转化为typelist
-        int value = chooser.showSaveDialog(PumpTypePage);
-        String out = "";
-        if(value == JFileChooser.APPROVE_OPTION){
-            File file = chooser.getSelectedFile();
-
-            StringBuffer buffer = new StringBuffer();
-            try{
-                FileInputStream fis = new FileInputStream(file);
-                InputStreamReader isr = new InputStreamReader(fis,"GBK");
-                Reader in = new BufferedReader(isr);
-                int i ;
-                while ((i = in.read()) > -1){
-                    buffer.append((char) i);
-                }
-                in.close();
-//                Log(buffer.toString());
-                out = buffer.toString();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-//        Log(out);
-//        ArrayList list = (ArrayList)Util.jsonStringToObj(out,ArrayList.class);
-        List list = Util.stringToArray(out,PumpType[].class );
-        typelist = new ArrayList<PumpType>(list);
-//        typelist = ArrayList(PumpType) list ;
-//        Log("type[0] : "+typelist.get(0));
-        //更新table
-        clearTableContent(pListInTypepage);
-
-        for(PumpType t : typelist){
-            ArrayList<String> content = new ArrayList<String>();
-            content.add(t.getName());
-            content.add(t.toString());
-            DefaultTableModel model = (DefaultTableModel) pListInTypepage.getModel();
-            model.addRow(content.toArray());
-        }
-
-
-    }//GEN-LAST:event_jMenuItem12ActionPerformed
-
-    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-
-        //将typelist 转化成jsonstring
-        String out =  Util.objToJsonString(typelist);
-//        Log(out);
-        //将jsonstring保存为文件
-        JFileChooser chooser = new JFileChooser();
-        //update -------add filefilter
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
-        chooser.setFileFilter(filter);
-
-        int value = chooser.showSaveDialog(PumpTypePage);
-        if(value == JFileChooser.APPROVE_OPTION){
-            try{
-                File newFile = chooser.getSelectedFile();
-//                if(!newFile.exists()){
-//                    newFile.createNewFile();
-//                }
-                //add extensions
-                String fname = newFile.getName();
-                if(fname.indexOf(".json") == -1){
-                    Log("add extensions");
-                    newFile = new File(chooser.getCurrentDirectory(),fname+".json");
-                }
-                FileOutputStream outputStream = new FileOutputStream(newFile);
-                outputStream.write(out.getBytes());
-                outputStream.close();
-                Log("Typelist saved!");
-
-            }catch (Exception e ){
-                e.printStackTrace();
-            }
-        }
-
-    }//GEN-LAST:event_jMenuItem13ActionPerformed
-
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         this.deleteTypeFromTable(evt, pListInTypepage);
 
@@ -2819,104 +2677,15 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
        //暂停当前所有pump的动作
        //暂停所有的pumpthread
+       if(worldTime!=null){
         worldTime.shutdown();
+        }
         for (Pump p :pumpList){
             p.shutdown();
         }
        
+       
     }//GEN-LAST:event_jButton20ActionPerformed
-
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
-        //读取到Actionlist
-        JFileChooser chooser = new JFileChooser();
-        //update -------add filefilter
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
-        chooser.setFileFilter(filter);
-        //jsonparse转化为Actionlist
-        int value = chooser.showSaveDialog(ActionConfiguationMainPage);
-        String out = "";
-        if(value == JFileChooser.APPROVE_OPTION){
-            File file = chooser.getSelectedFile();
-
-            StringBuffer buffer = new StringBuffer();
-            try{
-                FileInputStream fis = new FileInputStream(file);
-                InputStreamReader isr = new InputStreamReader(fis,"GBK");
-                Reader in = new BufferedReader(isr);
-                int i ;
-                while ((i = in.read()) > -1){
-                    buffer.append((char) i);
-                }
-                in.close();
-//                Log(buffer.toString());
-                out = buffer.toString();
-            }catch (IOException e){
-                e.printStackTrace();
-            }
-        }
-//        Log(out);
-//        ArrayList list = (ArrayList)Util.jsonStringToObj(out,ArrayList.class);
-        List<Pump> list = Util.stringToArray(out,Pump[].class );
-        ArrayList<Pump> tmp = new ArrayList<Pump>();
-        for(Pump p : list){
-            tmp.add(new Pump(p.getName(),p.getType(),p.getSpeed(),p.getPinNumber1(),p.getPinNumber2()));
-        }
-        pumpList = tmp;
-        showPumpList();
-
-
-//        Log("pumplist [0] type : "+pumpList.get(0).getType());
-        //更新table
-        clearTableContent(PumpListInActionPage);
-        clearTableContent(PumpListInExpertMode);
-        clearTableContent(PumpTableInPumpPage);
-        for(Pump t : pumpList){
-            ArrayList<String> content = new ArrayList<String>();
-            content.add(t.getName());
-            content.add(t.toString());
-            DefaultTableModel model1 = (DefaultTableModel) PumpListInActionPage.getModel();
-            DefaultTableModel model2 = (DefaultTableModel) PumpListInExpertMode.getModel();
-            DefaultTableModel model3 = (DefaultTableModel) PumpTableInPumpPage.getModel();
-            model1.addRow(content.toArray());
-            model2.addRow(content.toArray());
-            model3.addRow(content.toArray());
-            
-        }
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
-        //pumplist 转化成jsonstring
-        String out =  Util.objToJsonString(pumpList);
-//        Log(out);
-        //将jsonstring保存为文件
-        JFileChooser chooser = new JFileChooser();
-        //update -------add filefilter
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("Json file(.json)","json");
-        chooser.setFileFilter(filter);
-
-        int value = chooser.showSaveDialog(ActionConfiguationMainPage);
-        if(value == JFileChooser.APPROVE_OPTION){
-            try{
-                File newFile = chooser.getSelectedFile();
-//                if(!newFile.exists()){
-//                    newFile.createNewFile();
-//                }
-                //add extensions
-                String fname = newFile.getName();
-                if(fname.indexOf(".json") == -1){
-                    Log("add extensions");
-                    newFile = new File(chooser.getCurrentDirectory(),fname+".json");
-                }
-                FileOutputStream outputStream = new FileOutputStream(newFile);
-                outputStream.write(out.getBytes());
-                outputStream.close();
-                Log("Pumplist saved!");
-
-            }catch (Exception e ){
-                e.printStackTrace();
-            }
-        }
-    }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     private void pumpSpeedStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_pumpSpeedStateChanged
         
@@ -2944,7 +2713,7 @@ public class MainFrame extends javax.swing.JFrame {
             javax.swing.JOptionPane.showMessageDialog(this, message);
             return;
         }
-        Log("bp 1");
+//        Log("bp 1");
         Pump p = pumpList.get(in);
         
         if(!this.runButton.isEnabled()){
@@ -2958,7 +2727,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
             
 //            Log(p.getName()+ speed);
-            Log("bp 2");
+//            Log("bp 2");
         }
         }catch( Exception e){ 
             String message = "no selection";
@@ -3550,9 +3319,11 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -3564,26 +3335,23 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
-    private javax.swing.JMenu jMenu5;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuBar jMenuBar3;
-    private javax.swing.JMenuItem jMenuItem11;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel14;
