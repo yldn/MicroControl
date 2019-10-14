@@ -2454,8 +2454,8 @@ public class MainFrame extends javax.swing.JFrame {
              return;
         }
         if(this.pin1Label.getText() != "" && this.pin2Label.getText() != "" ){
-            pin1 = Integer.parseInt(this.pin1Label.getText().substring(11));
-            pin2 = Integer.parseInt(this.pin2Label.getText().substring(11));
+            pin1 = Integer.parseInt(this.pin1Label.getText().substring(3));
+            pin2 = Integer.parseInt(this.pin2Label.getText().substring(3));
         }
         
         //generate a new Pump Obj
@@ -2497,6 +2497,15 @@ public class MainFrame extends javax.swing.JFrame {
         this.mapPinListToComboBox(pumpPin2);
     }//GEN-LAST:event_jButton15ActionPerformed
     void addToPumpList(Pump p){
+        // 添加时检查是否重名
+        for(Pump pl : this.pumpList){
+            if(p.getName().equals(pl.getName()) ){
+                String message = "The pump name is already existed, please change one!";
+                javax.swing.JOptionPane.showMessageDialog(this, message);
+                return ;
+            }
+        
+        }
         this.pumpList.add(p);
         this.showPinList();
         this.pinList.remove((Integer)p.getPinNumber1());
@@ -2515,23 +2524,24 @@ public class MainFrame extends javax.swing.JFrame {
     /////两个combobox互相的listener
     private void pumpPin1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pumpPin1ItemStateChanged
         try{
-            if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
+            if(evt.getStateChange() == java.awt.event.ItemEvent.ITEM_EVENT_MASK){
                 //如果选择pin1 则更新pin2
-                if(evt.getItem().toString() != ""){
-                    
+//                if(evt.getItem().toString() != ""){
+                    System.out.println("bp1");
                     ArrayList<Integer> inBox2 = (ArrayList<Integer>)this.pinList.clone();
                     Integer in = (Integer)Integer.parseInt((String)this.pumpPin1.getSelectedItem());
                     inBox2.remove(in);
-                    
-                    int pin2 = Integer.parseInt(this.pin2Label.getText().substring(11));
+                    System.out.println(Arrays.toString(inBox2.toArray()));
+                    int pin2 = Integer.parseInt(this.pin2Label.getText().substring(3));
                     this.pumpPin2.removeAllItems();
-                    pumpPin2.addItem("");
+                    
+//                    pumpPin2.addItem(""+pin2);
                     System.out.println("Pin1 selected: "+evt.getItem().toString());
                     for(int i = 0 ; i< inBox2.size();i++){
                         pumpPin2.addItem(""+inBox2.get(i));
                     }
-                    this.pin1Label.setText("Pin1Select:"+evt.getItem().toString());
-                }
+                    this.pin1Label.setText("-> "+evt.getItem().toString());
+//                }
             }
         }
         catch(Exception e ){
@@ -2541,23 +2551,22 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void pumpPin2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_pumpPin2ItemStateChanged
          try{
-             if(evt.getStateChange() == java.awt.event.ItemEvent.SELECTED){
-
+             if(evt.getStateChange() == java.awt.event.ItemEvent.ITEM_FIRST){
                  
-                 if(evt.getItem().toString() != ""){
+//                 if(evt.getItem().toString() != ""){
                      
                     ArrayList<Integer> inBox1 = (ArrayList<Integer>)this.pinList.clone();
                     Integer in = (Integer)Integer.parseInt((String)this.pumpPin2.getSelectedItem());
                     inBox1.remove(in);
                     System.out.println("Pin2 selected: "+evt.getItem().toString());
-                    int pin1 = Integer.parseInt(this.pin1Label.getText().substring(11));
+                    int pin1 = Integer.parseInt(this.pin1Label.getText().substring(3));
                     this.pumpPin1.removeAllItems();
-                    pumpPin1.addItem("");
+//                    pumpPin1.addItem(""+pin1);
                     for(int i = 0 ; i< inBox1.size();i++){
                         pumpPin1.addItem(""+inBox1.get(i));
                     }
-                    this.pin2Label.setText("Pin2Select:"+evt.getItem().toString());
-                 }
+                    this.pin2Label.setText("-> "+evt.getItem().toString());
+//                 }
 
             }
         }
@@ -3666,8 +3675,8 @@ public class MainFrame extends javax.swing.JFrame {
         //然后更新两个combobox
         this.mapPinListToComboBox(this.pumpPin1);
         this.mapPinListToComboBox(this.pumpPin2);                    
-        this.pin1Label.setText("Pin1Select:"+0);
-        this.pin2Label.setText("Pin2Select:"+1);
+        this.pin1Label.setText("-> "+0);
+        this.pin2Label.setText("-> "+1);
 
         this.mapPumplistToTable(PumpTableInPumpPage);
         
