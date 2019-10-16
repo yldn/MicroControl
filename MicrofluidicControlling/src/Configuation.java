@@ -14,11 +14,11 @@ import java.util.List;
  */
 public class Configuation {
     private String name ;
-    ArrayList<Action> actions = new ArrayList<Action>();
+
     ArrayList<PumpType> types=new ArrayList<PumpType>();
     ArrayList<Pump> pumps = new ArrayList<Pump>();
-
-    public Configuation(String name, ArrayList<Action> actions, ArrayList<PumpType> types, ArrayList<Pump> pumps) {
+    ArrayList<Action> actions = new ArrayList<Action>();
+    public Configuation(String name, ArrayList<PumpType> types, ArrayList<Pump> pumps, ArrayList<Action> actions) {
         this.name = name;
         this.actions = actions;
         this.types = types;

@@ -57,7 +57,7 @@ public class Pump implements PumpEntity {
     
     private PriorityQueue<Action> eq;
     //GPIO控制单元
-    //GpioController gpio = GpioFactory.getInstance();
+    GpioController gpio = GpioFactory.getInstance();
 //    transient GpioController gpio ;
     
     //For Debugging
@@ -70,7 +70,7 @@ public class Pump implements PumpEntity {
 //        this.speed = speed ;
         this.pinNumber1 = pinNumber1;
         this.pinNumber2 = pinNumber2;
-//        aq = new PriorityQueue<Action>(actionComparator());
+        aq = new PriorityQueue<Action>(actionComparator());
     }
 
     @Override
@@ -165,19 +165,19 @@ public class Pump implements PumpEntity {
 //    fundmebtal functions
     public void provisionPin(int pin ,int initvalue , int range){
         
-//        SoftPwm.softPwmCreate(pin, initvalue , range);
+        SoftPwm.softPwmCreate(pin, initvalue , range);
         System.out.println("provision pin :"+pin+"["+initvalue+";"+range+ "]" );
     }
     public void start(int pinNumber , int value){
-//        SoftPwm.softPwmWrite(pinNumber,value);
+        SoftPwm.softPwmWrite(pinNumber,value);
         System.out.println("pwm write pin :"+pinNumber+"["+value+ "]" );
     }
     public void stop(int pinNumber){
-//        SoftPwm.softPwmStop(pinNumber);
+        SoftPwm.softPwmStop(pinNumber);
         System.out.println("stop now "+ pinNumber);
     }
     public void initServo(){
-//        Gpio.wiringPiSetup();
+        Gpio.wiringPiSetup();
         System.out.println("InitServi :" );
     }
     

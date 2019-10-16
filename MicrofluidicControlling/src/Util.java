@@ -106,8 +106,8 @@ public class Util {
                 
             }
             p.initialize();
-//            System.out.println(p.toString());
-            pumps.add(p);   
+            System.out.println("Pump action queue:"+ p.getAq().toString());
+            pumps.add(p);
         }
         
         JsonArray actionsjson = jsonObject.getAsJsonArray("actions");
@@ -152,7 +152,7 @@ public class Util {
                                     break;
                                 }
                            p= pumps.get(index) ;
-                           p.initialize();
+//                           p.initialize();
                         break;
 
                         default:
@@ -183,7 +183,7 @@ public class Util {
 //        System.out.println(Arrays.toString(actions.toArray()));
         
         
-        Configuation config = new Configuation(name,actions,types,pumps);
+        Configuation config = new Configuation(name,types,pumps,actions);
 
         return config;
     }
