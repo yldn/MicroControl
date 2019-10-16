@@ -20,9 +20,8 @@ import com.pi4j.wiringpi.SoftPwm;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class Pump {
+public class Pump implements PumpEntity {
     /////////RASPERRYPI ALL PINS /////////////
-    Pump p ;
     @Expose
     private String name;
     @Expose
@@ -71,21 +70,22 @@ public class Pump {
 //        this.speed = speed ;
         this.pinNumber1 = pinNumber1;
         this.pinNumber2 = pinNumber2;
-        Comparator<Action> com = actionComparator();
-        aq = new PriorityQueue<Action>(com);
-        System.out.println("pump" + name + "loaded !");
+//        aq = new PriorityQueue<Action>(actionComparator());
     }
+
+    @Override
+    public void initialize() {
+        aq = new PriorityQueue<>(actionComparator());
+    }
+
     Comparator<Action> actionComparator(){
-        Comparator<Action> actionComparator = new Comparator<Action>() {
-            @Override
-            public int compare(Action a1, Action a2) {
-                if(a1.getStartTime() - a2.getStartTime() < 0){
-                    return -1;
-                }else if (a1.getStartTime() - a2.getStartTime() == 0){
-                    return 0;
-                }else {
-                    return 1;
-                }
+        Comparator<Action> actionComparator = (Action a1, Action a2) -> {
+            if(a1.getStartTime() - a2.getStartTime() < 0){
+                return -1;
+            }else if (a1.getStartTime() - a2.getStartTime() == 0){
+                return 0;
+            }else {
+                return 1;
             }
         };
         return  actionComparator;

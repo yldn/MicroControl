@@ -7,5 +7,28 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/Pi4jEx/lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/Pi4jEx/lib" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/Pi4jEx/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/Pi4jEx/lib" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/Gson" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+        <jarDirectory url="file://$MODULE_DIR$/Gson" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>

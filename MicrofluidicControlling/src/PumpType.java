@@ -8,7 +8,7 @@
  *
  * @author liuyang
  */
-public class PumpType {
+public class PumpType implements PumpEntity  {
     /////
      String Name ;
     //max frequency
@@ -27,6 +27,12 @@ public class PumpType {
         this.minSpeed = minSpeed;
         
     }
+
+    @Override
+    public void initialize() {
+
+    }
+
     public String toString(){
         return ("Type: "+ this.getName() + " ["+this.getMinSpeed()+","+this.getRange()+"] " );
     }

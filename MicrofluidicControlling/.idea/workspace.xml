@@ -2,33 +2,137 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dede54ec-70ff-4479-bda3-c46968a9b057" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/MicrofluidicControlling.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PumpEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MicrofluidicControlling.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MicrofluidicControlling.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Action$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Configuation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Configuation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$34.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$35.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$37.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$39.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$40.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$41.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$42.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$43.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$44.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$45.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$46.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$47.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$48.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$48.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$49.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$49.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$50.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$50.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$51.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$51.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$52.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$52.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$53.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$53.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$54.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$54.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$55.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$55.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$56.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$56.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$57.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$57.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$58.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$58.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$59.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$59.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$60.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$60.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$61.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$61.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$61.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Pump$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Pump.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/PumpType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/PumpType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Util.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$34.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$35.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$37.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$39.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$40.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$41.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$42.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$43.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$44.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$45.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Pump$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Pump.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/PumpType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/PumpType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MicrofluidicControlling/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Configuation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PumpType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PumpType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,34 +141,70 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-429421468">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="2" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="207">
+              <caret line="2856" column="19" lean-forward="true" selection-start-line="2856" selection-start-column="19" selection-end-line="2856" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1078#1108#0" expanded="true" />
+                <element signature="e#1113#1202#0" expanded="true" />
+                <element signature="e#57310#57311#0" expanded="true" />
+                <element signature="e#57373#57374#0" expanded="true" />
+                <element signature="e#105706#105707#0" expanded="true" />
+                <element signature="e#105775#105776#0" expanded="true" />
+                <element signature="e#126568#126576#0" expanded="true" />
+                <element signature="e#128610#129614#0" expanded="true" />
+                <element signature="e#129613#129614#0" expanded="true" />
+                <element signature="e#135112#135120#0" expanded="true" />
+                <element signature="e#135694#135702#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Action.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
+              <folding>
+                <element signature="e#1927#1928#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="518">
+              <caret line="176" column="36" lean-forward="true" selection-start-line="176" selection-start-column="36" selection-end-line="176" selection-end-column="36" />
+              <folding>
+                <element signature="e#2057#2067#0" expanded="true" />
+                <element signature="e#2601#2607#0" expanded="true" />
+                <element signature="e#3585#3593#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,19 +212,59 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pump.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+            <state relative-caret-position="512">
+              <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
+              <folding>
+                <element signature="e#1933#1934#0" expanded="true" />
+                <element signature="e#1993#1994#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PumpType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Configuation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="29" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/PumpEntity.java" />
+        <option value="$PROJECT_DIR$/src/PumpType.java" />
+        <option value="$PROJECT_DIR$/src/Configuation.java" />
+        <option value="$PROJECT_DIR$/src/Action.java" />
+        <option value="$PROJECT_DIR$/src/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/Pump.java" />
+        <option value="$PROJECT_DIR$/src/Util.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -92,15 +272,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="139" />
-    <option name="y" value="23" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1280" />
-    <option name="height" value="704" />
+    <option name="height" value="987" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -169,12 +345,16 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,25 +367,17 @@
               <item name="MicrofluidicControlling" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="MicrofluidicControlling" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Gson" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -225,6 +397,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainFrame" />
+      <module name="MicrofluidicControlling" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MainFrame" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -236,62 +422,126 @@
       <option name="presentableId" value="Default" />
       <updated>1566343987926</updated>
       <workItem from="1566343991089" duration="433000" />
+      <workItem from="1571093597442" duration="8119000" />
+      <workItem from="1571150233641" duration="10202000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433000" />
+    <option name="totallyTimeSpent" value="18754000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="704" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.123667374" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Maven Projects" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32981783" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="2" />
+      <window_info anchor="bottom" id="Find" order="3" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.19942474" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/PumpEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PumpType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Configuation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#1927#1928#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pump.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        <state relative-caret-position="512">
+          <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
+          <folding>
+            <element signature="e#1933#1934#0" expanded="true" />
+            <element signature="e#1993#1994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="176" column="36" lean-forward="true" selection-start-line="176" selection-start-column="36" selection-end-line="176" selection-end-column="36" />
+          <folding>
+            <element signature="e#2057#2067#0" expanded="true" />
+            <element signature="e#2601#2607#0" expanded="true" />
+            <element signature="e#3585#3593#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="207">
+          <caret line="2856" column="19" lean-forward="true" selection-start-line="2856" selection-start-column="19" selection-end-line="2856" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1078#1108#0" expanded="true" />
+            <element signature="e#1113#1202#0" expanded="true" />
+            <element signature="e#57310#57311#0" expanded="true" />
+            <element signature="e#57373#57374#0" expanded="true" />
+            <element signature="e#105706#105707#0" expanded="true" />
+            <element signature="e#105775#105776#0" expanded="true" />
+            <element signature="e#126568#126576#0" expanded="true" />
+            <element signature="e#128610#129614#0" expanded="true" />
+            <element signature="e#129613#129614#0" expanded="true" />
+            <element signature="e#135112#135120#0" expanded="true" />
+            <element signature="e#135694#135702#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

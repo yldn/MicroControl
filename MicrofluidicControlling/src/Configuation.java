@@ -15,7 +15,7 @@ import java.util.List;
 public class Configuation {
     private String name ;
     ArrayList<Action> actions = new ArrayList<Action>();
-    ArrayList<PumpType> types=new ArrayList<PumpType>();;
+    ArrayList<PumpType> types=new ArrayList<PumpType>();
     ArrayList<Pump> pumps = new ArrayList<Pump>();
 
     public Configuation(String name, ArrayList<Action> actions, ArrayList<PumpType> types, ArrayList<Pump> pumps) {
@@ -84,5 +84,7 @@ public class Configuation {
                 return false;
         }
     }
+
+
     
 }

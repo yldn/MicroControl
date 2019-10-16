@@ -20,7 +20,7 @@ import java.util.logging.Logger;
  *
  * @author liuyang
  */
-public class Action  { 
+public class Action implements PumpEntity  {
     //related Action
 //    private transient Thread t;
 
@@ -74,13 +74,18 @@ public class Action  {
         this.seq = seq;
         this.startTime = startTime;
         this.endTime = endTime;
-//        this.speed = (int)(p.getType().getMinSpeed()+((p.getSpeed()-p.getType().getMinSpeed()) * ((double)(speed/100.0))) );
-        this.speed = speed;
+        this.speed = (int)(p.getType().getMinSpeed()+((p.getSpeed()-p.getType().getMinSpeed()) * ((double)(speed/100.0))) );
+//        this.speed = speed;
         this.p = p;
         this.reverse = reverse;
+//        p.getAq().add(this);
+    }
+
+    @Override
+    public void initialize() {
         p.getAq().add(this);
     }
-    
+
     public long getStartTime() {
         return startTime;
     }
