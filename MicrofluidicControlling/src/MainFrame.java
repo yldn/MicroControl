@@ -2018,6 +2018,7 @@ public class MainFrame extends javax.swing.JFrame {
        
        setTS(expertSlider);
        reversButton.setText("Normal");
+       this.showPumpList();
        
     }//GEN-LAST:event_jButton4ActionPerformed
 

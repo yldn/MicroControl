@@ -30,13 +30,13 @@ import java.util.Set;
  */
 
 public class Util {
-//    static GpioController gpio = GpioFactory.getInstance();
-//    
-//
-//    public static GpioController getGpio() {
-//        
-//        return gpio;
-//    }
+    static GpioController gpio = GpioFactory.getInstance();
+    
+
+    public static GpioController getGpio() {
+        
+        return gpio;
+    }
 
     public static Pin[] getAllPins() {
          Pin[] allPins = allPins(RaspberryPi_3B_Plus);
@@ -152,7 +152,7 @@ public class Util {
                                     break;
                                 }
                            p= pumps.get(index) ;
-//                           p.initialize();
+                           p.initialize();
                         break;
 
                         default:
