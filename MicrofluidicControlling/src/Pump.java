@@ -67,7 +67,7 @@ public class Pump implements PumpEntity {
         this.name = name;
         this.type = type;
         this.speed = (int)(type.getMinSpeed()+(type.getRange()- type.getMinSpeed() ) * ((double)speed/100.0));
-//        this.speed = speed ;
+//        this.speed = speed ; 
         this.pinNumber1 = pinNumber1;
         this.pinNumber2 = pinNumber2;
         aq = new PriorityQueue<Action>(actionComparator());
@@ -158,9 +158,8 @@ public class Pump implements PumpEntity {
                 isActive = true;
             }catch(Exception e ){
 //                e.printStackTrace();
-            isActive = false;
+                isActive = false;
             }
-           
     }
 //    fundmebtal functions
     public void provisionPin(int pin ,int initvalue , int range){
@@ -181,7 +180,6 @@ public class Pump implements PumpEntity {
         System.out.println("InitServi :" );
     }
     
-//    
     public void shutdown(){
         stop(pinNumber1);
         stop(pinNumber2);

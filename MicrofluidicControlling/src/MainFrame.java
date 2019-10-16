@@ -1925,7 +1925,7 @@ public class MainFrame extends javax.swing.JFrame {
         typelist.add(t);
 
         //添加默认Pump
-        Pump p1 = new Pump("p1",t,100,14,15);
+        Pump p1 = new Pump("p1",t,100,15,16);
         p1.initialize();
         Pump p2 = new Pump("p2",t,100,24,25);
         p1.initialize();
@@ -3203,7 +3203,7 @@ public class MainFrame extends javax.swing.JFrame {
         Pump p = pumpList.get(in);
         p.shutdown();
         p.isActive = false;
-//        Log("stop pump!"+ p.getName());
+        Log("stop pump!"+ p.getName());
         
         this.updatepumpListOnExpertTable();
         runButton.setEnabled(true);

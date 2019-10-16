@@ -78,7 +78,7 @@ public class Action implements PumpEntity  {
 //        this.speed = speed;
         this.p = p;
         this.reverse = reverse;
-//        p.getAq().add(this);
+        p.getAq().add(this);
     }
 
     @Override
