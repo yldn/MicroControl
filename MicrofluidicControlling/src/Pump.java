@@ -20,7 +20,7 @@ import com.pi4j.wiringpi.SoftPwm;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
-public class Pump implements PumpEntity {
+public class Pump  {
     /////////RASPERRYPI ALL PINS /////////////
     @Expose
     private String name;
@@ -36,9 +36,11 @@ public class Pump implements PumpEntity {
     int pinNumber2;
     //每个pump上的两个针脚
     //默认Pin1高电位 Pin2低电位
-    boolean isActive = false;
-    private PriorityQueue<Action> aq;
-
+    transient boolean  isActive = false;
+    
+    transient private PriorityQueue<Action> aq;
+    transient private PriorityQueue<Action> eq;
+    
     public PriorityQueue<Action> getAq() {
         return aq;
     }
@@ -55,9 +57,9 @@ public class Pump implements PumpEntity {
         this.eq = eq;
     }
     
-    private PriorityQueue<Action> eq;
+
     //GPIO控制单元
-    GpioController gpio = GpioFactory.getInstance();
+//    GpioController gpio = GpioFactory.getInstance();
 //    transient GpioController gpio ;
     
     //For Debugging
@@ -70,12 +72,8 @@ public class Pump implements PumpEntity {
 //        this.speed = speed ; 
         this.pinNumber1 = pinNumber1;
         this.pinNumber2 = pinNumber2;
+        ///comment out for stackoverflow by constructor
         aq = new PriorityQueue<Action>(actionComparator());
-    }
-
-    @Override
-    public void initialize() {
-        aq = new PriorityQueue<>(actionComparator());
     }
 
     Comparator<Action> actionComparator(){
@@ -164,19 +162,19 @@ public class Pump implements PumpEntity {
 //    fundmebtal functions
     public void provisionPin(int pin ,int initvalue , int range){
         
-        SoftPwm.softPwmCreate(pin, initvalue , range);
+//        SoftPwm.softPwmCreate(pin, initvalue , range);
         System.out.println("provision pin :"+pin+"["+initvalue+";"+range+ "]" );
     }
     public void start(int pinNumber , int value){
-        SoftPwm.softPwmWrite(pinNumber,value);
+//        SoftPwm.softPwmWrite(pinNumber,value);
         System.out.println("pwm write pin :"+pinNumber+"["+value+ "]" );
     }
     public void stop(int pinNumber){
-        SoftPwm.softPwmStop(pinNumber);
+//        SoftPwm.softPwmStop(pinNumber);
         System.out.println("stop now "+ pinNumber);
     }
     public void initServo(){
-        Gpio.wiringPiSetup();
+//        Gpio.wiringPiSetup();
         System.out.println("InitServi :" );
     }
     

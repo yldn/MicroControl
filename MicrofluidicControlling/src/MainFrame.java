@@ -1919,32 +1919,30 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.setVisible(false);
         this.PumpconfigMainFrame.setVisible(true);
+        
+        
 //        Log("Avaliable Types :"+ Arrays.toString(this.typelist.toArray()));
         //添加默认Pumptype
-        PumpType t = new PumpType("RP-Q1.2N-P20Z-DC3V",100,10);
-        typelist.add(t);
-
-        //添加默认Pump
-        Pump p1 = new Pump("p1",t,100,15,16);
-        p1.initialize();
-        Pump p2 = new Pump("p2",t,100,24,25);
-        p1.initialize();
-        Pump p3 = new Pump("p3",t,100,28,29);
-        p1.initialize();
-        Pump p4 = new Pump("p4",t,100,26,27);
-        p1.initialize();
-        
-        this.pumpList.add(p1);
-        this.pumpList.add(p2);
-        this.pumpList.add(p3);
-        this.pumpList.add(p4);
-
-        //添加默认Actions
-        Action a = new Action(0,0,1,90,p1,false );
-        a.initialize();
-        this.actionList.add(a);
-        
-        this.mapTypeListToTable(this.pListInTypepage, typelist);
+//        PumpType t = new PumpType("RP-Q1.2N-P20Z-DC3V",100,10);
+//        typelist.add(t);
+//
+//        //添加默认Pump
+//        Pump p1 = new Pump("p1",t,100,15,16);
+//        Pump p2 = new Pump("p2",t,100,24,25);
+//        Pump p3 = new Pump("p3",t,100,28,29);
+//        Pump p4 = new Pump("p4",t,100,26,27);
+//        
+//        this.pumpList.add(p1);
+//        this.pumpList.add(p2);
+//        this.pumpList.add(p3);
+//        this.pumpList.add(p4);
+//
+//        //添加默认Actions
+//        Action a = new Action(0,0,1,90,p1,false );
+//        this.actionList.add(a);
+//        
+        jMenuItem14ActionPerformed( evt);
+        this.mapTypeListToTable(this.pListInTypepage,typelist);
        //安排slider
         setTS(pumpSpeed);
         loadPumpconfigFrame();
@@ -2807,10 +2805,8 @@ public class MainFrame extends javax.swing.JFrame {
 
             if(value == JFileChooser.APPROVE_OPTION){
                 File file = chooser.getSelectedFile();
-
                 StringBuffer buffer = new StringBuffer();
-
-
+                
                 FileInputStream fis = new FileInputStream(file);
                 InputStreamReader isr = new InputStreamReader(fis,"GBK");
                 Reader in = new BufferedReader(isr);
@@ -2903,15 +2899,7 @@ public class MainFrame extends javax.swing.JFrame {
 //        Log(Arrays.toString(config.getActions().toArray()));
         
         String out =  Util.objToJsonString(config);
-        Log(out);
-
-//        JsonObject jsonObject = new JsonParser().parse(out).getAsJsonObject();
-//
-//
-//        Log(jsonObject.get("name").getAsString());
-//        Log(jsonObject.get("actions").getAsJsonArray().get(0).toString());
-//        Log(jsonObject.get("pumps").getAsJsonArray().get(0).toString());
-
+//        Log(out);
 
         
         int value = chooser.showSaveDialog(ActionConfiguationMainPage);
