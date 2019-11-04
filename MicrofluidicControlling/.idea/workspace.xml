@@ -2,26 +2,74 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dede54ec-70ff-4479-bda3-c46968a9b057" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Configs/Default.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Configs/Default.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/built-jar.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/built-jar.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Action$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Action.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/Configuation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Configuation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$33.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$34.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$34.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$35.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$36.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$37.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$38.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$39.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$39.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$40.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$40.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$41.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$41.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$42.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$42.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$43.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$43.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$44.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$44.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$45.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$45.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$46.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$46.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$47.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$47.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$48.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$48.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$49.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$49.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$50.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$50.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$51.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$51.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$52.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$52.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$53.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$53.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$54.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$54.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$55.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$55.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/MainFrame$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/MainFrame.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Pump.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Pump.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/PumpEntity.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/PumpType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/PumpType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" beforeDir="false" afterPath="$PROJECT_DIR$/dist/MicrofluidicControlling.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pump.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pump.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PumpEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PumpType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PumpType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Util.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,39 +96,141 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-429421468">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.15" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="913" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="913" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="2770" column="18" selection-start-line="2770" selection-start-column="18" selection-end-line="2770" selection-end-column="18" />
+            <state relative-caret-position="17">
+              <caret line="2830" column="32" lean-forward="true" selection-start-line="2830" selection-start-column="32" selection-end-line="2830" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1078#1108#0" expanded="true" />
                 <element signature="e#1113#1202#0" expanded="true" />
-                <element signature="e#64409#64410#0" expanded="true" />
-                <element signature="e#64473#64474#0" expanded="true" />
+                <element signature="e#8636#8637#0" expanded="true" />
+                <element signature="e#8697#8698#0" expanded="true" />
+                <element signature="e#8964#8965#0" expanded="true" />
+                <element signature="e#9025#9026#0" expanded="true" />
+                <element signature="e#13871#13872#0" expanded="true" />
+                <element signature="e#13932#13933#0" expanded="true" />
+                <element signature="e#21125#21126#0" expanded="true" />
+                <element signature="e#21185#21186#0" expanded="true" />
+                <element signature="e#23329#23330#0" expanded="true" />
+                <element signature="e#23390#23391#0" expanded="true" />
+                <element signature="e#23877#23878#0" expanded="true" />
+                <element signature="e#23938#23939#0" expanded="true" />
+                <element signature="e#26977#26978#0" expanded="true" />
+                <element signature="e#27040#27041#0" expanded="true" />
+                <element signature="e#28104#28105#0" expanded="true" />
+                <element signature="e#28162#28163#0" expanded="true" />
+                <element signature="e#33606#33607#0" expanded="true" />
+                <element signature="e#33667#33668#0" expanded="true" />
+                <element signature="e#34046#34047#0" expanded="true" />
+                <element signature="e#34107#34108#0" expanded="true" />
+                <element signature="e#36561#36562#0" expanded="true" />
+                <element signature="e#36621#36622#0" expanded="true" />
+                <element signature="e#42268#42269#0" expanded="true" />
+                <element signature="e#42326#42327#0" expanded="true" />
+                <element signature="e#42840#42841#0" expanded="true" />
+                <element signature="e#42900#42901#0" expanded="true" />
+                <element signature="e#43287#43288#0" expanded="true" />
+                <element signature="e#43347#43348#0" expanded="true" />
+                <element signature="e#46067#46068#0" expanded="true" />
+                <element signature="e#46127#46128#0" expanded="true" />
+                <element signature="e#46396#46569#0" expanded="true" />
+                <element signature="e#46568#46569#0" expanded="true" />
+                <element signature="e#46718#46719#0" expanded="true" />
+                <element signature="e#46779#46780#0" expanded="true" />
+                <element signature="e#47537#47538#0" expanded="true" />
+                <element signature="e#47595#47596#0" expanded="true" />
+                <element signature="e#47781#47956#0" expanded="true" />
+                <element signature="e#47955#47956#0" expanded="true" />
+                <element signature="e#48377#48378#0" expanded="true" />
+                <element signature="e#48438#48439#0" expanded="true" />
+                <element signature="e#48818#48819#0" expanded="true" />
+                <element signature="e#48879#48880#0" expanded="true" />
+                <element signature="e#49257#49258#0" expanded="true" />
+                <element signature="e#49317#49318#0" expanded="true" />
+                <element signature="e#49695#49696#0" expanded="true" />
+                <element signature="e#49755#49756#0" expanded="true" />
+                <element signature="e#50136#50137#0" expanded="true" />
+                <element signature="e#50197#50198#0" expanded="true" />
+                <element signature="e#55592#55593#0" expanded="true" />
+                <element signature="e#55655#55656#0" expanded="true" />
+                <element signature="e#56147#56148#0" expanded="true" />
+                <element signature="e#56210#56211#0" expanded="true" />
+                <element signature="e#61506#61507#0" expanded="true" />
+                <element signature="e#61570#61571#0" expanded="true" />
+                <element signature="e#64281#64282#0" expanded="true" />
+                <element signature="e#64345#64346#0" expanded="true" />
+                <element signature="e#64872#64873#0" expanded="true" />
+                <element signature="e#64938#64939#0" expanded="true" />
+                <element signature="e#70023#70024#0" expanded="true" />
+                <element signature="e#70084#70085#0" expanded="true" />
+                <element signature="e#70471#70472#0" expanded="true" />
+                <element signature="e#70532#70533#0" expanded="true" />
+                <element signature="e#77085#77086#0" expanded="true" />
+                <element signature="e#77150#77151#0" expanded="true" />
+                <element signature="e#77682#77683#0" expanded="true" />
+                <element signature="e#77749#77750#0" expanded="true" />
+                <element signature="e#82864#82865#0" expanded="true" />
+                <element signature="e#82925#82926#0" expanded="true" />
+                <element signature="e#83312#83313#0" expanded="true" />
+                <element signature="e#83373#83374#0" expanded="true" />
+                <element signature="e#87364#87365#0" expanded="true" />
+                <element signature="e#87429#87430#0" expanded="true" />
+                <element signature="e#90143#90144#0" expanded="true" />
+                <element signature="e#90208#90209#0" expanded="true" />
+                <element signature="e#90740#90741#0" expanded="true" />
+                <element signature="e#90807#90808#0" expanded="true" />
+                <element signature="e#92572#92573#0" expanded="true" />
+                <element signature="e#92636#92637#0" expanded="true" />
+                <element signature="e#99463#99464#0" expanded="true" />
+                <element signature="e#99524#99525#0" expanded="true" />
+                <element signature="e#99911#99912#0" expanded="true" />
+                <element signature="e#99972#99973#0" expanded="true" />
+                <element signature="e#104077#104078#0" expanded="true" />
+                <element signature="e#104135#104136#0" expanded="true" />
+                <element signature="e#104543#104544#0" expanded="true" />
+                <element signature="e#104612#104613#0" expanded="true" />
+                <element signature="e#104682#104683#0" expanded="true" />
+                <element signature="e#104751#104752#0" expanded="true" />
+                <element signature="e#106188#106189#0" expanded="true" />
+                <element signature="e#106249#106250#0" expanded="true" />
+                <element signature="e#108133#108134#0" expanded="true" />
+                <element signature="e#108197#108198#0" expanded="true" />
+                <element signature="e#108583#108584#0" expanded="true" />
+                <element signature="e#108642#108643#0" expanded="true" />
+                <element signature="e#108909#108910#0" expanded="true" />
+                <element signature="e#108970#108971#0" expanded="true" />
+                <element signature="e#112590#112591#0" expanded="true" />
+                <element signature="e#112650#112651#0" expanded="true" />
+                <element signature="e#113030#113031#0" expanded="true" />
+                <element signature="e#113091#113092#0" expanded="true" />
+                <element signature="e#119446#119447#0" expanded="true" />
+                <element signature="e#119506#119507#0" expanded="true" />
+                <element signature="e#124909#124917#0" expanded="true" />
+                <element signature="e#126951#127955#0" expanded="true" />
+                <element signature="e#127954#127955#0" expanded="true" />
+                <element signature="e#133590#133598#0" expanded="true" />
+                <element signature="e#134172#134180#0" expanded="true" />
+                <element signature="e#138900#138901#0" expanded="true" />
+                <element signature="e#138939#138940#0" expanded="true" />
+                <element signature="e#148418#148426#0" expanded="true" />
+                <element signature="e#149547#149555#0" expanded="true" />
+                <element signature="e#151413#151421#0" expanded="true" />
+                <element signature="e#174772#174859#0" expanded="true" />
+                <element signature="e#176356#176357#0" expanded="true" />
+                <element signature="e#176420#176421#0" expanded="true" />
+                <element signature="e#183059#183068#0" expanded="true" />
+                <element signature="e#183117#183123#0" expanded="true" />
+                <element signature="e#183177#183185#0" expanded="true" />
+                <element signature="e#183242#183252#0" expanded="true" />
+                <element signature="e#183388#183389#0" expanded="true" />
+                <element signature="e#183458#183459#0" expanded="true" />
+                <element signature="e#183552#183553#0" expanded="true" />
+                <element signature="e#183655#183656#0" expanded="true" />
+                <element signature="e#183755#183756#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,7 +239,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="240">
               <caret line="71" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
@@ -98,8 +248,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="686">
-              <caret line="118" selection-start-line="118" selection-end-line="118" />
+            <state>
+              <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -107,8 +257,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Pump.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+            <state relative-caret-position="2272">
+              <caret line="213" column="29" selection-start-line="213" selection-start-column="29" selection-end-line="213" selection-end-column="29" />
+              <folding>
+                <element signature="e#1181#1182#0" expanded="true" />
+                <element signature="e#1203#1204#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -116,7 +270,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PumpType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="3">
               <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
             </state>
           </provider>
@@ -125,7 +279,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Configuation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
+            <state relative-caret-position="-343">
               <caret line="20" column="112" selection-start-line="20" selection-start-column="112" selection-end-line="20" selection-end-column="112" />
             </state>
           </provider>
@@ -140,6 +294,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>input fal</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -149,15 +308,13 @@
         <option value="$PROJECT_DIR$/src/PumpEntity.java" />
         <option value="$PROJECT_DIR$/src/PumpType.java" />
         <option value="$PROJECT_DIR$/src/Configuation.java" />
-        <option value="$PROJECT_DIR$/src/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/Action.java" />
         <option value="$PROJECT_DIR$/src/Util.java" />
         <option value="$PROJECT_DIR$/src/Pump.java" />
+        <option value="$PROJECT_DIR$/src/MainFrame.java" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
@@ -165,15 +322,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1209" />
-    <option name="y" value="-1324" />
-    <option name="width" value="1280" />
-    <option name="height" value="704" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="500" />
+    <option name="y" value="34" />
+    <option name="width" value="1440" />
+    <option name="height" value="870" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -250,6 +403,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -266,8 +421,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,29 +478,30 @@
       <workItem from="1571225719583" duration="2630000" />
       <workItem from="1571261601762" duration="632000" />
       <workItem from="1571845516231" duration="3908000" />
+      <workItem from="1572846925889" duration="8118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25992000" />
+    <option name="totallyTimeSpent" value="34110000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1222" y="-1349" width="1280" height="1329" extended-state="0" />
+    <frame x="500" y="34" width="1440" height="870" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13085622" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17971015" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32843137" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.3279003" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Find" order="3" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.39379084" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="4" weight="0.34735414" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39980826" />
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" />
@@ -370,9 +524,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/PumpEntity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -383,48 +534,175 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Configuation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="-343">
           <caret line="20" column="112" selection-start-line="20" selection-start-column="112" selection-end-line="20" selection-end-column="112" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Util.java">
+    <entry file="file://$PROJECT_DIR$/src/Pump.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="686">
-          <caret line="118" selection-start-line="118" selection-end-line="118" />
+        <state relative-caret-position="2272">
+          <caret line="213" column="29" selection-start-line="213" selection-start-column="29" selection-end-line="213" selection-end-column="29" />
+          <folding>
+            <element signature="e#1181#1182#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Action.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="240">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PumpType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="3">
           <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pump.java">
+    <entry file="file://$PROJECT_DIR$/src/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="73" column="37" selection-start-line="73" selection-start-column="37" selection-end-line="73" selection-end-column="37" />
+        <state>
+          <caret line="61" column="17" selection-start-line="61" selection-start-column="17" selection-end-line="61" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="2770" column="18" selection-start-line="2770" selection-start-column="18" selection-end-line="2770" selection-end-column="18" />
+        <state relative-caret-position="17">
+          <caret line="2830" column="32" lean-forward="true" selection-start-line="2830" selection-start-column="32" selection-end-line="2830" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1078#1108#0" expanded="true" />
             <element signature="e#1113#1202#0" expanded="true" />
-            <element signature="e#64409#64410#0" expanded="true" />
-            <element signature="e#64473#64474#0" expanded="true" />
+            <element signature="e#8636#8637#0" expanded="true" />
+            <element signature="e#8697#8698#0" expanded="true" />
+            <element signature="e#8964#8965#0" expanded="true" />
+            <element signature="e#9025#9026#0" expanded="true" />
+            <element signature="e#13871#13872#0" expanded="true" />
+            <element signature="e#13932#13933#0" expanded="true" />
+            <element signature="e#21125#21126#0" expanded="true" />
+            <element signature="e#21185#21186#0" expanded="true" />
+            <element signature="e#23329#23330#0" expanded="true" />
+            <element signature="e#23390#23391#0" expanded="true" />
+            <element signature="e#23877#23878#0" expanded="true" />
+            <element signature="e#23938#23939#0" expanded="true" />
+            <element signature="e#26977#26978#0" expanded="true" />
+            <element signature="e#27040#27041#0" expanded="true" />
+            <element signature="e#28104#28105#0" expanded="true" />
+            <element signature="e#28162#28163#0" expanded="true" />
+            <element signature="e#33606#33607#0" expanded="true" />
+            <element signature="e#33667#33668#0" expanded="true" />
+            <element signature="e#34046#34047#0" expanded="true" />
+            <element signature="e#34107#34108#0" expanded="true" />
+            <element signature="e#36561#36562#0" expanded="true" />
+            <element signature="e#36621#36622#0" expanded="true" />
+            <element signature="e#42268#42269#0" expanded="true" />
+            <element signature="e#42326#42327#0" expanded="true" />
+            <element signature="e#42840#42841#0" expanded="true" />
+            <element signature="e#42900#42901#0" expanded="true" />
+            <element signature="e#43287#43288#0" expanded="true" />
+            <element signature="e#43347#43348#0" expanded="true" />
+            <element signature="e#46067#46068#0" expanded="true" />
+            <element signature="e#46127#46128#0" expanded="true" />
+            <element signature="e#46396#46569#0" expanded="true" />
+            <element signature="e#46568#46569#0" expanded="true" />
+            <element signature="e#46718#46719#0" expanded="true" />
+            <element signature="e#46779#46780#0" expanded="true" />
+            <element signature="e#47537#47538#0" expanded="true" />
+            <element signature="e#47595#47596#0" expanded="true" />
+            <element signature="e#47781#47956#0" expanded="true" />
+            <element signature="e#47955#47956#0" expanded="true" />
+            <element signature="e#48377#48378#0" expanded="true" />
+            <element signature="e#48438#48439#0" expanded="true" />
+            <element signature="e#48818#48819#0" expanded="true" />
+            <element signature="e#48879#48880#0" expanded="true" />
+            <element signature="e#49257#49258#0" expanded="true" />
+            <element signature="e#49317#49318#0" expanded="true" />
+            <element signature="e#49695#49696#0" expanded="true" />
+            <element signature="e#49755#49756#0" expanded="true" />
+            <element signature="e#50136#50137#0" expanded="true" />
+            <element signature="e#50197#50198#0" expanded="true" />
+            <element signature="e#55592#55593#0" expanded="true" />
+            <element signature="e#55655#55656#0" expanded="true" />
+            <element signature="e#56147#56148#0" expanded="true" />
+            <element signature="e#56210#56211#0" expanded="true" />
+            <element signature="e#61506#61507#0" expanded="true" />
+            <element signature="e#61570#61571#0" expanded="true" />
+            <element signature="e#64281#64282#0" expanded="true" />
+            <element signature="e#64345#64346#0" expanded="true" />
+            <element signature="e#64872#64873#0" expanded="true" />
+            <element signature="e#64938#64939#0" expanded="true" />
+            <element signature="e#70023#70024#0" expanded="true" />
+            <element signature="e#70084#70085#0" expanded="true" />
+            <element signature="e#70471#70472#0" expanded="true" />
+            <element signature="e#70532#70533#0" expanded="true" />
+            <element signature="e#77085#77086#0" expanded="true" />
+            <element signature="e#77150#77151#0" expanded="true" />
+            <element signature="e#77682#77683#0" expanded="true" />
+            <element signature="e#77749#77750#0" expanded="true" />
+            <element signature="e#82864#82865#0" expanded="true" />
+            <element signature="e#82925#82926#0" expanded="true" />
+            <element signature="e#83312#83313#0" expanded="true" />
+            <element signature="e#83373#83374#0" expanded="true" />
+            <element signature="e#87364#87365#0" expanded="true" />
+            <element signature="e#87429#87430#0" expanded="true" />
+            <element signature="e#90143#90144#0" expanded="true" />
+            <element signature="e#90208#90209#0" expanded="true" />
+            <element signature="e#90740#90741#0" expanded="true" />
+            <element signature="e#90807#90808#0" expanded="true" />
+            <element signature="e#92572#92573#0" expanded="true" />
+            <element signature="e#92636#92637#0" expanded="true" />
+            <element signature="e#99463#99464#0" expanded="true" />
+            <element signature="e#99524#99525#0" expanded="true" />
+            <element signature="e#99911#99912#0" expanded="true" />
+            <element signature="e#99972#99973#0" expanded="true" />
+            <element signature="e#104077#104078#0" expanded="true" />
+            <element signature="e#104135#104136#0" expanded="true" />
+            <element signature="e#104543#104544#0" expanded="true" />
+            <element signature="e#104612#104613#0" expanded="true" />
+            <element signature="e#104682#104683#0" expanded="true" />
+            <element signature="e#104751#104752#0" expanded="true" />
+            <element signature="e#106188#106189#0" expanded="true" />
+            <element signature="e#106249#106250#0" expanded="true" />
+            <element signature="e#108133#108134#0" expanded="true" />
+            <element signature="e#108197#108198#0" expanded="true" />
+            <element signature="e#108583#108584#0" expanded="true" />
+            <element signature="e#108642#108643#0" expanded="true" />
+            <element signature="e#108909#108910#0" expanded="true" />
+            <element signature="e#108970#108971#0" expanded="true" />
+            <element signature="e#112590#112591#0" expanded="true" />
+            <element signature="e#112650#112651#0" expanded="true" />
+            <element signature="e#113030#113031#0" expanded="true" />
+            <element signature="e#113091#113092#0" expanded="true" />
+            <element signature="e#119446#119447#0" expanded="true" />
+            <element signature="e#119506#119507#0" expanded="true" />
+            <element signature="e#124909#124917#0" expanded="true" />
+            <element signature="e#126951#127955#0" expanded="true" />
+            <element signature="e#127954#127955#0" expanded="true" />
+            <element signature="e#133590#133598#0" expanded="true" />
+            <element signature="e#134172#134180#0" expanded="true" />
+            <element signature="e#138900#138901#0" expanded="true" />
+            <element signature="e#138939#138940#0" expanded="true" />
+            <element signature="e#148418#148426#0" expanded="true" />
+            <element signature="e#149547#149555#0" expanded="true" />
+            <element signature="e#151413#151421#0" expanded="true" />
+            <element signature="e#174772#174859#0" expanded="true" />
+            <element signature="e#176356#176357#0" expanded="true" />
+            <element signature="e#176420#176421#0" expanded="true" />
+            <element signature="e#183059#183068#0" expanded="true" />
+            <element signature="e#183117#183123#0" expanded="true" />
+            <element signature="e#183177#183185#0" expanded="true" />
+            <element signature="e#183242#183252#0" expanded="true" />
+            <element signature="e#183388#183389#0" expanded="true" />
+            <element signature="e#183458#183459#0" expanded="true" />
+            <element signature="e#183552#183553#0" expanded="true" />
+            <element signature="e#183655#183656#0" expanded="true" />
+            <element signature="e#183755#183756#0" expanded="true" />
           </folding>
         </state>
       </provider>

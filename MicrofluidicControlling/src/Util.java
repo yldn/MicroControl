@@ -188,6 +188,7 @@ public class Util {
 //            System.out.println(a.getP().getAq().toString());
 //            System.out.println("p1");
             actions.add(a);
+            p.addAction(a);
         }
         
 //        System.out.println(Arrays.toString(types.toArray()));
@@ -225,4 +226,5 @@ public class Util {
         }
         return -1;
     }
+
 }

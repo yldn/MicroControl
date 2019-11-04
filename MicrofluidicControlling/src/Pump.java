@@ -49,6 +49,18 @@ public class Pump  {
         this.aq = aq;
     }
 
+    public void addAction(Action a){
+        this.getAq().add(a);
+    }
+    public void removeAction(Action a ){
+        if(aq.contains(a)){
+            aq.remove(a);
+        }
+        else
+            return;
+    }
+
+
     public PriorityQueue<Action> getEq() {
         return eq;
     }
@@ -206,7 +218,7 @@ public class Pump  {
     //Pump as String Output
     public String toString(){
         
-        return (type.toString()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/actualMaxSpeed"+this.speed+"%");
+        return ("Name : "+this.getName()+"/"+type.toString()+"/"+"pin1:" + pinNumber1+"/"+"pin2:" + pinNumber2+"/actualMaxSpeed"+this.speed+"%");
     }
 
 
