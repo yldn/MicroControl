@@ -68,7 +68,6 @@ public class Pump  {
     public void setEq(PriorityQueue<Action> eq) {
         this.eq = eq;
     }
-    
 
     //GPIO控制单元
 //    GpioController gpio = GpioFactory.getInstance();
@@ -174,19 +173,19 @@ public class Pump  {
 //    fundmebtal functions
     public void provisionPin(int pin ,int initvalue , int range){
         
-//        SoftPwm.softPwmCreate(pin, initvalue , range);
+        SoftPwm.softPwmCreate(pin, initvalue , range);
         System.out.println("provision pin :"+pin+"["+initvalue+";"+range+ "]" );
     }
     public void start(int pinNumber , int value){
-//        SoftPwm.softPwmWrite(pinNumber,value);
+        SoftPwm.softPwmWrite(pinNumber,value);
         System.out.println("pwm write pin :"+pinNumber+"["+value+ "]" );
     }
     public void stop(int pinNumber){
-//        SoftPwm.softPwmStop(pinNumber);
+        SoftPwm.softPwmStop(pinNumber);
         System.out.println("stop now "+ pinNumber);
     }
     public void initServo(){
-//        Gpio.wiringPiSetup();
+        Gpio.wiringPiSetup();
         System.out.println("InitServi :" );
     }
     
