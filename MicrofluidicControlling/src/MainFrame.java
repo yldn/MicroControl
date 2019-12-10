@@ -2824,22 +2824,21 @@ public class MainFrame extends javax.swing.JFrame {
             e.printStackTrace();
         }
         Log(out);
-        try {
-            Util.parseJsontoConfig(out);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            Util.parseJsontoConfig(out);
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
 
 
         Configuation con = null;
         try {
-            con = Util.parseJsontoConfig(out);
+//            con = Util.parseJsontoConfig(out);
 
         if(!out.equals("")) {
             con = Util.parseJsontoConfig(out);
-//            con = Util.stringToObj(out, Configuation.class);
 
 
             typelist = con.getTypes();
@@ -2848,7 +2847,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         }
         } catch (Exception e) {
-                e.printStackTrace();
+            this.Log("Input pull , parse cancel! ");
         }
 
 
