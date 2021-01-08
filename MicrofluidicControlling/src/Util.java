@@ -17,17 +17,7 @@ import static com.pi4j.system.SystemInfo.BoardType.RaspberryPi_3B_Plus;
 import java.util.Map;
 import java.util.Set;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author liuyang
- *
- */
 
 public class Util {
 //    static GpioController gpio = GpioFactory.getInstance();

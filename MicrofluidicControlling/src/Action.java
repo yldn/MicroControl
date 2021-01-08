@@ -11,18 +11,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/**
- *
- * @author liuyang
- */
+
 public class Action {
-    //related Action
-//    private transient Thread t;
 
     //sequence number
     @Expose
@@ -120,7 +110,6 @@ public class Action {
 
     public void st(){
        
-        //逻辑2
         System.out.println("Action : " + seq + " now Running !"+ "open Pump :"+getP().getName() );
         p.run(100);
 
@@ -148,23 +137,7 @@ public class Action {
                 }
             },0,1000,TimeUnit.MILLISECONDS);
            this.isActive = false;
-            //逻辑1
-//        try {
-//            while (true) {
-//                long endTime = System.currentTimeMillis();
-//                int currentCollapsedTime = (int) (endTime - startTime) / 1000;
-//                boolean t = currentCollapsedTime == runTime;
-//                System.out.println(t);
-//                if (t) {
-//                    p.stop();
-//                    System.out.println("Action : " + seq + " now Stop ! " + "close Pump :" + getP().getName());
-//                    break;
-//                }
-//                Thread.sleep(1000);
-//            }
-//        }catch (Exception e ){
-//            e.printStackTrace();
-//        }
+
     }
 
     public String toString(){
