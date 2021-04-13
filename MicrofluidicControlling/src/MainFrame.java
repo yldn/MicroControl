@@ -2037,8 +2037,8 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         //pumplist里的pump逐一运行
         this.jButton10.setEnabled(false);
-        String message = "Program Now Running !";
-        javax.swing.JOptionPane.showMessageDialog(this, message);
+//        String message = "Program Now Running !";
+//        javax.swing.JOptionPane.showMessageDialog(this, message);
 //        Gpio.wiringPiSetup();
 //        for(Pump p : pumpList){
 //            p.provisionPin(p.getPinNumber1(), 0 ,10);
@@ -2136,6 +2136,7 @@ public class MainFrame extends javax.swing.JFrame {
 //                            Log("running Action :" + a.getSeq());
                             a.isActive = true;
                             tab.setValueAt("true", a.getSeq(), 2);
+                            
                         }
                         ////
                     }
@@ -2160,10 +2161,26 @@ public class MainFrame extends javax.swing.JFrame {
                                 break;
                             }
 //
+                    
                     }
+                
                 }
+            
             }
+            
+            
+
         },0,10,TimeUnit.MILLISECONDS );
+        for(Action a : this.actionList){
+           a.isActive = false;
+       }
+       
+        for (Pump p :pumpList){
+            p.shutdown();
+        }
+        this.updateActionListToTable(ActionTable);
+        
+       
        this.jButton10.setEnabled(true);
     }//GEN-LAST:event_jButton10ActionPerformed
 
@@ -2699,9 +2716,14 @@ public class MainFrame extends javax.swing.JFrame {
        if(worldTime!=null){
         worldTime.shutdown();
         }
+       for(Action a : this.actionList){
+           a.isActive = false;
+       }
+       
         for (Pump p :pumpList){
             p.shutdown();
         }
+        this.updateActionListToTable(ActionTable);
        
        
     }//GEN-LAST:event_jButton20ActionPerformed
@@ -3175,7 +3197,8 @@ public class MainFrame extends javax.swing.JFrame {
         }
         try{
         DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
-        String pn =((String) model.getValueAt(PumpListInExpertMode.getSelectedRow(), 1));
+        int selectedRow = PumpListInExpertMode.getSelectedRow();
+        String pn =((String) model.getValueAt(selectedRow, 1));
 
         int in = findPumpByName(pn);
         if (in == -1) {
@@ -3190,6 +3213,12 @@ public class MainFrame extends javax.swing.JFrame {
         
         this.updatepumpListOnExpertTable();
         runButton.setEnabled(true);
+        
+            
+        PumpListInExpertMode.changeSelection(selectedRow, 0, false, false);
+        
+        
+        
         }catch( Exception e){ 
             String message = "no selection";
             javax.swing.JOptionPane.showMessageDialog(this, message);
@@ -3207,7 +3236,8 @@ public class MainFrame extends javax.swing.JFrame {
         }
         try{
         DefaultTableModel model = (DefaultTableModel) PumpListInExpertMode.getModel();
-        String pn =((String) model.getValueAt(PumpListInExpertMode.getSelectedRow(), 1));
+        int selectedRow = PumpListInExpertMode.getSelectedRow();
+        String pn =((String) model.getValueAt(selectedRow, 1));
 
         int in = findPumpByName(pn);
         if (in == -1) {
@@ -3229,6 +3259,9 @@ public class MainFrame extends javax.swing.JFrame {
             p.isActive = true;
             this.updatepumpListOnExpertTable();
             this.runButton.setEnabled(false);
+            
+            PumpListInExpertMode.changeSelection(selectedRow, 0, false, false);
+            
         
         }catch( Exception e){ 
             String message = "no selection";
